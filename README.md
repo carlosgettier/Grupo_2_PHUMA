@@ -40,6 +40,6 @@ para aprender nuevas herramientas para aplicar en el ámbito laboral como inicia
 
 * **El detalle del producto basado en New Balance**
 
-* **Inicio de sesion** y login en Billabong 
+* **Inicio de sesion** y Registro en Billabong 
 
 * Adidas para el carrito de compras 
