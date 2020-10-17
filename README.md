@@ -36,10 +36,10 @@ para aprender nuevas herramientas para aplicar en el ámbito laboral como inicia
 
 
 
-* El home basado en Billabong 
+* **El home basado en Billabong**
 
-* El detalle del producto basado en New Balance
+* **El detalle del producto basado en New Balance**
 
-* Inicio de sesion y login en Billabong 
+* **Inicio de sesion** y login en Billabong 
 
 * Adidas para el carrito de compras 
