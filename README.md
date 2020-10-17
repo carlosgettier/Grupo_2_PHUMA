@@ -1,6 +1,12 @@
 # Grupo_2_PHUMA
 proyecto integrador
 
+## Informacion sobre la pagina
+
+* El proyecto consiste en un ecomerce para la presentación y venta de indumentaria deportiva enfocada en hombres y mujeres de entre 15 y 60 años.
+
+* Se ofreceran diferentes categorias de productos: calzado, ropa, accesorios.
+
 ## Paginas de referencia
 
 * https://www.newbalance.com.ar/
@@ -21,9 +27,15 @@ proyecto integrador
 
 * Hola soy Carlos Gettier  tengo 31 años  soy oriundo de la provincia de Córdoba y viviendo en Capital Federal y  empezando a conoce este nuevo mundo de la programación web. 
 
+
+
 ### Se usaran de referencia para maquetar las siguientes paginas.
 
+
+
 * El home basado en Billabong 
+
+* El detalle del producto basado en New Balance
 
 * Inicio de sesion y login en Billabong 
 
