@@ -27,6 +27,9 @@ proyecto integrador
 
 * Hola soy Carlos Gettier  tengo 31 años  soy oriundo de la provincia de Córdoba y viviendo en Capital Federal y  empezando a conoce este nuevo mundo de la programación web. 
 
+* Buenas, por acá Sebastian Esquivel de Cap Fed, tengo 30 años, actualmente trabajo en RRHH, y me sumé al curso 
+para aprender nuevas herramientas para aplicar en el ámbito laboral como iniciar proyectos independientes.
+
 
 
 ### Se usaran de referencia para maquetar las siguientes paginas.
