@@ -1,11 +1,20 @@
 # Grupo_2_PHUMA
 proyecto integrador
 
+
 ## Informacion sobre la pagina
 
 * El proyecto consiste en un ecomerce para la presentación y venta de indumentaria deportiva enfocada en hombres y mujeres de entre 15 y 60 años.
 
 * Se ofreceran diferentes categorias de productos: calzado, ropa, accesorios.
+
+
+
+## Tablero del proyecto
+
+El proyecto se gestiona desde - [PHUMA TRELLO](URL "https://trello.com/b/FUarmrFh/proyecto-phuma")
+
+
 
 ## Paginas de referencia
 
@@ -15,9 +24,13 @@ proyecto integrador
 * https://www.billabong.com.ar/
 * https://www.sportline.com.ar/
 
+
+
 ## ¿Por que elegimos esas paginas?
 
 * Elegimos las siguientes paginas de referencia ya que nos parece que tienen todas una estetica similar y atractiva, destacamos algunas cosas por sobre otras en ciertas paginas por ejemplo el carrito de compras de adidas ya que lo muestra en otra pagina y no al costado lo cual nos parece menos ordenado.
+
+
 
 ## Textos de presentacion
 
@@ -33,8 +46,6 @@ para aprender nuevas herramientas para aplicar en el ámbito laboral como inicia
 
 
 ### Se usaran de referencia para maquetar las siguientes paginas.
-
-
 
 * El home basado en Billabong
 
