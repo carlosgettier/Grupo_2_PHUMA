@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Abel', sans-serif;
+}
+
+/*PRIMERAS DOS ETIQUETAS A QUE SE ENCUENTRAN A LA DERECHA ARRIBA DEL TODO*/
+
+
+.primerosLinks{
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+justify-content: flex-end;
+margin-right: 10px;
+}
+.primerosLinks li{
+    margin-left: 10px;
+    margin:  10px 5px;
+}
+.primerosLinks li a{
+    text-decoration: none;
+    color: #c4c4c4;
+   
+}
+.primerosLinks li a:hover{
+    color: black;
+}
+
+/* ACA EMPIEZA EL HEADER*/
+
+.navegacion{
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.navegacion ul{
+    display: flex;
+    list-style: none;
+}
+.navegacion ul li{
+
+    margin-right:55px;
+
+}
+ 
+
+
+.navegacion ul li a{
+    color: #8f8f8f;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+.navegacion ul li a:hover{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+
+.logo{
+    height: 70px;
+    width: 85px;
+    margin-left: 50px ;
+}
+
+/*BARRA DE BUSQUEDA*/
+
+.buscar{
+margin-right: 30px;
+    padding: 5px;
+}
+.buscar input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition:all 0.6 ease;
+}
+.boton{
+    border-radius: 50px;
+    background: silver;
+    height: 40px;
+    width: 38px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+
+}
+.boton:hover{
+    border-radius: 50px;
+    background: #eaeaea;
+    height: 40px;
+    width: 38px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+
+}
+.titulo{
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 55px;
+}
+
+/*ACA ARRANCA EL MAIN*/
+
+
+.main-container{
+    
+    padding: 10px;
+    margin-top: 150px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+    
+}
+.productos{
+    display: flex;
+    flex-direction: column;
+}
+.producto-1{
+    padding: 20px 20px 20px 10px;
+    margin: 1% 3% 1% 3%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+}
+.producto-1 img{
+    padding: 25px;
+    border-radius: 10px;
+    border: 4px white solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    height: 150px;
+    width: 165px;
+}
+.producto-1 img:hover{
+    background-color: rgb(167, 167, 167);
+    padding: 25px;
+    border-radius: 10px;
+    border: 4px white solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    height: 150px;
+    width: 165px;
+}
+.producto-1 ul li{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+
+#cantidad{
+    background-color: black;
+    color: white;
+    margin:0px 20px 9px 0px;
+    border-radius: 15px;
+    height: 25px;
+    width: 85px;
+    border: solid 2px black;
+    align-self: flex-end;
+    text-align: end;   
+}
+#cantidad:hover{
+    background-color: black;
+    color: white;
+    margin:0px 20px 9px 0px;
+    border-radius: 15px;
+    height: 25px;
+    width: 85px;
+    border: solid 2px white;
+    align-self: flex-end;
+    text-align: end;   
+}
+#color{
+    background-color: black;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin:0px 20px 9px 0px;
+    border-radius: 15px;
+    height: 25px;
+    width: 85px;
+    border: solid 2px black;
+    align-self: flex-end;
+    text-align: end; 
+}
+#color:hover{
+    background-color: black;
+    color: white;
+    margin:0px 20px 9px 0px;
+    height: 25px;
+    width: 85px;
+    border: solid 2px white;
+    align-self: flex-end;
+    text-align: end; 
+}
+.resumen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 20%;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+}
+#continuar{
+    margin-left: 90px;
+    background-color: black;
+    color: white;
+    border: whitesmoke 2px solid;
+    border-radius: 5px;
+    font-size: 25px;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
+}
+#continuar:hover{
+    align-content: center;
+    background-color: #fafafa;
+    color: black;
+    border: black 2px solid;
+    border-radius: 5px;
+    font-size: 25px;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
+}
+.resumen ul li{
+    list-style: none;
+    
+}
+.resumen ul hr{
+    margin:15px 70px 15px 70px;
+}
+.opciones{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-align: end;
+    margin-top: 35px;
+    margin-right: 18%;
+}
+.opciones ul li{
+    display: inline;
+}
+.mercadoPago{
+    height: 35px;
+    width: 35px;
+}
+.tarjetitas{
+    width: 130px;
+    height: 35px;
+}
+#continuar-2{
+    margin-left: 280px;
+    background-color: black;
+    color: white;
+    border: whitesmoke 2px solid;
+    border-radius: 5px;
+    font-size: 25px;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
+}
+#continuar-2:hover{
+    margin-left: 280px;
+    align-content: center;
+    background-color: #fafafa;
+    color: black;
+    border: black 2px solid;
+    border-radius: 5px;
+    font-size: 25px;
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
+}
+.continuar-opciones{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer{
+    background-color: #e4e4e4;
+}
+.otros-compraron{
+    font-weight: bolder;
+    font-size: 40px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.productos-interes{
+    margin-top: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.productos-interes img {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.productos-interes img:hover{
+    height: 150px;
+    width: 150px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+

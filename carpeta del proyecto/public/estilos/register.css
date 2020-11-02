@@ -1,0 +1,146 @@
+body{
+    font-family: 'Abel', sans-serif;
+    margin: 0%;
+}
+#promo{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #c4c4c4;
+}
+
+.primerosLinks li{
+    display: inline-block;
+    float: right;
+    padding-top: 8px;
+}
+
+.primerosLinks li a{
+    margin-right: 20px;
+    margin-left: 5px; 
+    
+}
+
+#logo{
+    display: inline;
+    margin-left: 8%;
+    height: 70px;
+    width: 85px;
+}
+.HMN li a{
+    font-weight: bold;
+    margin-right: 20px;
+    margin-left: 55px; 
+    font-size: 19px;
+    
+}
+
+.HMN{
+    margin-left: 20px;
+    display: inline-block;
+}
+.HMN li{
+    display: inline-block;
+    padding-top: 8px;
+}
+.iconos{
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
+    float: right;
+}
+.titulo{
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+}
+.formulario{
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+label{
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+input{
+    height: 35px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: solid  #c4c4c4 1px;
+}
+
+.enviar{
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 20px;
+    border: solid black ;
+    width: 100%;
+    background: black;
+    color: white;
+    margin-bottom: 55px;
+}
+
+
+
+#h1nl{
+   font-weight: bold;
+    width: 100%;
+    margin: 0px;
+    padding-top: 20px;
+    font-weight: bold;
+    padding-left: 50px;
+    background-color: #b5b5b5;
+    color: black;
+}
+
+#pNl{
+    display: inline;
+    font-size: 20px;
+    padding-top: 0;
+    font-weight: bold;
+    padding-left: 150px;
+    
+}
+.formuNL{
+    
+    display: inline;
+}
+.formuNL input{
+    height: 45px;
+    display: inline;
+    width: 20%;
+    margin-left:5% ;
+}
+.enviarNL{
+    width: 10%;
+    font-size: 35;
+    height: 40px;
+    border-radius: 1px;
+    border: black 1px;
+    background: black;
+    display: inline;
+    margin-left: 5%;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.newsletter{
+    
+    background-color: #b5b5b5;
+}
+.listaFooter1 li{
+    
+    text-align: center;
+    font-size: 19px;
+    margin-left: 20%;
+    display: inline;
+}

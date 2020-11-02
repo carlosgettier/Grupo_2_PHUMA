@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/carrito.css">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <header>
+        <nav class="primerosLinks">
+            <li>
+                <a href="#">Suscribete al Newsletter</a>
+            </li>
+            <li>
+                <a href="#">Iniciar Sesion</a>
+            </li>
+        </nav>
+        <hr style="color:#c4c4c4; margin-top: 20px;">
+
+        <div class="navegacion">
+            <img class="logo" src="imagenes/logo.png" alt="logo de Phuma">
+            <ul>
+                <li>
+                        <a href="#">Hombres</a>
+                </li>
+                <li>
+                    <a href="#">Mujeres</a>
+                </li>
+                <li>
+                    <a href="#">Niños</a>
+                </li>
+            </ul>
+
+            <nav class="buscar">
+                <form action="#">
+                <input type="text" placeholder="Buscar" required>
+                    <button type="submit" class="boton"> <i class="fas fa-search icon"></i></button>
+            </form>
+
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <h1 class="titulo">TU CARRITO</h1>
+
+
+        <div class="main-container">
+            <div class="productos">
+                    <div class="producto-1">
+                        <img src="imagenes/camiseta.png" alt="camiseta de futbol">
+                        <h2 style="font-weight: bold;"> Camiseta Del Sarasa FC </h2>
+                        <ul>
+                            <li>
+                                STOCK: Disponible
+                            </li>
+                            <li>
+                                SEXO: H
+                            </li>
+                            <li>
+                                COLOR: <select name="color" id="color">
+                                    <option value="1">Rojo</option>
+                                    <option value="2">Verde</option>
+                                    <option value="3">Amarillo</option>
+                                </select>
+                            </li>
+                            <li>
+                                CANTIDAD: <select name="cantidad" id="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </li>
+                            <li>
+                                PRECIO: $ 4999
+                            </li>
+                        </ul>
+                        
+
+                    </div>
+                    <div class="producto-1">
+                        <img src="imagenes/zapas-mujer.png" alt="camiseta de futbol">
+                        <h2 style="font-weight: bold;"> Calzado Running </h2>
+                        <ul>
+                            <li>
+                                STOCK: Disponible
+                            </li>
+                            <li>
+                                SEXO: M
+                            </li>
+                            <li>
+                                COLOR: <select name="color" id="color">
+                                    <option value="1">Rojo</option>
+                                    <option value="2">Verde</option>
+                                    <option value="3">Amarillo</option>
+                                </select>
+                            </li>
+                            <li>
+                                CANTIDAD: <select name="cantidad" id="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </li>
+                            <li>
+                                PRECIO: $ 6700
+                            </li>
+                        </ul>
+                        
+                    </div>
+            </div>
+
+
+            <div class="resumen">
+                <button id="continuar">CONTINUAR  <i class="fas fa-long-arrow-alt-right"></i></button>
+
+                <h2>Resumen Del Pedido</h2>
+
+                <ul>
+                    <li>
+                        CANTIDAD DE PRODUCTOS : 2
+                    </li>
+                    <hr>
+                    <li>
+                       TOTAL : $ 11.699
+                    </li>
+                    <hr>
+                    <li>
+                        COSTO DEL ENVIO: $ 500
+                    </li>
+                    <hr>
+                </ul>
+                <br>
+                <h1>TOTAL: $ 12.199</h1>
+
+                <p>Hasta 6 cuotas sin interés</p>
+
+            </div>
+
+        </div>
+<div class="continuar-opciones">
+    <div>
+        <button id="continuar-2">CONTINUAR  <i class="fas fa-long-arrow-alt-right"></i></button>
+    </div>
+        <div class="opciones">
+        <h2 id="opciones-pago">OPCIONES DE PAGO</h2>
+        <ul>
+            <li>
+                <img src="imagenes/tarjetas.png" alt="" class="tarjetitas">
+            </li>
+            <li>
+                <img src="imagenes/mercado-pago.png" alt="" class="mercadoPago">
+            </li>
+        </ul>
+    </div>
+    
+</div>
+    </main>
+    <footer>
+        <h1 class="otros-compraron">OTROS TAMBIEN COMPRARON</h1>
+        <div class="productos-interes">
+            
+                    <img src="imagenes/river.png">
+                    
+                
+                    <img src="imagenes/boca.png" >
+                
+                    <img src="imagenes/argentina.png" >
+                    
+        </div>
+    </footer>
+    
+</body>
+</html>
