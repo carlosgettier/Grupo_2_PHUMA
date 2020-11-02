@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltaSHANTA</title>
+    <link rel="stylesheet" href="estilos/detalleDeProducto.css">
+    <script src="https://kit.fontawesome.com/cfadb59558.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        PHUMA HEADER
+    </header>
+    <main>
+        <nav class="pathDeCategorias">
+            <un>
+                <li><a href="#">Incio</a></li>  <i class="fas fa-long-arrow-alt-right"></i>  
+                <li><a href="#">LifeStyles</a></li>  <i class="fas fa-long-arrow-alt-right"></i>  
+                <li><a href="#">Zapatilla Deportiva SARASA Vintage</a></li>
+            </un>
+        </nav>
+        <section class="mostrador">
+            <div class="selector-imagenes">
+                <figure><img src="imagenes/productoimagen1.jpg" alt="imagen secundaria 1"></figure>
+                <figure><img src="imagenes/productoimagen2.jpg" alt="imagen secundaria 2"></figure>
+                <figure><img src="imagenes/productoimagen4OTRASDIMENSIONES.jpg" alt="imagen secundaria 3"></figure>
+            </div>
+            <div class="imagen-principal">
+                <figure><img src="imagenes/productoimagen1.jpg" alt="detalle de imagen seleccionada"></figure>
+            </div>
+            <div class="caja">
+                <h1>Zapatilla Deportivas SARASA<br>
+                    Estilo Vintage
+                </h1>
+                <p class="precio">$13.000,00</p>
+                <div class="reseñasLite">
+                    <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+                    <p>11 Reseñas</p>
+                </div>
+                <form>
+                    <p>TALLE | <a href="#"><i class="fas fa-tshirt"></i> VER TABLA DE TALLES</a></p>
+                    <div class="selectorTalles">
+                        <span><input type="radio" name="talle" value="39" id="talleChoice39"><label class="cajaGris" for="talleChoice39">39</label></span>
+                        <span><input type="radio" name="talle" value="40" id="talleChoice40"><label class="cajaGris" for="talleChoice40">40</label></span>
+                        <span><input type="radio" name="talle" value="41" id="talleChoice41"><label class="cajaGris" for="talleChoice41">41</label></span>
+                        <span><input type="radio" name="talle" value="42" id="talleChoice42"><label class="cajaGris" for="talleChoice42">42</label></span>
+                        <span><input type="radio" name="talle" value="43" id="talleChoice43"><label class="cajaGris" for="talleChoice43">43</label></span>
+                      </div>
+                      <div class="cantidad-comprar">
+                        <div class="cantidad">
+                            <button class="cajaGris" name="resta uno al pedido" onclick="brrrRESTA"><i class="fas fa-minus"></i></button><input class="cajaGris" type="number" placeholder="1"><button class="cajaGris" name="suma uno al pedido" onclick="brrrSUMA"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button name="agregar al carrito" class="comprar" type="submit">COMPRAR</button>
+                      </div>
+                </form>
+            </div>
+        </section>
+        <section class="resumen">
+            <p>Reinventate con las nuevas <b>Zapatillas SARASA Estilo Vintage</b>. Cosas interesantes ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium recusandae asperiores reiciendis totam nisi incidunt sed voluptatum, fuga repellendus maiores doloribus magnam.
+            </p>
+            <div class="compartir-redes">
+                <p>Compartir producto</p>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+        
+        <section class="tecnologias">
+                <h2>TECNOLOGIAS</h2>
+                <input type="checkbox" name="" id="checkTecnologias">
+                <label class="cajaGris check-mas" for="checkTecnologias"><i class="fas fa-plus"></i></label>
+                <label class="cajaGris check-menos" for="checkTecnologias"><i class="fas fa-minus"></i></label>
+                <div>
+                    Cosas tecnologias, lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime blanditiis iure quisquam reprehenderit iusto autem libero dicta dolores minima itaque animi totam vel consequatur voluptas omnis, rerum odio, nostrum repellat.
+                    Eius, adipisci id. Nostrum voluptatem numquam ipsa eligendi provident atque quo veniam neque non cum incidunt quidem maiores voluptate esse earum consequuntur, facilis aliquid consectetur eos repudiandae corrupti accusantium. Officia!
+                    Quasi saepe minus sit earum nulla quos quaerat odit nemo, quam maiores quae ducimus laborum eos excepturi ut laudantium ex iusto sapiente soluta. Quisquam accusamus officiis corporis? Minus, accusamus ipsa.
+                </div>
+        </section>
+        <section class="descripcion-detallada">
+                <h2>DESCRIPCION DETALLADA</h2>
+                <input type="checkbox" name="" id="checkDesc">
+                <label class="cajaGris check-mas" for="checkDesc"><i class="fas fa-plus"></i></label>
+                <label class="cajaGris check-menos" for="checkDesc"><i class="fas fa-minus"></i></label>
+                <div>
+                    Items interesantes y detallados:
+                    <ul>
+                        <li>Nostrum voluptatem numquam ipsa eligendi provident atque quo veniam neque non cum incidunt</li>
+                        <li>Ipsum dolor sit amet</li>
+                        <li>Saepe minus sit earum nulla quos quaerat odit</li>
+                        <li>Quasi saepe</li>
+                        <li>Voluptatem numquam ipsa eligendi</li>
+                    </ul>
+                </div>
+        </section>
+        <section class="reseñas">
+                <h2>RESEÑAS</h2>
+                <input type="checkbox" name="" id="checkReseñas">
+                <label class="cajaGris check-mas" for="checkReseñas"><i class="fas fa-plus"></i></label>
+                <label class="cajaGris check-menos" for="checkReseñas"><i class="fas fa-minus"></i></label>
+                <FORM>
+                    <p>ESCRIBIR SU PROPIA RESEÑA</p>
+                    <div>
+                    <div class="selectorValoracion">
+                        <span>VALORACION</span>
+                        <input type="radio" name="valoracion" value="1" id="valoracion1">
+                        <input type="radio" name="valoracion" value="2" id="valoracion2">
+                        <input type="radio" name="valoracion" value="3" id="valoracion3">
+                        <input type="radio" name="valoracion" value="4" id="valoracion4">
+                        <input type="radio" name="valoracion" value="5" id="valoracion5">
+                        <label for="valoracion1"><i class="far fa-star"></i></label>
+                        <label for="valoracion2"><i class="far fa-star"></i></label>
+                        <label for="valoracion3"><i class="far fa-star"></i></label>
+                        <label for="valoracion4"><i class="far fa-star"></i></label>
+                        <label for="valoracion5"><i class="far fa-star"></i></label>
+                    </div>
+                    <div class="selectorDiseño">
+                        <span>DISEÑO</span>
+                        <input type="radio" name="diseño" value="1" id="diseño1">
+                        <input type="radio" name="diseño" value="2" id="diseño2">
+                        <input type="radio" name="diseño" value="3" id="diseño3">
+                        <input type="radio" name="diseño" value="4" id="diseño4">
+                        <input type="radio" name="diseño" value="5" id="diseño5">
+                        <label for="diseño1"><i class="far fa-star"></i></label>
+                        <label for="diseño2"><i class="far fa-star"></i></label>
+                        <label for="diseño3"><i class="far fa-star"></i></label>
+                        <label for="diseño4"><i class="far fa-star"></i></label>
+                        <label for="diseño5"><i class="far fa-star"></i></label>
+                    </div>
+                    <div class="selectorCalce">
+                        <span>CALCE</span>
+                        <input type="radio" name="calce" value="1" id="calce1">
+                        <input type="radio" name="calce" value="2" id="calce2">
+                        <input type="radio" name="calce" value="3" id="calce3">
+                        <input type="radio" name="calce" value="4" id="calce4">
+                        <input type="radio" name="calce" value="5" id="calce5">
+                        <label for="calce1"><i class="far fa-star"></i></label>
+                        <label for="calce2"><i class="far fa-star"></i></label>
+                        <label for="calce3"><i class="far fa-star"></i></label>
+                        <label for="calce4"><i class="far fa-star"></i></label>
+                        <label for="calce5"><i class="far fa-star"></i></label>
+                    </div>
+                    </div>
+                    <input type="text" placeholder="APODO" name="apodo">
+                    <input type="text" placeholder="RESUMEN DE SU RESEÑA" name="resumen-reseña">
+                    <textarea placeholder="RESEÑA" name="reseña"></textarea>
+                    <button name="enviar-reseña" type="submit">ENVIAR RESEÑA</button>
+                </FORM>
+        </section>
+        <section class="talles">
+                <h2>TALLES</h2>
+                <input type="checkbox" name="" id="checkTalles">
+                <label class="cajaGris check-mas" for="checkTalles"><i class="fas fa-plus"></i></label>
+                <label class="cajaGris check-menos" for="checkTalles"><i class="fas fa-minus"></i></label>
+            <div>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>USA</th>
+                        <th>ARG</th>
+                        <th>CM</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>8.5</td>
+                        <td>39</td>
+                        <td>25.5</td>
+                      </tr>
+                      <tr>
+                        <td>8.5</td>
+                        <td>39</td>
+                        <td>25.5</td>
+                      </tr>
+                      <tr>
+                        <td>8.5</td>
+                        <td>39</td>
+                        <td>25.5</td>
+                      </tr>
+                      <tr>
+                        <td>8.5</td>
+                        <td>39</td>
+                        <td>25.5</td>
+                      </tr>
+                      <tr>
+                        <td>8.5</td>
+                        <td>39</td>
+                        <td>25.5</td>
+                      </tr>
+                      <tr>
+                        <td>8.5</td>
+                        <td>39</td>
+                        <td>25.5</td>
+                      </tr>
+                      <tr>
+                        <td>8.5</td>
+                        <td>39</td>
+                        <td>25.5</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+        <section class="otros-productos">
+            <div class="titulo-seccion-otros-productos">
+                <h2>OTROS PRODUCTOS</h2>
+            </div>
+            <div>
+                <div class="tile-producto">
+                    UNO
+                </div>
+                <div class="tile-producto">
+                    DOS
+                </div>
+                <div class="tile-producto">
+                    TRES
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div>FOOTER COLUMNA1</div>
+        <div>FOOTER COLUMNA2</div>
+        <div>FOOTER COLUMNA3</div>
+    </footer>
+    
+</body>
+</html>

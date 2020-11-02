@@ -7,3 +7,7 @@ app.listen(3000,()=> console.log("servidor corriendo"))
 app.get("/",function(req,res){
     res.sendFile(path.join(__dirname,"./views/home.html"))
 })
+
+app.get("/detalleDeProducto",function(req,res){
+    res.sendFile(path.join(__dirname,"./views/detalleDeProducto.html"))
+})

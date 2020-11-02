@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+/*
+ESTILOS GENERALES PARA TODO EL DOCUMENTO-------------------------------------------------------------------------
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    font-family: 'Abel', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+a{
+    text-decoration: none;
+}
+
+.cajaGris{
+    border: 1px solid #C9C9C9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+main > * {
+    border-bottom: 1px solid #C9C9C9;
+}
+
+/*
+ESTILOS HEADER?-------------------------------------------------------------------------------------------------
+*/
+header {
+    height: 100px;
+    font-size: 36px;
+    background-color: #161616;
+    color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+ESTILOS MAIN----------------------------------------------------------------------------------------------------
+*/
+
+main > *{
+    padding: 0px 100px;
+}
+
+main .pathDeCategorias{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+}
+
+main .pathDeCategorias *{
+    display: inline;
+    color: #C9C9C9;
+}
+
+main .pathDeCategorias li:last-child a{
+    color: #161616;
+}
+
+main .mostrador{
+    height: 415px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+
+main .mostrador .selector-imagenes{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main .mostrador .selector-imagenes figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+main .mostrador .selector-imagenes figure:hover{
+    opacity: 0.5;
+}
+
+main .mostrador .imagen-principal{
+    width: 535px;
+    margin-left: 20px;
+    margin-right: 35px;
+}
+
+main .mostrador .imagen-principal figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C9C9C9;
+}
+
+main .mostrador .caja{
+    display: flex;
+    flex-direction: column;
+}
+
+main .mostrador .caja > *{
+    margin-bottom: 10px;
+}
+
+main .mostrador .precio{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+main .mostrador .reseñasLite{
+    margin-bottom: 25px;
+}
+
+main .mostrador .reseñasLite p{
+    font-size: 13px;
+    color: #777777;
+}
+
+main .mostrador .reseñasLite i{
+    font-size: 15px;
+    color: #DD2036;
+}
+
+main form > p{
+    font-size: 15px;
+    color: #161616;
+}
+
+main form > p a{
+    font-size: 15px;
+    color: #DD2036;
+}
+
+main form .selectorTalles{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+main form .selectorTalles span input{
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+
+main form .selectorTalles span label{
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+main form .selectorTalles span input:checked + label {
+    background-color: #161616;
+    color: #FAFAFA;
+}
+
+main form .cantidad-comprar{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main form .cantidad-comprar *{
+    height: 100%;
+}
+
+main form .cantidad-comprar > button{
+    margin-left: 15px;
+}
+
+main form .cantidad-comprar .cantidad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main form .cantidad-comprar .cantidad input{
+    width: 40px;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+}
+
+main form .cantidad-comprar .cantidad button{
+    width: 30px;
+    background-color: white;
+}
+
+main form .cantidad-comprar .cantidad button *{
+    color: #252525;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+main form .cantidad-comprar > button{
+    width: 115px;
+    background-color: #CD1626;
+    border: none;
+    color: #FAFAFA;
+    letter-spacing: 3px;
+    font-weight: bold;
+    
+}
+
+main .resumen {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+main .resumen .compartir-redes{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
+
+main .resumen .compartir-redes a{
+    display: flex;
+    justify-content: center;
+    color: #C9C9C9;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+main .resumen .compartir-redes a:hover{
+    color: #DD2036;
+}
+
+main .resumen .compartir-redes p{
+    letter-spacing: 1px;
+    color: #777777;
+}
+
+/* SECCION TECNOLOGIAS-----------------------------------------------------------------------------------------------------------------*/
+
+
+main .tecnologias{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .tecnologias h2{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .tecnologias input{
+    grid-column: 2;
+    grid-row: 1;
+    display: none;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .tecnologias label{
+    grid-column: 2;
+    grid-row: 1;
+    height: 35px;
+    width: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+main .tecnologias input:checked ~ .check-mas{
+    display: none;
+}
+
+main .tecnologias input:not(:checked) ~ .check-mas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .tecnologias input:checked ~ .check-menos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .tecnologias input:not(:checked) ~ .check-menos{
+    display: none;
+}
+
+main .tecnologias div{
+    grid-column: 1/3;
+    grid-row: 2;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+main .tecnologias input:not(:checked) ~ div{
+    display: none;
+}
+
+main .tecnologias input:checked ~ div{
+    display: block;
+}
+
+/* SECCION DESCRIPCION GENERAL -----------------------------------------------------------------------------------------------------------------*/
+
+main .descripcion-detallada{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .descripcion-detallada h2{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .descripcion-detallada input{
+    grid-column: 2;
+    grid-row: 1;
+    display: none;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .descripcion-detallada label{
+    grid-column: 2;
+    grid-row: 1;
+    height: 35px;
+    width: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+main .descripcion-detallada input:checked ~ .check-mas{
+    display: none;
+}
+
+main .descripcion-detallada input:not(:checked) ~ .check-mas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .descripcion-detallada input:checked ~ .check-menos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .descripcion-detallada input:not(:checked) ~ .check-menos{
+    display: none;
+}
+
+main .descripcion-detallada div{
+    grid-column: 1/3;
+    grid-row: 2;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+main .descripcion-detallada input:not(:checked) ~ div{
+    display: none;
+}
+
+main .descripcion-detallada input:checked ~ div{
+    display: block;
+}
+
+main .descripcion-detallada div ul{
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+
+
+/* SECCION RESEÑAS ---------------------------------------------------------------------------------------------------------------*/
+
+main .reseñas{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .reseñas h2{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .reseñas > input{
+    grid-column: 2;
+    grid-row: 1;
+    display: none;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .reseñas > label{
+    grid-column: 2;
+    grid-row: 1;
+    height: 35px;
+    width: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+main .reseñas input:checked ~ .check-mas{
+    display: none;
+}
+
+main .reseñas input:not(:checked) ~ .check-mas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .reseñas input:checked ~ .check-menos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .reseñas input:not(:checked) ~ .check-menos{
+    display: none;
+}
+
+main .reseñas form{
+    grid-column: 1/3;
+    grid-row: 2;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+main .reseñas input:not(:checked) ~ form{
+    display: none;
+}
+
+main .reseñas input:checked ~ form{
+    display: flex;
+    flex-direction: column;
+}
+
+main .reseñas form > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 80%;
+}
+
+main .reseñas form p{
+    margin-bottom: 10px;
+}
+
+main .reseñas form div div{
+    margin-bottom: 10px;
+}
+
+main .reseñas form div input{
+    display: none;
+}
+
+main .reseñas form label{
+    color: #777777;
+}
+
+
+main .reseñas form > input, main .reseñas form > textarea{
+    margin-right: 600px;
+    border: none;
+    border-bottom: 1px solid #CD1626;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+main .reseñas form > textarea{
+    height: 70px;
+    text-align: justify;
+    resize: none;
+}
+
+main .reseñas form > button{
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    color: #FAFAFA;
+    background-color: #CD1626;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+
+
+/* pinches estrellas ****************************************/
+
+main .reseñas .selectorValoracion input[value="1"]:checked ~ label[for="valoracion1"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorValoracion input[value="2"]:checked ~ label[for="valoracion1"],
+main .reseñas .selectorValoracion input[value="2"]:checked ~ label[for="valoracion2"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion1"],
+main .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion2"],
+main .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion3"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion1"],
+main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion2"],
+main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion3"],
+main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion4"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion1"],
+main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion2"],
+main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion3"],
+main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion4"],
+main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion5"]{
+    color: #DD2036;
+}
+
+/* pinches estrellas ****************************************/
+
+main .reseñas .selectorDiseño input[value="1"]:checked ~ label[for="diseño1"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorDiseño input[value="2"]:checked ~ label[for="diseño1"],
+main .reseñas .selectorDiseño input[value="2"]:checked ~ label[for="diseño2"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño1"],
+main .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño2"],
+main .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño3"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño1"],
+main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño2"],
+main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño3"],
+main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño4"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño1"],
+main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño2"],
+main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño3"],
+main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño4"],
+main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño5"]{
+    color: #DD2036;
+}
+
+/* pinches estrellas ****************************************/
+
+main .reseñas .selectorCalce input[value="1"]:checked ~ label[for="calce1"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorCalce input[value="2"]:checked ~ label[for="calce1"],
+main .reseñas .selectorCalce input[value="2"]:checked ~ label[for="calce2"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce1"],
+main .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce2"],
+main .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce3"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce1"],
+main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce2"],
+main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce3"],
+main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce4"]{
+    color: #DD2036;
+}
+
+main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce1"],
+main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce2"],
+main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce3"],
+main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce4"],
+main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce5"]{
+    color: #DD2036;
+}
+
+/* pinches estrellas END ****************************************/
+
+
+
+/* SECCION TALLES -----------------------------------------------------------------------------------------------------------------*/
+
+main .talles{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .talles h2{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main .talles input{
+    grid-column: 2;
+    grid-row: 1;
+    display: none;
+}
+
+
+/*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
+pero si no lo hago me quedan desalineados... */
+main .talles label{
+    grid-column: 2;
+    grid-row: 1;
+    height: 35px;
+    width: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+main .talles input:checked ~ .check-mas{
+    display: none;
+}
+
+main .talles input:not(:checked) ~ .check-mas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .talles input:checked ~ .check-menos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .talles input:not(:checked) ~ .check-menos{
+    display: none;
+}
+
+main .talles div{
+    grid-column: 1/3;
+    grid-row: 2;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+main .talles input:not(:checked) ~ div{
+    display: none;
+}
+
+main .talles input:checked ~ div{
+    display: block;
+}
+
+main .talles div table {
+    width: 100%;
+    border:none;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+main .talles div table tbody tr:nth-child(odd){
+    background-color: #C9C9C9;
+}
+
+
+
+/*
+ESTILOS FOOTER?-------------------------------------------------------------------------------------------------
+*/
+
+footer {
+    height: 100px;
+    font-size: 36px;
+    background-color: #161616;
+    color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
