@@ -747,6 +747,142 @@ main .talles div table tbody tr:nth-child(odd){
 }
 
 
+main .otros-productos{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    margin-top:18px;
+}
+
+
+main .otros-productos .titulo{
+    color: #6d6d6d;
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main .otros-productos .titulo h2{
+    background-color:white;
+    z-index: 2;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+main .otros-productos .titulo .linea{
+    position: absolute;
+    top: 50%;
+    display: block;
+    height:1px;
+    width:100%;
+    background-color: #C5C5C5;
+    z-index: 1;
+}
+
+main .otros-productos .botonera{
+    width: 35px;
+    margin-left: 5px;
+    color: #6d6d6d;
+    grid-column: 2;
+    grid-row: 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+main .otros-productos .botonera i:hover{
+    cursor:pointer;
+    color: #DD2036;
+}
+
+main .otros-productos .carrusel{
+    grid-column: 1/3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+main .otros-productos .carrusel .tile-producto{
+    width: 200px;
+    height: 325px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    transition: border 0.5s ease-in 0s;
+}
+
+main .otros-productos .carrusel .tile-producto:hover{
+    border: 1px solid #6d6d6d;
+}
+
+
+
+main .otros-productos .carrusel .tile-producto figure{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+main .otros-productos .carrusel .tile-producto .botoncitos{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #6d6d6d;
+}
+
+main .otros-productos .carrusel .tile-producto .botoncitos i{
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+main .otros-productos .carrusel .tile-producto .botoncitos i:hover{
+    cursor:pointer;
+    color: #DD2036;
+}
+
+main .otros-productos .carrusel .tile-producto p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+main .otros-productos .carrusel .tile-producto figure{
+    width: 100%;
+    height: 200px;
+}
+
+main .otros-productos .carrusel .tile-producto  button{
+    width: 135px;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #CD1626;
+    border: none;
+    color: #FAFAFA;
+    letter-spacing: 3px;
+    font-weight: bold;
+    cursor:pointer;
+    align-self: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+main .otros-productos .carrusel .tile-producto:hover button,
+main .otros-productos .carrusel .tile-producto:hover i{
+    opacity: 1;
+}
+
+
 
 /*
 ESTILOS FOOTER?-------------------------------------------------------------------------------------------------
