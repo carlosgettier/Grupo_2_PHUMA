@@ -53,6 +53,112 @@ main > * {
 /*
 ESTILOS HEADER?-------------------------------------------------------------------------------------------------
 */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #C9C9C9;
+}
+
+header a{
+    text-decoration: none;
+    color: #161616;
+}
+
+header .bold{
+    font-weight: bold;
+}
+
+header figure{
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header nav > *{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header nav > div{
+    margin-top: 15px; 
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+
+header nav > ul{
+    width: 700px;
+}
+
+
+header nav ul li{
+    margin-left: 10px;
+}
+
+header nav > div form{
+    width: 175px;
+    margin-left: 100px;
+    background-color: #ebedee;
+    border: 1px solid #ebedee;
+    transition: border 0.25s ease-in 0s;
+}
+
+header nav > div form:hover{
+    border: 1px solid #777777;
+}
+
+header nav > div form input{
+    width: 135px;
+    height: 30px;
+    border:none;
+    background-color: #ebedee;
+}
+
+
+
+header nav > div form button{
+    border:none;
+    background-color: #ebedee;
+}
+
+header nav > div ul{
+    width: 575px;
+}
+
+header nav > div i{
+    margin-left: 20px;
+}
+
+header nav > div i:hover{
+    cursor:pointer;
+    color: #DD2036;
+}
+
+
+
+
+/*
 header {
     height: 100px;
     font-size: 36px;
@@ -62,6 +168,7 @@ header {
     align-items: center;
     justify-content: center;
 }
+*/
 /*
 ESTILOS MAIN----------------------------------------------------------------------------------------------------
 */
@@ -887,7 +994,7 @@ main .otros-productos .carrusel .tile-producto:hover i{
 /*
 ESTILOS FOOTER?-------------------------------------------------------------------------------------------------
 */
-
+/*
 footer {
     height: 100px;
     font-size: 36px;
@@ -897,4 +1004,20 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+*/
+
+.listaFooter1 li{
+    text-align: center;
+    font-size: 19px;
+    margin-left: 20%;
+    display: inline;
+}
+
+footer img{
+    height: 100px;
+}
+
+footer p{
+    margin-top: 20px;
 }
