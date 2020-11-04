@@ -336,4 +336,94 @@ footer{
     border-radius: 10px;
     margin-left: 15px;
 }
+#h1nl{
+    font-weight: bold;
+     width: 100%;
+     margin: 0px;
+     padding-top: 20px;
+     font-weight: bold;
+     padding-left: 50px;
+     background-color: #b5b5b5;
+     color: black;
+ }
+ 
+ #pNl{
+     display: inline;
+     font-size: 20px;
+     padding-top: 0;
+     font-weight: bold;
+     padding-left: 150px;
+     
+ }
+ .formuNL{
+     
+     display: inline;
+ }
+ .formuNL input{
+     height: 45px;
+     display: inline;
+     width: 20%;
+     margin-left:5% ;
+ }
+ .enviarNL{
+     width: 10%;
+     font-size: 35;
+     height: 40px;
+     border-radius: 1px;
+     border: black 1px;
+     background: black;
+     display: inline;
+     margin-left: 5%;
+     color: white;
+     font-weight: bold;
+     letter-spacing: 0.5px;
+ }
+ 
+ .newsletter{
+     
+     background-color: #b5b5b5;
+     padding-bottom: 50px;
+ }
+ .listaFooter1 li{
+    
+    text-align: center;
+    font-size: 19px;
+    margin-left: 20%;
+    display: inline;
+}
+footer{
+    padding-top: 50px;
+}
+footer img{
+    height: 100px;
+}
+footer p{
+    margin-top: 35px;
+}
+.otrosProductos{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.otrosProductos article:hover{
+    border: 1px black solid;
+}
+
+.otrosProductos article{
+    background-color: #edeff0;
+    margin-left: 6px;
+}
+.otrosProductos article img{
+    margin: 40px;
+    height: 150px;
+}
+.otrosProductos div{
+    background-color: white;
+}
+
+
+
 
