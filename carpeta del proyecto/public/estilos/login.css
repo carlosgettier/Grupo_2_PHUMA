@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+    background-color: #ffffff;
+    
+}
+
+
+header{
+    width: 100%;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    
+    
+
+}
+.PromoHead{
+    text-align: center;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.PromoHead p{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    padding: 3px 2px;
+}
+.desplegableHead{
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: solid 1px rgb(180, 179, 179);
+    padding-bottom: 1px;
+    height: 20px;
+    align-items: center; 
+   
+  
+}
+.desplegableHead ul{
+    list-style: none;
+    
+}
+.desplegableHead ul li{
+    display: inline-block;
+    text-decoration: none;
+    
+    
+}
+
+.desplegableHead ul li a{
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+}
+img{
+    height: 60px;
+    width: 60px;
+}
+.logo ul{
+    list-style: none;
+
+}
+.navImg ul li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    justify-content: space-around;
+}
+.navImg ul li a{
+    
+    margin-right: 5px;
+    padding: 2px 1px;
+    left: -100px;
+    text-decoration: none;
+    color: rgb(31, 31, 31);
+    
+    
+    
+}
+.navImg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 2px black;  
+}
+.primero{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    height: 50px;
+        
+    
+}
+.primero ul{
+    padding: 3px;
+    
+}
+.navImg .primero .cajaimg{
+    position: relative;
+    
+
+}
+
+.segundo{
+    display: flex;
+    
+    width: 5%;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+.segundo a{
+    font-size: 20px;
+    color: black;
+
+}
+main{
+    box-sizing: border-box;
+    
+    margin-bottom: 5%;
+}
+
+main h1{
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    
+}
+.cuadro{
+    position: relative;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    
+    
+      
+}
+.cuadro a{
+    color: #000000;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cuadro button{
+    margin-top: 30px;
+}
+
+.cuadro input{
+    width: 50%;
+    
+    
+}
+.cuadro button{
+    width: 78%;
+    margin-bottom: 15px;
+     padding: 8px 120px;
+     border: solid 1px rgb(0, 0, 0);
+     background-color: black;
+     color: whitesmoke;
+
+}
+.cuadro label{
+    position: relative;
+    align-items: left;
+    
+    padding: 2px;
+}
+ 
+
+     
+ 
+
+ .formuNL input{
+     
+     display: inline;
+     
+     margin-left:5% ;
+ }
+
+ .formulario{
+     display: flex;
+     background-color: lightgreen;
+ }
+
+
+ .enviarNL{
+     width: 100%;
+     font-size: 35;
+     height: 35px;
+     border-radius: 1px;
+     border: black 1px;
+     background: black;
+     display: inline;
+     margin-left: 2%;
+     color: white;
+     font-weight: bold;
+     letter-spacing: 0.5px;
+ }
+ 
+ .newsletter{
+     display: flex;
+     flex-direction: row;
+     background-color: #b1b1b1;
+     padding-bottom: 10px;
+
+ }
+
+ .new1{
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+     align-items: flex-start;
+ }
+.new1 h1{
+    font-size:23px;
+    margin-left: 15px;
+    margin-bottom: 3px;
+}
+.new1 p{
+    margin-left: 15px;
+    margin-top: 2px;
+}
+.new2{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.newsletter input{
+    padding: 3px;
+    width: 300px;
+    height: 25px;
+    margin-top: 30px;
+   
+}
+.new2 button{
+    width:20%;
+    margin-top: 30px;
+    margin-right: 20px;
+
+
+
+}
+
+.new2 form{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+.imagen{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ .listaFooter1 li{
+     
+     text-align: center;
+     font-size: 19px;
+     margin-left: 20%;
+     display: inline;
+ }
+ .form-label{
+     
+     width: 77%;
+     margin-bottom: 5px;
+     font-family: "Roboto", sans-serif;
+     font-size: 15px;
+     
+     
+ }
+ .form-input{
+     margin-bottom: 15px;
+     padding: 8px 100px;
+     border: solid 1px grey;
+ }
+ .listaFooter1 li{
+    
+    text-align: center;
+    font-size: 19px;
+    margin-left: 20%;
+    display: inline;
+}
+#logo{
+    height: 100px;
+}
