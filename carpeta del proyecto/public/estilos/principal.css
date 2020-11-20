@@ -1,0 +1,279 @@
+@import "/estilos/carrito.css";
+@import "/estilos/detalleDeProducto.css";
+@import "/estilos/home.css";
+@import "/estilos/register.css";
+@import "/estilos/login.css";
+
+
+
+/*hesder*/
+.primerosLinks{
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+justify-content: flex-end;
+margin-right: 10px;
+}
+.primerosLinks li{
+    margin-left: 10px;
+    margin:  10px 5px;
+}
+.primerosLinks li a{
+    text-decoration: none;
+    color: #c4c4c4;
+   
+}
+.primerosLinks li a:hover{
+    color: black;
+}
+
+/* ACA EMPIEZA EL HEADER*/
+
+.navegacion{
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.navegacion ul{
+    display: flex;
+    list-style: none;
+}
+.navegacion ul li{
+
+    margin-right:55px;
+
+}
+ 
+
+
+.navegacion ul li a{
+    color: #8f8f8f;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+.navegacion ul li a:hover{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+
+.logo{
+    height: 70px;
+    width: 85px;
+    margin-left: 50px ;
+}
+
+/*BARRA DE BUSQUEDA*/
+
+.buscar{
+margin-right: 30px;
+    padding: 5px;
+}
+.buscar input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition:all 0.6 ease;
+}
+.boton{
+    border-radius: 50px;
+    background: silver;
+    height: 40px;
+    width: 38px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+
+}
+.boton:hover{
+    border-radius: 50px;
+    background: #eaeaea;
+    height: 40px;
+    width: 38px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+
+}
+.titulo{
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 55px;
+}
+.primerosLinks{
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+justify-content: flex-end;
+margin-right: 10px;
+}
+.primerosLinks li{
+    margin-left: 10px;
+    margin:  10px 5px;
+}
+.primerosLinks li a{
+    text-decoration: none;
+    color: #c4c4c4;
+   
+}
+.primerosLinks li a:hover{
+    color: black;
+}
+
+/* ACA EMPIEZA EL HEADER*/
+
+.navegacion{
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.navegacion ul{
+    display: flex;
+    list-style: none;
+}
+.navegacion ul li{
+
+    margin-right:55px;
+
+}
+ 
+
+
+.navegacion ul li a{
+    color: #8f8f8f;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+.navegacion ul li a:hover{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+
+.logo{
+    height: 70px;
+    width: 85px;
+    margin-left: 50px ;
+}
+
+/*BARRA DE BUSQUEDA*/
+
+.buscar{
+margin-right: 30px;
+    padding: 5px;
+}
+.buscar input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition:all 0.6 ease;
+}
+.boton{
+    border-radius: 50px;
+    background: silver;
+    height: 40px;
+    width: 38px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+
+}
+.boton:hover{
+    border-radius: 50px;
+    background: #eaeaea;
+    height: 40px;
+    width: 38px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+
+}
+.titulo{
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 55px;
+}
+
+/*footer*/
+#h1nl{
+   font-weight: bold;
+    width: 100%;
+    margin: 0px;
+    padding-top: 20px;
+    font-weight: bold;
+    padding-left: 50px;
+    background-color: #b5b5b5;
+    color: black;
+}
+
+#pNl{
+    display: inline;
+    font-size: 20px;
+    padding-top: 0;
+    font-weight: bold;
+    padding-left: 150px;
+    
+}
+.formuNL{
+    
+    display: inline;
+}
+.formuNL input{
+    height: 45px;
+    display: inline;
+    width: 20%;
+    margin-left:5% ;
+}
+.enviarNL{
+    width: 10%;
+    font-size: 35;
+    height: 40px;
+    border-radius: 1px;
+    border: black 1px;
+    background: black;
+    display: inline;
+    margin-left: 5%;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.newsletter{
+    
+    background-color: #b5b5b5;
+}
+.listaFooter1 li{
+    
+    text-align: center;
+    font-size: 19px;
+    margin-left: 20%;
+    display: inline;
+}

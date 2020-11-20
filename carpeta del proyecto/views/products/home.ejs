@@ -1,51 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/7ce21fa4dd.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./estilos/home.css">
-    <title>home</title>
-</head>
-<body>
-    <header> 
-      <div class="primera"> 
-        <img src="./imagenes/logo.png" alt="">
-        <ul>
-            <li>
-                <a href="">Crear cuenta</a>
-            </li>
-            <li>
-                <a href="">Iniciar sesion</a>
-             </li>
-        </ul>
-      </div>  
-      <div class="segundo">  
-          <ul>
-            <li>
-                <a href="">Inicio</a>
-            </li>
-            <li>
-                 <a href="">Mujeres</a>
-            </li>
-            <li>
-                <a href="">Niños</a>
-            </li>
-            <li>
-                <a href="">Hombres</a>
-            </li>
+<%- include ("../partials/head.ejs")%>
 
-           </ul>
-              <div class="tercero">
-                <input type="text" name="buscar" placeholder="Buscar">
-                <button type="submit"><i class="fas fa-search"></i></button>
-                    <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </div>
-         </div> 
-    </header>
-    
+<body>
+    <%- include("../partials/header.ejs") %>
     <main>
        <div class="container">
         <ul class="slider">

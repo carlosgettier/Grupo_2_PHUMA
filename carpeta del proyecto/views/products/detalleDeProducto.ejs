@@ -1,42 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AltaSHANTA</title>
-    <link rel="stylesheet" href="estilos/detalleDeProducto.css">
-    <script src="https://kit.fontawesome.com/cfadb59558.js" crossorigin="anonymous"></script>
-</head>
+    <%- include ("../partials/head.ejs")%>
 <body>
-    <header>
-        <figure><img src="/imagenes/logo.png" id="logo"></figure>
-        <nav>
-                <ul>
-                    <li><a href="#">ayuda</a></li>
-                    <li><a href="#">cambios y devoluciones</a></li>
-                    <li><a href="#">seguimiento de pedidos</a></li>
-                    <li><a href="#">suscribite al newsletter</a></li>
-                    <li><a href="#">creators club</a></li>
-                    <li><a href="#">iniciar sesión</a></li>
-                </ul>
-                <div>
-                    <ul>
-                        <li><a class="bold" href="#">HOMBRES</a></li>
-                        <li><a class="bold" href="#">MUJERES</a></li>
-                        <li><a class="bold" href="#">NIÑOS</a></li>
-                        <li><a href="#">DEPORTES</a></li>
-                        <li><a href="#">MARCAS</a></li>
-                        <li><a href="#">COLECCIONES</a></li>
-                    </ul>
-                    <form>
-                        <input type="text" name="busqueda" placeholder="Buscar">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-shopping-bag"></i>
-                </div>
-        </nav>
-    </header>
+    <%- include("../partials/header.ejs") %>
     <main>
         <nav class="pathDeCategorias">
             <un>

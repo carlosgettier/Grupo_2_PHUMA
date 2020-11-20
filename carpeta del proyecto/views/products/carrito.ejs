@@ -1,52 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos/carrito.css">
-    <title>Carrito de Compras</title>
-</head>
+    <%- include ("../partials/head.ejs")%>
 <body>
-    <header>
-        <nav class="primerosLinks">
-            <li>
-                <a href="#">Suscribete al Newsletter</a>
-            </li>
-            <li>
-                <a href="#">Iniciar Sesion</a>
-            </li>
-        </nav>
-        <hr style="color:#c4c4c4; margin-top: 20px;">
-
-        <div class="navegacion">
-            <img class="logo" src="imagenes/logo.png" alt="logo de Phuma">
-            <ul>
-                <li>
-                        <a href="#">Hombres</a>
-                </li>
-                <li>
-                    <a href="#">Mujeres</a>
-                </li>
-                <li>
-                    <a href="#">Niños</a>
-                </li>
-            </ul>
-
-            <nav class="buscar">
-                <form action="#">
-                <input type="text" placeholder="Buscar" required>
-                    <button type="submit" class="boton"> <i class="fas fa-search icon"></i></button>
-            </form>
-
-            </nav>
-        </div>
-        <hr>
-    </header>
+     <%- include("../partials/header.ejs") %>
     <main>
         <h1 class="titulo">TU CARRITO</h1>
 
-
+        
         <div class="main-container">
             <div class="productos">
                     <div class="producto-1">

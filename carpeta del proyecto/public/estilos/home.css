@@ -2,61 +2,6 @@ body{
     background-color: whitesmoke;
 }
 
-header{
-    width: 100%;
-    box-sizing: border-box;
-   
-    
-}
-header .primera{
-    padding:5px 15px 0px 15px;
-    border-bottom:solid 0.5px rgba(0, 0, 0,0.2);
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-header .primera ul{
-    list-style: none;
-    }
-header .primera ul li{
-display: inline;
-padding-left: 10px;
-}
-header .primera ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-header img{
-    height: 48px;
-    width: 14%;
-}
-body{
-    color: #000000;
-    font-family: "Roboto", sans-serif;
-}
-header .segundo{
-    padding:30px 15px 30px 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom:solid 0.5px rgba(0, 0, 0,0.2)
-}
-header.segundo ul{
-    list-style: none;
-   
-}
-header .segundo ul li{
-    display: inline;
-    padding-left: 10px;
-}
-header .segundo ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
 
 
 .tercero{
