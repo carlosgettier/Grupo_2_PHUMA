@@ -4,35 +4,35 @@
 ESTILOS GENERALES PARA TODO EL DOCUMENTO-------------------------------------------------------------------------
 */
 
-* {
+.detalleDeProducto * {
     margin: 0px;
     padding: 0px;
     box-sizing: content-box;
     font-family: 'Abel', sans-serif;
 }
 
-img {
+.detalleDeProducto img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-figure {
+.detalleDeProducto figure {
     width: 100%;
     height: 100%;
 }
 
-h1{
+.detalleDeProducto h1{
     font-size: 30px;
     letter-spacing: 3px;
     font-weight: lighter;
 }
 
-a{
+.detalleDeProducto a{
     text-decoration: none;
 }
 
-.cajaGris{
+.detalleDeProducto .cajaGris{
     border: 1px solid #C9C9C9;
     display: flex;
     flex-direction: row;
@@ -40,160 +40,42 @@ a{
     align-items: center;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+.detalleDeProducto input[type=number]::-webkit-inner-spin-button,
+.detalleDeProducto input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-main > * {
+.detalleDeProducto > * {
     border-bottom: 1px solid #C9C9C9;
 }
 
-/*
-ESTILOS HEADER?-------------------------------------------------------------------------------------------------
-*/
-
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-bottom: 1px solid #C9C9C9;
-}
-
-header a{
-    text-decoration: none;
-    color: #161616;
-}
-
-header .bold{
-    font-weight: bold;
-}
-
-header figure{
-    width: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-header nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-header nav > *{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-header nav > div{
-    margin-top: 15px; 
-}
-
-header nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    list-style-type: none;
-}
-
-header nav > ul{
-    width: 700px;
-}
-
-
-header nav ul li{
-    margin-left: 10px;
-}
-
-header nav > div form{
-    width: 175px;
-    margin-left: 100px;
-    background-color: #ebedee;
-    border: 1px solid #ebedee;
-    transition: border 0.25s ease-in 0s;
-}
-
-header nav > div form:hover{
-    border: 1px solid #777777;
-}
-
-header nav > div form input{
-    width: 135px;
-    height: 30px;
-    border:none;
-    background-color: #ebedee;
-}
-
-
-
-header nav > div form button{
-    border:none;
-    background-color: #ebedee;
-}
-
-header nav > div ul{
-    width: 575px;
-}
-
-header nav > div i{
-    margin-left: 20px;
-}
-
-header nav > div i:hover{
-    cursor:pointer;
-    color: #DD2036;
-}
-
-
-
 
 /*
-header {
-    height: 100px;
-    font-size: 36px;
-    background-color: #161616;
-    color: #FAFAFA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-*/
-/*
-ESTILOS MAIN----------------------------------------------------------------------------------------------------
+ESTILOS .detalleDeProducto----------------------------------------------------------------------------------------------------
 */
 
-main > *{
+.detalleDeProducto > *{
     padding: 0px 100px;
 }
 
-main .pathDeCategorias{
+.detalleDeProducto .pathDeCategorias{
     height: 55px;
     display: flex;
     align-items: center;
     border-bottom: none;
 }
 
-main .pathDeCategorias *{
+.detalleDeProducto .pathDeCategorias *{
     display: inline;
     color: #C9C9C9;
 }
 
-main .pathDeCategorias li:last-child a{
+.detalleDeProducto .pathDeCategorias li:last-child a{
     color: #161616;
 }
 
-main .mostrador{
+.detalleDeProducto .mostrador{
     height: 415px;
     display: flex;
     flex-direction: row;
@@ -201,89 +83,89 @@ main .mostrador{
 }
 
 
-main .mostrador .selector-imagenes{
+.detalleDeProducto .mostrador .selector-imagenes{
     width: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-main .mostrador .selector-imagenes figure{
+.detalleDeProducto .mostrador .selector-imagenes figure{
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-main .mostrador .selector-imagenes figure:hover{
+.detalleDeProducto .mostrador .selector-imagenes figure:hover{
     opacity: 0.5;
 }
 
-main .mostrador .imagen-principal{
+.detalleDeProducto .mostrador .imagen-principal{
     width: 535px;
     margin-left: 20px;
     margin-right: 35px;
 }
 
-main .mostrador .imagen-principal figure{
+.detalleDeProducto .mostrador .imagen-principal figure{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #C9C9C9;
 }
 
-main .mostrador .caja{
+.detalleDeProducto .mostrador .caja{
     display: flex;
     flex-direction: column;
 }
 
-main .mostrador .caja > *{
+.detalleDeProducto .mostrador .caja > *{
     margin-bottom: 10px;
 }
 
-main .mostrador .precio{
+.detalleDeProducto .mostrador .precio{
     font-weight: bolder;
     font-size: 30px;
 }
 
-main .mostrador .reseñasLite{
+.detalleDeProducto .mostrador .reseñasLite{
     margin-bottom: 25px;
 }
 
-main .mostrador .reseñasLite p{
+.detalleDeProducto .mostrador .reseñasLite p{
     font-size: 13px;
     color: #777777;
 }
 
-main .mostrador .reseñasLite i{
+.detalleDeProducto .mostrador .reseñasLite i{
     font-size: 15px;
     color: #DD2036;
 }
 
-main form > p{
+.detalleDeProducto form > p{
     font-size: 15px;
     color: #161616;
 }
 
-main form > p a{
+.detalleDeProducto form > p a{
     font-size: 15px;
     color: #DD2036;
 }
 
-main form .selectorTalles{
+.detalleDeProducto form .selectorTalles{
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
 }
 
-main form .selectorTalles span input{
+.detalleDeProducto form .selectorTalles span input{
     position: absolute;
     opacity: 0;
     height: 0px;
     width: 0px;
 }
 
-main form .selectorTalles span label{
+.detalleDeProducto form .selectorTalles span label{
     height: 40px;
     width: 40px;
     margin-top: 5px;
@@ -293,45 +175,45 @@ main form .selectorTalles span label{
     user-select: none;
 }
 
-main form .selectorTalles span input:checked + label {
+.detalleDeProducto form .selectorTalles span input:checked + label {
     background-color: #161616;
     color: #FAFAFA;
 }
 
-main form .cantidad-comprar{
+.detalleDeProducto form .cantidad-comprar{
     height: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-main form .cantidad-comprar *{
+.detalleDeProducto form .cantidad-comprar *{
     height: 100%;
 }
 
-main form .cantidad-comprar > button{
+.detalleDeProducto form .cantidad-comprar > button{
     margin-left: 15px;
 }
 
-main form .cantidad-comprar .cantidad{
+.detalleDeProducto form .cantidad-comprar .cantidad{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-main form .cantidad-comprar .cantidad input{
+.detalleDeProducto form .cantidad-comprar .cantidad input{
     width: 40px;
     text-align: center;
     border-left: none;
     border-right: none;
 }
 
-main form .cantidad-comprar .cantidad button{
+.detalleDeProducto form .cantidad-comprar .cantidad button{
     width: 30px;
     background-color: white;
 }
 
-main form .cantidad-comprar .cantidad button *{
+.detalleDeProducto form .cantidad-comprar .cantidad button *{
     color: #252525;
     display: flex;
     flex-direction: row;
@@ -339,24 +221,24 @@ main form .cantidad-comprar .cantidad button *{
     justify-content: center;
 }
 
-main form .cantidad-comprar > button{
+.detalleDeProducto form .cantidad-comprar > button{
     width: 115px;
     background-color: #CD1626;
     border: none;
     color: #FAFAFA;
     letter-spacing: 3px;
     font-weight: bold;
-    
+
 }
 
-main .resumen {
+.detalleDeProducto .resumen {
     padding-top: 30px;
     padding-bottom: 40px;
     display: flex;
     flex-direction: row;
 }
 
-main .resumen .compartir-redes{
+.detalleDeProducto .resumen .compartir-redes{
     width: 300px;
     display: flex;
     flex-direction: row;
@@ -365,7 +247,7 @@ main .resumen .compartir-redes{
     font-size: small;
 }
 
-main .resumen .compartir-redes a{
+.detalleDeProducto .resumen .compartir-redes a{
     display: flex;
     justify-content: center;
     color: #C9C9C9;
@@ -373,11 +255,11 @@ main .resumen .compartir-redes a{
     padding-left: 10px;
 }
 
-main .resumen .compartir-redes a:hover{
+.detalleDeProducto .resumen .compartir-redes a:hover{
     color: #DD2036;
 }
 
-main .resumen .compartir-redes p{
+.detalleDeProducto .resumen .compartir-redes p{
     letter-spacing: 1px;
     color: #777777;
 }
@@ -385,7 +267,7 @@ main .resumen .compartir-redes p{
 /* SECCION TECNOLOGIAS-----------------------------------------------------------------------------------------------------------------*/
 
 
-main .tecnologias{
+.detalleDeProducto .tecnologias{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
@@ -394,7 +276,7 @@ main .tecnologias{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .tecnologias h2{
+.detalleDeProducto .tecnologias h2{
     grid-column: 1;
     grid-row: 1;
     display: flex;
@@ -403,7 +285,7 @@ main .tecnologias h2{
     margin-bottom: 10px;
 }
 
-main .tecnologias input{
+.detalleDeProducto .tecnologias input{
     grid-column: 2;
     grid-row: 1;
     display: none;
@@ -412,7 +294,7 @@ main .tecnologias input{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .tecnologias label{
+.detalleDeProducto .tecnologias label{
     grid-column: 2;
     grid-row: 1;
     height: 35px;
@@ -422,27 +304,27 @@ main .tecnologias label{
 }
 
 
-main .tecnologias input:checked ~ .check-mas{
+.detalleDeProducto .tecnologias input:checked ~ .check-mas{
     display: none;
 }
 
-main .tecnologias input:not(:checked) ~ .check-mas{
+.detalleDeProducto .tecnologias input:not(:checked) ~ .check-mas{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .tecnologias input:checked ~ .check-menos{
+.detalleDeProducto .tecnologias input:checked ~ .check-menos{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .tecnologias input:not(:checked) ~ .check-menos{
+.detalleDeProducto .tecnologias input:not(:checked) ~ .check-menos{
     display: none;
 }
 
-main .tecnologias div{
+.detalleDeProducto .tecnologias div{
     grid-column: 1/3;
     grid-row: 2;
     display: none;
@@ -450,17 +332,17 @@ main .tecnologias div{
     padding-bottom: 30px;
 }
 
-main .tecnologias input:not(:checked) ~ div{
+.detalleDeProducto .tecnologias input:not(:checked) ~ div{
     display: none;
 }
 
-main .tecnologias input:checked ~ div{
+.detalleDeProducto .tecnologias input:checked ~ div{
     display: block;
 }
 
 /* SECCION DESCRIPCION GENERAL -----------------------------------------------------------------------------------------------------------------*/
 
-main .descripcion-detallada{
+.detalleDeProducto .descripcion-detallada{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
@@ -469,7 +351,7 @@ main .descripcion-detallada{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .descripcion-detallada h2{
+.detalleDeProducto .descripcion-detallada h2{
     grid-column: 1;
     grid-row: 1;
     display: flex;
@@ -478,7 +360,7 @@ main .descripcion-detallada h2{
     margin-bottom: 10px;
 }
 
-main .descripcion-detallada input{
+.detalleDeProducto .descripcion-detallada input{
     grid-column: 2;
     grid-row: 1;
     display: none;
@@ -487,7 +369,7 @@ main .descripcion-detallada input{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .descripcion-detallada label{
+.detalleDeProducto .descripcion-detallada label{
     grid-column: 2;
     grid-row: 1;
     height: 35px;
@@ -497,27 +379,27 @@ main .descripcion-detallada label{
 }
 
 
-main .descripcion-detallada input:checked ~ .check-mas{
+.detalleDeProducto .descripcion-detallada input:checked ~ .check-mas{
     display: none;
 }
 
-main .descripcion-detallada input:not(:checked) ~ .check-mas{
+.detalleDeProducto .descripcion-detallada input:not(:checked) ~ .check-mas{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .descripcion-detallada input:checked ~ .check-menos{
+.detalleDeProducto .descripcion-detallada input:checked ~ .check-menos{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .descripcion-detallada input:not(:checked) ~ .check-menos{
+.detalleDeProducto .descripcion-detallada input:not(:checked) ~ .check-menos{
     display: none;
 }
 
-main .descripcion-detallada div{
+.detalleDeProducto .descripcion-detallada div{
     grid-column: 1/3;
     grid-row: 2;
     display: none;
@@ -525,15 +407,15 @@ main .descripcion-detallada div{
     padding-bottom: 30px;
 }
 
-main .descripcion-detallada input:not(:checked) ~ div{
+.detalleDeProducto .descripcion-detallada input:not(:checked) ~ div{
     display: none;
 }
 
-main .descripcion-detallada input:checked ~ div{
+.detalleDeProducto .descripcion-detallada input:checked ~ div{
     display: block;
 }
 
-main .descripcion-detallada div ul{
+.detalleDeProducto .descripcion-detallada div ul{
     margin-top: 10px;
     margin-left: 25px;
 }
@@ -542,7 +424,7 @@ main .descripcion-detallada div ul{
 
 /* SECCION RESEÑAS ---------------------------------------------------------------------------------------------------------------*/
 
-main .reseñas{
+.detalleDeProducto .reseñas{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
@@ -551,7 +433,7 @@ main .reseñas{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .reseñas h2{
+.detalleDeProducto .reseñas h2{
     grid-column: 1;
     grid-row: 1;
     display: flex;
@@ -560,7 +442,7 @@ main .reseñas h2{
     margin-bottom: 10px;
 }
 
-main .reseñas > input{
+.detalleDeProducto .reseñas > input{
     grid-column: 2;
     grid-row: 1;
     display: none;
@@ -569,7 +451,7 @@ main .reseñas > input{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .reseñas > label{
+.detalleDeProducto .reseñas > label{
     grid-column: 2;
     grid-row: 1;
     height: 35px;
@@ -579,27 +461,27 @@ main .reseñas > label{
 }
 
 
-main .reseñas input:checked ~ .check-mas{
+.detalleDeProducto .reseñas input:checked ~ .check-mas{
     display: none;
 }
 
-main .reseñas input:not(:checked) ~ .check-mas{
+.detalleDeProducto .reseñas input:not(:checked) ~ .check-mas{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .reseñas input:checked ~ .check-menos{
+.detalleDeProducto .reseñas input:checked ~ .check-menos{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .reseñas input:not(:checked) ~ .check-menos{
+.detalleDeProducto .reseñas input:not(:checked) ~ .check-menos{
     display: none;
 }
 
-main .reseñas form{
+.detalleDeProducto .reseñas form{
     grid-column: 1/3;
     grid-row: 2;
     display: none;
@@ -607,40 +489,40 @@ main .reseñas form{
     padding-bottom: 30px;
 }
 
-main .reseñas input:not(:checked) ~ form{
+.detalleDeProducto .reseñas input:not(:checked) ~ form{
     display: none;
 }
 
-main .reseñas input:checked ~ form{
+.detalleDeProducto .reseñas input:checked ~ form{
     display: flex;
     flex-direction: column;
 }
 
-main .reseñas form > div{
+.detalleDeProducto .reseñas form > div{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding-right: 80%;
 }
 
-main .reseñas form p{
+.detalleDeProducto .reseñas form p{
     margin-bottom: 10px;
 }
 
-main .reseñas form div div{
+.detalleDeProducto .reseñas form div div{
     margin-bottom: 10px;
 }
 
-main .reseñas form div input{
+.detalleDeProducto .reseñas form div input{
     display: none;
 }
 
-main .reseñas form label{
+.detalleDeProducto .reseñas form label{
     color: #777777;
 }
 
 
-main .reseñas form > input, main .reseñas form > textarea{
+.detalleDeProducto .reseñas form > input, .detalleDeProducto .reseñas form > textarea{
     margin-right: 600px;
     border: none;
     border-bottom: 1px solid #CD1626;
@@ -648,13 +530,13 @@ main .reseñas form > input, main .reseñas form > textarea{
     margin-bottom: 30px;
 }
 
-main .reseñas form > textarea{
+.detalleDeProducto .reseñas form > textarea{
     height: 70px;
     text-align: justify;
     resize: none;
 }
 
-main .reseñas form > button{
+.detalleDeProducto .reseñas form > button{
     height: 40px;
     width: 150px;
     text-align: center;
@@ -669,97 +551,97 @@ main .reseñas form > button{
 
 /* pinches estrellas ****************************************/
 
-main .reseñas .selectorValoracion input[value="1"]:checked ~ label[for="valoracion1"]{
+.detalleDeProducto .reseñas .selectorValoracion input[value="1"]:checked ~ label[for="valoracion1"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorValoracion input[value="2"]:checked ~ label[for="valoracion1"],
-main .reseñas .selectorValoracion input[value="2"]:checked ~ label[for="valoracion2"]{
+.detalleDeProducto .reseñas .selectorValoracion input[value="2"]:checked ~ label[for="valoracion1"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="2"]:checked ~ label[for="valoracion2"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion1"],
-main .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion2"],
-main .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion3"]{
+.detalleDeProducto .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion1"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion2"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="3"]:checked ~ label[for="valoracion3"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion1"],
-main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion2"],
-main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion3"],
-main .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion4"]{
+.detalleDeProducto .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion1"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion2"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion3"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="4"]:checked ~ label[for="valoracion4"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion1"],
-main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion2"],
-main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion3"],
-main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion4"],
-main .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion5"]{
-    color: #DD2036;
-}
-
-/* pinches estrellas ****************************************/
-
-main .reseñas .selectorDiseño input[value="1"]:checked ~ label[for="diseño1"]{
-    color: #DD2036;
-}
-
-main .reseñas .selectorDiseño input[value="2"]:checked ~ label[for="diseño1"],
-main .reseñas .selectorDiseño input[value="2"]:checked ~ label[for="diseño2"]{
-    color: #DD2036;
-}
-
-main .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño1"],
-main .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño2"],
-main .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño3"]{
-    color: #DD2036;
-}
-
-main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño1"],
-main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño2"],
-main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño3"],
-main .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño4"]{
-    color: #DD2036;
-}
-
-main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño1"],
-main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño2"],
-main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño3"],
-main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño4"],
-main .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño5"]{
+.detalleDeProducto .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion1"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion2"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion3"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion4"],
+.detalleDeProducto .reseñas .selectorValoracion input[value="5"]:checked ~ label[for="valoracion5"]{
     color: #DD2036;
 }
 
 /* pinches estrellas ****************************************/
 
-main .reseñas .selectorCalce input[value="1"]:checked ~ label[for="calce1"]{
+.detalleDeProducto .reseñas .selectorDiseño input[value="1"]:checked ~ label[for="diseño1"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorCalce input[value="2"]:checked ~ label[for="calce1"],
-main .reseñas .selectorCalce input[value="2"]:checked ~ label[for="calce2"]{
+.detalleDeProducto .reseñas .selectorDiseño input[value="2"]:checked ~ label[for="diseño1"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="2"]:checked ~ label[for="diseño2"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce1"],
-main .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce2"],
-main .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce3"]{
+.detalleDeProducto .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño1"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño2"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="3"]:checked ~ label[for="diseño3"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce1"],
-main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce2"],
-main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce3"],
-main .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce4"]{
+.detalleDeProducto .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño1"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño2"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño3"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="4"]:checked ~ label[for="diseño4"]{
     color: #DD2036;
 }
 
-main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce1"],
-main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce2"],
-main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce3"],
-main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce4"],
-main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce5"]{
+.detalleDeProducto .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño1"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño2"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño3"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño4"],
+.detalleDeProducto .reseñas .selectorDiseño input[value="5"]:checked ~ label[for="diseño5"]{
+    color: #DD2036;
+}
+
+/* pinches estrellas ****************************************/
+
+.detalleDeProducto .reseñas .selectorCalce input[value="1"]:checked ~ label[for="calce1"]{
+    color: #DD2036;
+}
+
+.detalleDeProducto .reseñas .selectorCalce input[value="2"]:checked ~ label[for="calce1"],
+.detalleDeProducto .reseñas .selectorCalce input[value="2"]:checked ~ label[for="calce2"]{
+    color: #DD2036;
+}
+
+.detalleDeProducto .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce1"],
+.detalleDeProducto .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce2"],
+.detalleDeProducto .reseñas .selectorCalce input[value="3"]:checked ~ label[for="calce3"]{
+    color: #DD2036;
+}
+
+.detalleDeProducto .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce1"],
+.detalleDeProducto .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce2"],
+.detalleDeProducto .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce3"],
+.detalleDeProducto .reseñas .selectorCalce input[value="4"]:checked ~ label[for="calce4"]{
+    color: #DD2036;
+}
+
+.detalleDeProducto .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce1"],
+.detalleDeProducto .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce2"],
+.detalleDeProducto .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce3"],
+.detalleDeProducto .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce4"],
+.detalleDeProducto .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce5"]{
     color: #DD2036;
 }
 
@@ -769,7 +651,7 @@ main .reseñas .selectorCalce input[value="5"]:checked ~ label[for="calce5"]{
 
 /* SECCION TALLES -----------------------------------------------------------------------------------------------------------------*/
 
-main .talles{
+.detalleDeProducto .talles{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
@@ -778,7 +660,7 @@ main .talles{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .talles h2{
+.detalleDeProducto .talles h2{
     grid-column: 1;
     grid-row: 1;
     display: flex;
@@ -787,7 +669,7 @@ main .talles h2{
     margin-bottom: 10px;
 }
 
-main .talles input{
+.detalleDeProducto .talles input{
     grid-column: 2;
     grid-row: 1;
     display: none;
@@ -796,7 +678,7 @@ main .talles input{
 
 /*Esta parte esta medio gede, no deberia tener que poner los margenes en h2 y en label
 pero si no lo hago me quedan desalineados... */
-main .talles label{
+.detalleDeProducto .talles label{
     grid-column: 2;
     grid-row: 1;
     height: 35px;
@@ -806,27 +688,27 @@ main .talles label{
 }
 
 
-main .talles input:checked ~ .check-mas{
+.detalleDeProducto .talles input:checked ~ .check-mas{
     display: none;
 }
 
-main .talles input:not(:checked) ~ .check-mas{
+.detalleDeProducto .talles input:not(:checked) ~ .check-mas{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .talles input:checked ~ .check-menos{
+.detalleDeProducto .talles input:checked ~ .check-menos{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .talles input:not(:checked) ~ .check-menos{
+.detalleDeProducto .talles input:not(:checked) ~ .check-menos{
     display: none;
 }
 
-main .talles div{
+.detalleDeProducto .talles div{
     grid-column: 1/3;
     grid-row: 2;
     display: none;
@@ -834,27 +716,27 @@ main .talles div{
     padding-bottom: 30px;
 }
 
-main .talles input:not(:checked) ~ div{
+.detalleDeProducto .talles input:not(:checked) ~ div{
     display: none;
 }
 
-main .talles input:checked ~ div{
+.detalleDeProducto .talles input:checked ~ div{
     display: block;
 }
 
-main .talles div table {
+.detalleDeProducto .talles div table {
     width: 100%;
     border:none;
     border-collapse: collapse;
     text-align: center;
 }
 
-main .talles div table tbody tr:nth-child(odd){
+.detalleDeProducto .talles div table tbody tr:nth-child(odd){
     background-color: #C9C9C9;
 }
 
 
-main .otros-productos{
+.detalleDeProducto .otros-productos{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
@@ -862,7 +744,7 @@ main .otros-productos{
 }
 
 
-main .otros-productos .titulo{
+.detalleDeProducto .otros-productos .titulo{
     color: #6d6d6d;
     position: relative;
     grid-column: 1;
@@ -872,14 +754,14 @@ main .otros-productos .titulo{
     justify-content: center;
 }
 
-main .otros-productos .titulo h2{
+.detalleDeProducto .otros-productos .titulo h2{
     background-color:white;
     z-index: 2;
     padding-left:15px;
     padding-right:15px;
 }
 
-main .otros-productos .titulo .linea{
+.detalleDeProducto .otros-productos .titulo .linea{
     position: absolute;
     top: 50%;
     display: block;
@@ -889,7 +771,7 @@ main .otros-productos .titulo .linea{
     z-index: 1;
 }
 
-main .otros-productos .botonera{
+.detalleDeProducto .otros-productos .botonera{
     width: 35px;
     margin-left: 5px;
     color: #6d6d6d;
@@ -901,12 +783,12 @@ main .otros-productos .botonera{
     align-items:center;
 }
 
-main .otros-productos .botonera i:hover{
+.detalleDeProducto .otros-productos .botonera i:hover{
     cursor:pointer;
     color: #DD2036;
 }
 
-main .otros-productos .carrusel{
+.detalleDeProducto .otros-productos .carrusel{
     grid-column: 1/3;
     grid-row: 2;
     display: flex;
@@ -916,7 +798,7 @@ main .otros-productos .carrusel{
     padding-right: 100px;
 }
 
-main .otros-productos .carrusel .tile-producto{
+.detalleDeProducto .otros-productos .carrusel .tile-producto{
     width: 200px;
     height: 325px;
     margin-bottom: 25px;
@@ -928,19 +810,19 @@ main .otros-productos .carrusel .tile-producto{
     transition: border 0.5s ease-in 0s;
 }
 
-main .otros-productos .carrusel .tile-producto:hover{
+.detalleDeProducto .otros-productos .carrusel .tile-producto:hover{
     border: 1px solid #6d6d6d;
 }
 
 
 
-main .otros-productos .carrusel .tile-producto figure{
+.detalleDeProducto .otros-productos .carrusel .tile-producto figure{
     width: 100%;
     height: 200px;
     margin-bottom: 15px;
 }
 
-main .otros-productos .carrusel .tile-producto .botoncitos{
+.detalleDeProducto .otros-productos .carrusel .tile-producto .botoncitos{
     position: absolute;
     right: 5px;
     top: 5px;
@@ -949,27 +831,27 @@ main .otros-productos .carrusel .tile-producto .botoncitos{
     color: #6d6d6d;
 }
 
-main .otros-productos .carrusel .tile-producto .botoncitos i{
+.detalleDeProducto .otros-productos .carrusel .tile-producto .botoncitos i{
     opacity: 0;
     transition: opacity 0.3s ease-in 0s;
 }
 
-main .otros-productos .carrusel .tile-producto .botoncitos i:hover{
+.detalleDeProducto .otros-productos .carrusel .tile-producto .botoncitos i:hover{
     cursor:pointer;
     color: #DD2036;
 }
 
-main .otros-productos .carrusel .tile-producto p{
+.detalleDeProducto .otros-productos .carrusel .tile-producto p{
     margin-left: 5px;
     margin-right: 5px;
 }
 
-main .otros-productos .carrusel .tile-producto figure{
+.detalleDeProducto .otros-productos .carrusel .tile-producto figure{
     width: 100%;
     height: 200px;
 }
 
-main .otros-productos .carrusel .tile-producto  button{
+.detalleDeProducto .otros-productos .carrusel .tile-producto  button{
     width: 135px;
     height: 35px;
     margin-top: 20px;
@@ -984,40 +866,7 @@ main .otros-productos .carrusel .tile-producto  button{
     transition: opacity 0.3s ease-in 0s;
 }
 
-main .otros-productos .carrusel .tile-producto:hover button,
-main .otros-productos .carrusel .tile-producto:hover i{
+.detalleDeProducto .otros-productos .carrusel .tile-producto:hover button,
+.detalleDeProducto .otros-productos .carrusel .tile-producto:hover i{
     opacity: 1;
-}
-
-
-
-/*
-ESTILOS FOOTER?-------------------------------------------------------------------------------------------------
-*/
-/*
-footer {
-    height: 100px;
-    font-size: 36px;
-    background-color: #161616;
-    color: #FAFAFA;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-*/
-
-.listaFooter1 li{
-    text-align: center;
-    font-size: 19px;
-    margin-left: 20%;
-    display: inline;
-}
-
-footer img{
-    height: 100px;
-}
-
-footer p{
-    margin-top: 20px;
 }
