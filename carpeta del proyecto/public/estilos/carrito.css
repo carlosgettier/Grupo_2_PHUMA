@@ -6,6 +6,7 @@
 }
 body{
     font-family: 'Abel', sans-serif;
+    
 }
 
 /*PRIMERAS DOS ETIQUETAS A QUE SE ENCUENTRAN A LA DERECHA ARRIBA DEL TODO*/
@@ -23,7 +24,7 @@ body{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    width: 100%;
+    
     
 }
 .FCarrito .productos{
@@ -201,34 +202,20 @@ body{
 footer{
     background-color: #e4e4e4;
 }
-.otros-compraron{
-    font-weight: bolder;
-    font-size: 40px;
-    margin-left: 10%;
-    margin-top: 5%;
-}
-.productos-interes{
+.otrosProductos{
     margin-top: 100px;
     justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
-.otros-compraron .productos-interes img {
+.otrosProductos img {
     height: 150px;
     width: 150px;
-    border: 2px solid black;
     border-radius: 10px;
-    margin-left: 15px;
+    
 }
-.productos-interes img:hover{
-    height: 150px;
-    width: 150px;
-    background-color: grey;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-left: 15px;
-}
+
 #h1nl{
     font-weight: bold;
      width: 100%;
@@ -317,6 +304,442 @@ footer p{
     background-color: white;
 }
 
+/* MEDIA QUERIES */
 
 
+@media (max-width: 425px){
+    .FCarrito .titulo{
+        text-align: left;
+        font-family: 'Abel', sans-serif;
 
+    }
+    .FCarrito .main-container{
+    
+        padding: 10px;
+        margin-top: 300px;
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .FCarrito .main-container .productos{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        justify-content: center;
+        width: 100%;
+    }
+    .FCarrito .producto-1{
+        padding: 10px 20px 20px 10px;
+        margin-left: 3%;
+        margin-right: 10%;
+        height: 50vh;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #e4e4e4;
+        border-radius: 5px;
+
+}
+.FCarrito .producto-1 img{
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px white solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    height: 15vh;
+}
+    .FCarrito .producto-1 img:hover{
+        background-color: rgb(167, 167, 167);
+        padding: 10px;
+        border-radius: 10px;
+        border: 4px white solid;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 25px;
+        height: 15vh; 
+    }
+    .FCarrito .producto-1 h2{
+        font-size: 25px;
+    }
+    .FCarrito .producto-1 ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .FCarrito .producto-1 ul li{
+        display: inline;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    
+    
+    .FCarrito #cantidad{
+        background-color: black;
+        color: white;
+        margin:0px 20px 9px 0px;
+        border-radius: 15px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px black;
+        align-self: flex-end;
+        text-align: end;   
+    }
+    .FCarrito #cantidad:hover{
+        background-color: black;
+        color: white;
+        margin:0px 20px 9px 0px;
+        border-radius: 15px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px white;
+        align-self: flex-end;
+        text-align: end;   
+    }
+    .FCarrito #color{
+        background-color: black;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        margin:0px 20px 9px 0px;
+        border-radius: 15px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px black;
+        align-self: flex-end;
+        text-align: end; 
+    }
+    .FCarrito #color:hover{
+        background-color: black;
+        color: white;
+        margin:0px 20px 9px 0px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px white;
+        align-self: flex-end;
+        text-align: end; 
+    }
+    .FCarrito .resumen{
+        margin-top: 250px;
+        margin-left:6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        width: 100%;
+        background-color: #e4e4e4;
+        border-radius: 5px;
+    }
+    .FCarrito .resumen h2{
+        text-align: center;
+    }
+    .FCarrito .resumen ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+    .FCarrito .resumen p{text-align: center;}
+
+    .FCarrito #continuar{
+        background-color: black;
+        color: white;
+        border: whitesmoke 2px solid;
+        border-radius: 5px;
+        font-size: 35px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 10%;
+        margin-right: 15%;
+        height: 40px;
+        width: 80%;
+    }
+    .FCarrito #continuar:hover{
+        align-content: center;
+        background-color: #fafafa;
+        color: black;
+        border: black 2px solid;
+        border-radius: 5px;
+        font-size: 30px;
+        margin-top: 15px;
+        margin-left: 10%;
+        margin-right: 15%;
+        height: 40px;
+        width: 80%;
+    }
+    .FCarrito #continuar-2{
+        display: none;
+    }
+    .FCarrito .resumen ul li{
+        list-style: none;
+        
+    }
+    .FCarrito .resumen ul hr{
+        margin:15px 70px 15px 70px;
+    }
+    .FCarrito .opciones{
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        justify-content: left;
+        text-align: left;
+        margin-top: 35px;
+    }
+    .FCarrito .opciones ul li{
+        display: inline;
+    }
+    .FCarrito .mercadoPago{
+        height: 35px;
+        width: 35px;
+    }
+    .FCarrito .tarjetitas{
+        width: 130px;
+        height: 35px;
+    }
+
+    h1.titulo{
+        text-align: left;
+    }
+    .otrosProductos{
+        margin-top: 100px;
+        justify-content: right;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 50px;
+        font-size: 30px;
+        
+    }
+    .otrosProductos img {
+        height: 20vh;  
+        border-radius: 10px;
+        
+    }
+    
+ 
+}
+/*-----------------TABLET--------------------*/
+@media ( max-width:768px){
+    .FCarrito .titulo{
+        text-align: left;
+        font-family: 'Abel', sans-serif;
+
+    }
+    .FCarrito .main-container{
+    
+        padding: 10px;
+        margin-top: 300px;
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .FCarrito .main-container .productos{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    .FCarrito .producto-1{
+        padding: 10px 20px 20px 10px;
+        margin-left: 3%;
+        margin-right: 3%;
+        height: 50vh;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100vh;
+        background-color: #e4e4e4;
+        border-radius: 5px;
+
+}
+.FCarrito .producto-1 img{
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px white solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    height: 15vh;
+}
+    .FCarrito .producto-1 img:hover{
+        background-color: rgb(167, 167, 167);
+        padding: 10px;
+        border-radius: 10px;
+        border: 4px white solid;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 25px;
+        height: 15vh; 
+    }
+    .FCarrito .producto-1 h2{
+        font-size: 25px;
+    }
+    .FCarrito .producto-1 ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .FCarrito .producto-1 ul li{
+        display: inline;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .FCarrito #cantidad{
+        background-color: black;
+        color: white;
+        margin:0px 20px 9px 0px;
+        border-radius: 15px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px black;
+        align-self: flex-end;
+        text-align: end;   
+    }
+    .FCarrito #cantidad:hover{
+        background-color: black;
+        color: white;
+        margin:0px 20px 9px 0px;
+        border-radius: 15px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px white;
+        align-self: flex-end;
+        text-align: end;   
+    }
+    .FCarrito #color{
+        background-color: black;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        margin:0px 20px 9px 0px;
+        border-radius: 15px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px black;
+        align-self: flex-end;
+        text-align: end; 
+    }
+    .FCarrito #color:hover{
+        background-color: black;
+        color: white;
+        margin:0px 20px 9px 0px;
+        height: 25px;
+        width: 85px;
+        border: solid 2px white;
+        align-self: flex-end;
+        text-align: end; 
+    }
+    .FCarrito .resumen{
+        margin-top: 250px;
+        margin-left:3%;
+        margin-right: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        width: 100vh;
+        background-color: #e4e4e4;
+        border-radius: 5px;
+    }
+    .FCarrito .resumen h2{
+        text-align: center;
+    }
+    .FCarrito .resumen ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+    .FCarrito .resumen p{text-align: center;}
+
+    .FCarrito #continuar{
+        background-color: black;
+        color: white;
+        border: whitesmoke 2px solid;
+        border-radius: 5px;
+        font-size: 35px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 10%;
+        margin-right: 15%;
+        height: 40px;
+        width: 80%;
+    }
+    .FCarrito #continuar:hover{
+        align-content: center;
+        background-color: #fafafa;
+        color: black;
+        border: black 2px solid;
+        border-radius: 5px;
+        font-size: 30px;
+        margin-top: 15px;
+        margin-left: 10%;
+        margin-right: 15%;
+        height: 40px;
+        width: 80%;
+    }
+    .FCarrito #continuar-2{
+        display: none;
+    }
+    .FCarrito .resumen ul li{
+        list-style: none;
+        
+    }
+    .FCarrito .resumen ul hr{
+        margin:15px 70px 15px 70px;
+    }
+    .FCarrito .opciones{
+        display: block;
+       
+        font-weight: bold;
+        
+        margin-top: 35px;
+    }
+    .FCarrito .opciones ul li{
+        display: inline;
+    }
+    .FCarrito .mercadoPago{
+        height: 35px;
+        width: 35px;
+    }
+    .FCarrito .tarjetitas{
+        width: 130px;
+        height: 35px;
+    }
+
+    h1.titulo{
+        text-align: left;
+    }
+    .otrosProductos{
+        margin-top: 100px;
+        justify-content: right;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 50px;
+        font-size: 30px;
+        
+    }
+    .otrosProductos img {
+        height: 20vh;  
+        border-radius: 10px;
+        
+    }
+    
+}
+/*---------------------LAPTOP----------------------*/
