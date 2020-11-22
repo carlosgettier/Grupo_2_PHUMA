@@ -525,8 +525,8 @@ pero si no lo hago me quedan desalineados... */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 80%;
     background-color:white;
+    margin-right: auto;
 }
 
 
@@ -944,10 +944,6 @@ pero si no lo hago me quedan desalineados... */
         margin-bottom: 10px;
     }
 
-    .detalleDeProducto .reseñas form > div{
-        padding-right: 555px;
-    }
-
     .detalleDeProducto .carrusel .tile-producto:last-child{
         display:none;
     }
@@ -976,9 +972,6 @@ pero si no lo hago me quedan desalineados... */
     .detalleDeProducto .mostrador .imagen-principal figure{
         width: 410px
     }
-    .detalleDeProducto .reseñas form > div{
-        padding-right: 380px;
-    }
 
     .detalleDeProducto .otros-productos{
         display:none;
@@ -994,9 +987,6 @@ pero si no lo hago me quedan desalineados... */
     .detalleDeProducto .mostrador .imagen-principal figure{
         width: auto
     }
-    .detalleDeProducto .reseñas form > div{
-        padding-right: 220px;
-    }
 
     .detalleDeProducto .reseñas form > input, .detalleDeProducto .reseñas form > textarea{
         width: auto;
@@ -1006,6 +996,21 @@ pero si no lo hago me quedan desalineados... */
 @media (max-width: 425px){
     .detalleDeProducto > div > * {
         width: auto;
+        padding-right: 10px;
+        padding-left: 10px;
         background-color: orange;
     }
+
+    .detalleDeProducto .mostrador .selector-imagenes figure{
+        width: auto;
+    }
+
+    .detalleDeProducto .mostrador .selector-imagenes figure:last-child{
+        display:none;
+    }
+
+    .detalleDeProducto .mostrador .imagen-principal figure{
+        width: auto
+    }
+
 }
