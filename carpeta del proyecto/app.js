@@ -1,6 +1,8 @@
 const express= require("express")
 const app = express()
 const path = require("path");
+const productsRoutes = require(path.join(__dirname, 'routes','productsRoutes'))
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
@@ -24,3 +26,5 @@ app.get("/register",function(req,res){
 app.get("/login",function(req,res){
     res.render("users/login")
 })
+
+app.use('/products',productsRoutes);

@@ -1,0 +1,81 @@
+.partials-tile-de-producto{
+    width: 200px;
+    height: 325px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    transition: border 0.5s ease-in 0s;
+}
+
+.partials-tile-de-producto:hover{
+    border: 1px solid #6d6d6d;
+}
+
+
+
+.partials-tile-de-producto figure{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    background-color:#fafafa;
+}
+
+.partials-tile-de-producto figure img{
+    width: 200px;
+    margin-bottom: 15px;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.partials-tile-de-producto .botoncitos{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #6d6d6d;
+}
+
+.partials-tile-de-producto .botoncitos i{
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.partials-tile-de-producto .botoncitos i:hover{
+    cursor:pointer;
+    color: #DD2036;
+}
+
+.partials-tile-de-producto p{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.partials-tile-de-producto figure{
+    width: 100%;
+    height: 200px;
+}
+
+.partials-tile-de-producto  button{
+    width: 135px;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #CD1626;
+    border: none;
+    color: #FAFAFA;
+    letter-spacing: 3px;
+    font-weight: bold;
+    cursor:pointer;
+    align-self: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0s;
+}
+
+.partials-tile-de-producto:hover button,
+.partials-tile-de-producto:hover i{
+    opacity: 1;
+}

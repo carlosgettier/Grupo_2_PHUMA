@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../partials/head.ejs")%>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <h1>ALL PRODUCTOS</h1>
+        <% tilesDeProducto.forEach(producto =>{ %>
+            <%- include('../partials/tileDeProducto.ejs', {producto:producto}) %>
+        <% }) %>
+        
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
