@@ -3,8 +3,8 @@
 <%- include ("../partials/head.ejs")%>
 
 <body>
+    <main class="home">
     <%- include("../partials/header.ejs") %>
-    <main>
        <div class="container">
         <ul class="slider">
             <li id="slider1">
@@ -34,22 +34,22 @@
                 <a href="#slider4"></a>
             </li>
         </ul>
-    </div> 
-    <hr>
+     </div> 
+     <hr>
          <article class="productos">
             <div id="imagen1"> 
                <img src="./imagenes/mujer.jpg" alt="">
              <p><a href="">MUJER</a></p>
             </div>
-            <div id="imagen 2">
-            <img src="./imagenes/hombre.jpg" alt="">
+            <div id="imagen2">
+              <img src="./imagenes/hombre.jpg" alt="">
               <p><a href="">HOMBRE</a></p>
             </div> 
             <div id="imagen3"> 
-            <img src="./imagenes/NIÑO.jpg" alt="">
-             <p><a href="">NIÑO</a></p>
+              <img src="./imagenes/NIÑO.jpg" alt="">
+               <p><a href="">NIÑO</a></p>
             </div>
-        </article>
+         </article>
         <hr>
     <article id="hombres">
             <h3>ELEGIDOS POR HOMBRES</h3>
@@ -124,39 +124,6 @@
 
         </article>
     </main>
-    <div class="newsletter">
-         <div class="new1">
-            <h1>SUSCRIBITE A NUESTRO NEWSLETTER</h1>
-            <p>Recibí nuestras novedades y promociones</p>
-         </div>
-         <div class="new2">
-                 <form action="" > 
-                     <input type="text" placeholder="Nombre" >
-                     <input type="email" placeholder="Email" >
-                      <button type="submit">Enviar</button>
-                 </form>
-          </div>
-    </div>
-    <footer>
-        <div class="imagen">
-            <img src="./imagenes/logo.png" id="logo">
-        </div>
-        <div class="footer2">
-        <ul class="listaFooter1">
-            <li>Lorem</li>
-            <li>Ipsum </li>
-            <li>Dolor</li>
-        </ul>
-        
-        <ul class="listaFooter1">
-            <li>Lorem</li>
-            <li>Ipsum </li>
-            <li>Dolor</li>
-        </ul>
-        </div>
-        <div class="footer3">
-            <p style="text-align:center;">Copyright Phuma - 2020. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <%- include("../partials/footer.ejs") %>
 </body>
 </html>

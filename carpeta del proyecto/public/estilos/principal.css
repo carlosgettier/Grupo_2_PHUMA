@@ -141,9 +141,16 @@ margin-right: 10px;
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    box-sizing: content-box;
+    align-self: flex-start;
+    width: 100%;
     margin-top: 15px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap:nowrap;
+    
+}
+.navHeader{
+  
 }
 .navegacion ul{
     display: flex;
@@ -176,18 +183,24 @@ margin-right: 10px;
     height: 70px;
     width: 85px;
     margin-left: 50px ;
+    
 }
 
 /*BARRA DE BUSQUEDA*/
 
-.buscar{
-margin-right: 30px;
+.buscarheader{
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
     padding: 5px;
 }
-.buscar input{
-    width: 240px;
-    height: 40px;
-    padding: 0 20px;
+.formHeader{
+    display: flex;
+    align-items: center;
+}
+.buscarheader input{
+    width: 80%;
+    
     font-size: 18px;
     color: #000;
     outline: none;
@@ -198,8 +211,8 @@ margin-right: 30px;
 .boton{
     border-radius: 50px;
     background: silver;
-    height: 40px;
-    width: 38px;
+    height: 50%;
+    
     font-weight: bold;
     font-size: 18px;
     border: 2px solid black;
@@ -223,16 +236,13 @@ margin-right: 30px;
 }
 
 /*footer*/
-#h1nl{
-   font-weight: bold;
+.newsletter{
+    display: flex;
+    justify-content: space-around;
+   
     width: 100%;
-    margin: 0px;
-    padding-top: 20px;
-    font-weight: bold;
-    padding-left: 50px;
-    background-color: #b5b5b5;
-    color: black;
 }
+
 
 #pNl{
     display: inline;
@@ -242,38 +252,142 @@ margin-right: 30px;
     padding-left: 150px;
     
 }
-.formuNL{
+.footer1{
+  
+  display: flex;
+  flex-direction: column;
+}
+.formuNL2{
+    width: 49%;
+    display:flex;
+    align-items: center;
     
-    display: inline;
 }
-.formuNL input{
-    height: 45px;
+.formuNL2 input{
+    height: 45%;
     display: inline;
-    width: 20%;
-    margin-left:5% ;
+    width: 38%;
+    margin-left:3% ;
 }
-.enviarNL{
+.enviarNL2{
     width: 10%;
     font-size: 35;
-    height: 40px;
+    height: 45%;
     border-radius: 1px;
     border: black 1px;
     background: black;
-    display: inline;
     margin-left: 5%;
     color: white;
     font-weight: bold;
     letter-spacing: 0.5px;
 }
-
-.newsletter{
-    
-    background-color: #b5b5b5;
+.footer2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    padding-top: 0px;
+   
+   
 }
-.listaFooter1 li{
+.listaF{
+    display: flex;
+    justify-content: space-around;
     
-    text-align: center;
-    font-size: 19px;
-    margin-left: 20%;
-    display: inline;
+    width: 40%;
+}
+
+/* medias query del header*/
+ @media(max-width:768px){
+   
+     
+     .primerosLinks{
+          align-items: center;
+          display: flex;
+          list-style: none;
+          justify-content:center;
+          margin-right: 10px;
+    
+        }
+        .navegacion{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .buscarheader{
+            text-align: center;
+        }
+        .logo{
+            margin-left: 0px;
+        }
+        .newsletter{
+            display: flex;
+            flex-direction: column;
+             width: 100%;
+             align-items: center;
+        }
+        .enviarNL2{
+            width: 20%;
+        }
+}
+@media(max-width:425px){
+
+    .navHeader{
+        padding: 12px;
+        width: 100%;
+        
+    }
+    .formHeader{
+        margin-left: 50px;
+    }
+    .newsletter #h1nl2{
+        font-size: 23px;
+    }
+}
+
+
+/* medias queris del home*/
+
+@media(max-width:768px){
+
+       
+@media(max-width: 425px){
+    .home{
+        background-color: red;
+    }
+    .productos{
+        display: flex;
+        flex-direction: column;
+       align-content: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .home .container{
+            
+        background-color:white;
+        width: 95%;
+        padding: 10px;
+        height: 30%
+      }
+      .vistas{
+        display: flex;
+        flex-direction: column;
+    align-content: center;
+        padding-top: 15px;
+        width: 100%;
+    }
+     .elegidos{
+       width: 100%;
+   }
+   .productos #imagen1{
+    width: 90%;
+    }
+    .productos #imagen2{
+        width: 90%;
+        }
+    .productos #imagen3{
+            width: 90%;
+            
+    }
 }
