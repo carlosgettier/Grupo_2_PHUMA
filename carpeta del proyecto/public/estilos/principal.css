@@ -354,9 +354,8 @@ margin-right: 10px;
 
        
 @media(max-width: 425px){
-    .home{
-        background-color: red;
-    }
+    
+    
     .productos{
         display: flex;
         flex-direction: column;
