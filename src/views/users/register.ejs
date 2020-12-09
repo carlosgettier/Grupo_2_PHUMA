@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../partials/head.ejs")%>
+<body>
+    <%- include("../partials/header.ejs") %>
+    
+    <! -- FORMULARIO -->
+
+    <section>
+        <article><h1 class="titulo">CREAR CUENTA</h1></article>
+
+        <article>
+            <div>
+
+                <form action="" method="POST" enctype="multipart/form-data" class="formulario">
+               
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" name="name" id="name" autocomplete="off">
+                    
+                    <label for="">Imagen de perfil</label>
+                    <input id="avatar" type="file" name="avatar">
+                    
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email">
+
+                    <label for="contraseña">Contraseña</label><br>
+                    <input type="password" name="password" id="password" autocomplete="off">
+
+                    <label for="confirmarContraseña">Confirmar Contraseña</label><br>
+                    <input type="password" name="repassword" id="repassword" autocomplete="off">
+
+                    <button class="enviar">Crear Cuenta</button>
+
+                         
+                </form>
+            </div>
+
+        </article>
+
+    </section>
+    
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>
