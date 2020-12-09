@@ -12,8 +12,7 @@ proyecto integrador
 
 ## Tablero del proyecto
 
-El proyecto se gestiona desde - [PHUMA TRELLO](URL "https://trello.com/b/FUarmrFh/proyecto-phuma")
-
+El proyecto se gestiona desde - https://trello.com/b/FUarmrFh/proyecto-phuma
 
 
 ## Paginas de referencia
