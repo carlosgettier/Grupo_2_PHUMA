@@ -5,6 +5,7 @@
 @import "/estilos/login.css";
 @import "/estilos/productsAll.css";
 @import "/estilos/partials/tileDeProducto.css";
+@import"/estilos/addProduct.css";
 
 
 
@@ -136,7 +137,10 @@ margin-right: 10px;
 .primerosLinks li a:hover{
     color: black;
 }
-
+nav.buscarheader form a i{
+    font-size: 35px;
+    margin-left: 10px;
+}
 /* ACA EMPIEZA EL HEADER*/
 
 .navegacion{

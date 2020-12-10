@@ -14,5 +14,8 @@ module.exports = {
     },
     "detalle" : function (req,res){
         res.render("products/detalleDeProducto")
+    },
+    "add" : function (req,res){
+        res.render("products/addProduct")
     }
 }

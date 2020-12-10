@@ -13,7 +13,7 @@
 # Keep Doing:
 * Creemos que lo que deberiamos seguir haciendo con la misma frecuencia es estar en contacto mediante los diferentes medios de comunicacion que utilizamos hasta ahora, WhatsApp o Discord lo cual creemos que nos permite realizar todo de manera mas eficiente y cumplir con los tiempos de entrega de los Sprints.
 
-#RETROSPECTIVA PARTE 2
+# RETROSPECTIVA PARTE 2
 
 # Start Doing: 
 
@@ -35,3 +35,26 @@
 
 * Creemos que dejar de usar la herramienta Float y reemplazarla por flexbox seria la mejor idea y por otra parte dejar de realizar un html entero para cada pagina y en su lugar re-utilizar las plantillas dinamicas creadas con ejs.
 
+# RETROSPECTIVA PARTE 3
+
+# Start Doing :
+
+* Lo principal que creemos que deberiamos empezar a hacer es la utilizacion de rutas parametrizadas y la utilizacion de todas las carpetas vistas hasta la fecha para una mayor organizacion.
+
+* El uso de validators.
+
+* Empezar a usar Middlewares.
+
+# More Of :
+
+* Coincideramos que deberiamos fomentar mas el uso del tablero de trello.
+
+# Keep Doing :
+
+* Mantener el uso constande de ejs.
+
+* Mantener la constante comunicacion asi como lo venimos haciendo desde el comienzo del proyecto.
+
+# Stop Doing :
+
+* Dejar de poner todos los archivos del proyecto dentro de una carpeta separada para pasar a ponerlo en la raiz del proyecto, con esto conseguimos una mayor comodidad y el correcto uso de git ignore.
