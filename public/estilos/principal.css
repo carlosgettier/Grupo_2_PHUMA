@@ -33,6 +33,14 @@ margin-right: 10px;
 
 /* ACA EMPIEZA EL HEADER*/
 
+.saludo {
+    height: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+justify-content: flex-start
+}
+
 .navegacion{
     align-items: center;
     align-content: center;
