@@ -17,5 +17,8 @@ module.exports = {
     },
     "add" : function (req,res){
         res.render("products/addProduct")
+    },
+    "prueba": function (req, res){
+        res.send('prueba')
     }
 }
