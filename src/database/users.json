@@ -10,6 +10,12 @@
         "email": "pepe@hotmail.com",
         "avatar": "undefined-1607543885303.jpg",
         "password": "$2a$12$i7/NhJmIfJJjq5pGTleDC.cCNF9I8ittCSC2qpMmIZbXIbBV5JwyC"
+    },
+    {
+        "name": "admin",
+        "email": "admin@admin.com",
+        "avatar": "undefined-1607693851002.jpg",
+        "password": "$2a$12$XHMFiNviiDNI4yi1ZKZ5T.jhm0r.wZLdg8TF9MKKZRS/nwyiZmoAu"
     }
     
 ]

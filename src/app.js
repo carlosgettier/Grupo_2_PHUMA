@@ -4,8 +4,10 @@ const path = require("path");
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRoutes');
 const usersRouter = require('./routes/usersRouter');
+const session = require ('express-session')
+const sesionIniciadaMW = require('./middlewares/sessionIniciada');
 
-
+//De aplicaciòn
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
@@ -15,7 +17,10 @@ app.use(express.json())
 
 app.use(express.static(path.join(__dirname,"../public")))
 
+app.use(session({secret: 'chinguenguesha'}))
+app.use(sesionIniciadaMW);
 
+//De ruta
 app.use('/', mainRouter);
 
 app.use('/users', usersRouter);
