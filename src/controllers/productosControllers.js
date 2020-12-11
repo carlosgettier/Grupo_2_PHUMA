@@ -16,6 +16,6 @@ module.exports = {
         res.render("products/detalleDeProducto")
     },
     "add" : function (req,res){
-        res.render("products/addProduct")
-    }
+        res.render("products/addProduct")  
+    }//*****Test de push******
 }
