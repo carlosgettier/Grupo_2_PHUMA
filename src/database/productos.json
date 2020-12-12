@@ -1,10 +1,15 @@
 [
-    {"id":"1","nombre":"zapatilla 1", "descripcion":"desc 1","precio":"$10000","rutaALaImagen":"zapatilla1.jpg"},
-    {"id":"2","nombre":"zapatilla 2", "descripcion":"desc 2","precio":"$12000","rutaALaImagen":"zapatilla2.jpg"},
-    {"id":"3","nombre":"zapatilla 3", "descripcion":"desc 3","precio":"$5000","rutaALaImagen":"zapatilla3.jpg"},
-    {"id":"4","nombre":"zapatilla 4", "descripcion":"desc 4","precio":"$70000","rutaALaImagen":"zapatilla4.jpg"},
-    {"id":"5","nombre":"zapatilla 5", "descripcion":"desc 5","precio":"$10000","rutaALaImagen":"zapatilla1.jpg"},
-    {"id":"6","nombre":"zapatilla 6", "descripcion":"desc 6","precio":"$12000","rutaALaImagen":"zapatilla2.jpg"},
-    {"id":"7","nombre":"zapatilla 7", "descripcion":"desc 7","precio":"$5000","rutaALaImagen":"zapatilla3.jpg"},
-    {"id":"8","nombre":"zapatilla 8", "descripcion":"desc 8","precio":"$70000","rutaALaImagen":"zapatilla4.jpg"}
+    {"id":"1","nombre":"zapatilla 1", "descripcion":"desc 1","precio":"$10000","talles": [32, 33, 37, 56, 22, 11, 23, 44, 67],"rutaALaImagen":"zapatilla1.jpg","categoria":"zapatilla",
+        "tecnologias": "brabsadasd asddjsa pjpajsd adsdadpoasd poajsdpo japo djpoajdpoja spodj apojdspoapodj poajs dpoaj dposj aposjdpo ajsdpo japosdj poajsdpo ajsdpoj aposdj poajsdpo japosdj poasdj poajsdpo japosd jpoasdj poajsdpo "},
+    {"id":"2","nombre":"zapatilla 2", "descripcion":"desc 2","precio":"$12000","talles": [32, 33],"rutaALaImagen":"zapatilla2.jpg","categoria":"re que era una remera esto",
+        "tecnologias": "brabsadasd asddjsa pjpajsd adsdadpoasd poajsdpo japo djpoajdpoja spodj apojdspoapodj poajs dpoaj dposj aposjdpo ajsdpo japosdj poajsdpo ajsdpoj aposdj poajsdpo japosdj poasdj poajsdpo japosd jpoasdj poajsdpo "},
+    {"id":"3","nombre":"zapatilla 3", "descripcion":"desc 3","precio":"$5000","talles": [32, 33, 37],"rutaALaImagen":"zapatilla3.jpg","categoria":"zapatilla"},
+    {"id":"4","nombre":"zapatilla 4", "descripcion":"desc 4","precio":"$70000","talles": [32],"rutaALaImagen":"zapatilla4.jpg","categoria":"zapatilla"},
+    {"id":"5","nombre":"zapatilla 5", "descripcion":"desc 5","precio":"$10000","talles": [32, 33, 37],"rutaALaImagen":"zapatilla1.jpg","categoria":"zapatilla",
+        "tecnologias": "brabsadasd asddjsa pjpajsd adsdadpoasd poajsdpo japo djpoajdpoja spodj apojdspoapodj poajs dpoaj dposj aposjdpo ajsdpo japosdj poajsdpo ajsdpoj aposdj poajsdpo japosdj poasdj poajsdpo japosd jpoasdj poajsdpo "},
+    {"id":"6","nombre":"zapatilla 6", "descripcion":"desc 6","precio":"$12000","talles": [32, 33, 33, 56],"rutaALaImagen":"zapatilla2.jpg","categoria":"zapatilla"},
+    {"id":"7","nombre":"zapatilla 7", "descripcion":"desc 7","precio":"$5000","talles": [32, 33, 37, 21, 22],"rutaALaImagen":"zapatilla3.jpg","categoria":"zapatilla",
+        "tecnologias": "brabsadasd asddjsa pjpajsd adsdadpoasd poajsdpo japo djpoajdpoja spodj apojdspoapodj poajs dpoaj dposj aposjdpo ajsdpo japosdj poajsdpo ajsdpoj aposdj poajsdpo japosdj poasdj poajsdpo japosd jpoasdj poajsdpo "},
+    {"id":"8","nombre":"zapatilla 8", "descripcion":"desc 8","precio":"$70000","talles": [32, 33],"rutaALaImagen":"zapatilla4.jpg","categoria":"zapatilla",
+        "tecnologias": "brabsadasd asddjsa pjpajsd adsdadpoasd poajsdpo japo djpoajdpoja spodj apojdspoapodj poajs dpoaj dposj aposjdpo ajsdpo japosdj poajsdpo ajsdpoj aposdj poajsdpo japosdj poasdj poajsdpo japosd jpoasdj poajsdpo "}
 ]

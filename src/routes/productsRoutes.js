@@ -7,7 +7,7 @@ const productosControllers = require(path.join(__dirname,'..','controllers','pro
 router.get('/',productosControllers.all)
 
 router.get("/carrito", productosControllers.carrito)
-router.get("/detalleDeProducto", productosControllers.detalle)
+router.get("/detalleDeProducto/:id", productosControllers.detalle)
 router.get("/addProduct", productosControllers.add)
 
 

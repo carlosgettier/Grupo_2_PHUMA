@@ -16,12 +16,12 @@
     <div>
         <section class="mostrador">
             <div class="selector-imagenes">
-                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 1"></figure>
-                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 2"></figure>
-                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 3"></figure>
+                <figure><img src="/imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 1"></figure>
+                <figure><img src="/imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 2"></figure>
+                <figure><img src="/imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 3"></figure>
             </div>
             <div class="imagen-principal">
-                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="detalle de imagen seleccionada"></figure>
+                <figure><img src="/imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="detalle de imagen seleccionada"></figure>
             </div>
             <div class="caja">
                 <h1><%=producto.nombre%><br>
@@ -35,14 +35,16 @@
                 <form>
                     <p>TALLE | <a href="#"><i class="fas fa-tshirt"></i> VER TABLA DE TALLES</a></p>
                     <div class="selectorTalles">
-                        <%producto.talles.forEach(esteTalle => {%>
+                        <%
+                        if (producto.talles){
+                        producto.talles.forEach(esteTalle => {%>
                             <span>
                                 <input type="radio" name="talle" value="<%=esteTalle %>" id="talleChoice<%=esteTalle %>">
                                 <label class="cajaGris" for="talleChoice<%=esteTalle %>">
                                     <%=esteTalle%>
                                 </label>
                             </span>
-                        <%})%>
+                        <%})}%>
                       </div>
                       <div class="cantidad-comprar">
                         <div class="cantidad">
