@@ -37,6 +37,9 @@
     top: 5px;
     display: flex;
     flex-direction: column;
+}
+
+.partials-tile-de-producto .botoncitos a{
     color: #6d6d6d;
 }
 
