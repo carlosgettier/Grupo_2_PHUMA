@@ -7,27 +7,27 @@
         <div class="sin-borde">
         <nav class="pathDeCategorias">
             <un>
-                <li><a href="#">Incio</a></li>  <i class="fas fa-long-arrow-alt-right"></i>  
-                <li><a href="#">LifeStyles</a></li>  <i class="fas fa-long-arrow-alt-right"></i>  
-                <li><a href="#">Zapatilla Deportiva SARASA Vintage</a></li>
+                <li><a href="/">Incio</a></li>  <i class="fas fa-long-arrow-alt-right"></i>
+                <li><a href="#"><%=producto.categoria%></a></li>  <i class="fas fa-long-arrow-alt-right"></i> 
+                <li><a href="#"><%=producto.nombre%></a></li>
             </un>
         </nav>
     </div>
     <div>
         <section class="mostrador">
             <div class="selector-imagenes">
-                <figure><img src="../imagenes/productoimagen1.jpg" alt="imagen secundaria 1"></figure>
-                <figure><img src="../imagenes/productoimagen2.jpg" alt="imagen secundaria 2"></figure>
-                <figure><img src="../imagenes/productoimagen4OTRASDIMENSIONES.jpg" alt="imagen secundaria 3"></figure>
+                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 1"></figure>
+                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 2"></figure>
+                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="imagen secundaria 3"></figure>
             </div>
             <div class="imagen-principal">
-                <figure><img src="../imagenes/productoimagen1.jpg" alt="detalle de imagen seleccionada"></figure>
+                <figure><img src="../imagenesProductosDatabase/<%=producto.rutaALaImagen%>" alt="detalle de imagen seleccionada"></figure>
             </div>
             <div class="caja">
-                <h1>Zapatilla Deportivas SARASA<br>
-                    Estilo Vintage
+                <h1><%=producto.nombre%><br>
+                    <%=producto.categoria%>
                 </h1>
-                <p class="precio">$13.000,00</p>
+                <p class="precio"><%=producto.precio%></p>
                 <div class="reseñasLite">
                     <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
                     <p>11 Reseñas</p>
@@ -35,11 +35,14 @@
                 <form>
                     <p>TALLE | <a href="#"><i class="fas fa-tshirt"></i> VER TABLA DE TALLES</a></p>
                     <div class="selectorTalles">
-                        <span><input type="radio" name="talle" value="39" id="talleChoice39"><label class="cajaGris" for="talleChoice39">39</label></span>
-                        <span><input type="radio" name="talle" value="40" id="talleChoice40"><label class="cajaGris" for="talleChoice40">40</label></span>
-                        <span><input type="radio" name="talle" value="41" id="talleChoice41"><label class="cajaGris" for="talleChoice41">41</label></span>
-                        <span><input type="radio" name="talle" value="42" id="talleChoice42"><label class="cajaGris" for="talleChoice42">42</label></span>
-                        <span><input type="radio" name="talle" value="43" id="talleChoice43"><label class="cajaGris" for="talleChoice43">43</label></span>
+                        <%producto.talles.forEach(esteTalle => {%>
+                            <span>
+                                <input type="radio" name="talle" value="<%=esteTalle %>" id="talleChoice<%=esteTalle %>">
+                                <label class="cajaGris" for="talleChoice<%=esteTalle %>">
+                                    <%=esteTalle%>
+                                </label>
+                            </span>
+                        <%})%>
                       </div>
                       <div class="cantidad-comprar">
                         <div class="cantidad">
@@ -53,8 +56,7 @@
     </div>
     <div>
         <section class="resumen">
-            <p>Reinventate con las nuevas <b>Zapatillas SARASA Estilo Vintage</b>. Cosas interesantes ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium recusandae asperiores reiciendis totam nisi incidunt sed voluptatum, fuga repellendus maiores doloribus magnam.
-            </p>
+            <p><%=producto.descripcion%></p>
             <div class="compartir-redes">
                 <p>Compartir producto</p>
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -62,6 +64,7 @@
             </div>
         </section>
     </div>
+    <%if(producto.tecnologias){%>
     <div>
         <section class="tecnologias">
                 <h2>TECNOLOGIAS</h2>
@@ -69,12 +72,12 @@
                 <label class="cajaGris check-mas" for="checkTecnologias"><i class="fas fa-plus"></i></label>
                 <label class="cajaGris check-menos" for="checkTecnologias"><i class="fas fa-minus"></i></label>
                 <div>
-                    Cosas tecnologias, lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime blanditiis iure quisquam reprehenderit iusto autem libero dicta dolores minima itaque animi totam vel consequatur voluptas omnis, rerum odio, nostrum repellat.
-                    Eius, adipisci id. Nostrum voluptatem numquam ipsa eligendi provident atque quo veniam neque non cum incidunt quidem maiores voluptate esse earum consequuntur, facilis aliquid consectetur eos repudiandae corrupti accusantium. Officia!
-                    Quasi saepe minus sit earum nulla quos quaerat odit nemo, quam maiores quae ducimus laborum eos excepturi ut laudantium ex iusto sapiente soluta. Quisquam accusamus officiis corporis? Minus, accusamus ipsa.
+                    <%=producto.tecnologias%>
                 </div>
         </section>
     </div>
+    <%}%>
+    <%if(producto.descripcionDetallada){%>
     <div>
         <section class="descripcion-detallada">
                 <h2>DESCRIPCION DETALLADA</h2>
@@ -82,7 +85,7 @@
                 <label class="cajaGris check-mas" for="checkDesc"><i class="fas fa-plus"></i></label>
                 <label class="cajaGris check-menos" for="checkDesc"><i class="fas fa-minus"></i></label>
                 <div>
-                    Items interesantes y detallados:
+                    Items interesantes y detallados hardcodeados:
                     <ul>
                         <li>Nostrum voluptatem numquam ipsa eligendi provident atque quo veniam neque non cum incidunt</li>
                         <li>Ipsum dolor sit amet</li>
@@ -93,6 +96,7 @@
                 </div>
         </section>
     </div>
+    <%}%>
     <div>
         <section class="reseñas">
                 <h2>RESEÑAS</h2>
@@ -216,36 +220,9 @@
                     <i class="fas fa-arrow-alt-circle-right"></i>
             </div>
             <div class="carrusel">
-                <div class="tile-producto">
-                    <figure><img src="../imagenes/otroProducto.jpg" alt="imagen tile"></figure>
-                    <p>Otra Zapatilla Copada</p>
-                    <p><b>$7800</b></p>
-                    <button>COMPRAR ></button>
-                    <div class="botoncitos">
-                        <i class="far fa-heart"></i>
-                        <i class="far fa-eye"></i>
-                    </div>
-                </div>
-                <div class="tile-producto">
-                    <figure><img src="../imagenes/productoimagen4OTRASDIMENSIONES.jpg" alt="imagen tile"></figure>
-                    <p>Un Gate</p>
-                    <p><b>$ADOPTAR$</b></p>
-                    <button>COMPRAR ></button>
-                    <div class="botoncitos">
-                        <i class="far fa-heart"></i>
-                        <i class="far fa-eye"></i>
-                    </div>
-                </div>
-                <div class="tile-producto">
-                    <figure><img src="../imagenes/otroProducto.jpg" alt="imagen tile"></figure>
-                    <p>Otra Zapatilla Copada</p>
-                    <p><b>$7800</b></p>
-                    <button>COMPRAR ></button>
-                    <div class="botoncitos">
-                        <i class="far fa-heart"></i>
-                        <i class="far fa-eye"></i>
-                    </div>
-                </div>
+                <% tilesDeProducto.forEach(esteProducto =>{ %>
+                    <%- include('../partials/tileDeProducto.ejs',{producto:esteProducto}) %>
+                <% }) %>
             </div>
         </section>
     </div>
