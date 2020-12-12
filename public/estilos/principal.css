@@ -17,10 +17,26 @@
     list-style: none;
 justify-content: flex-end;
 margin-right: 10px;
+    flex-direction: column;
+    
 }
+.primerosLinks h1 {
+    background-color: #c5c5c5;
+    width: 100%;
+    margin-top: 0%;
+}
+
+.userIngreso {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    
+}
+
 .primerosLinks li{
     margin-left: 10px;
     margin:  10px 5px;
+    
 }
 .primerosLinks li a{
     text-decoration: none;
@@ -45,7 +61,7 @@ justify-content: flex-start
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    margin-top: 15px;
+    
     display: flex;
     flex-wrap: nowrap;
 }
@@ -158,7 +174,7 @@ nav.buscarheader form a i{
     box-sizing: content-box;
     align-self: flex-start;
     width: 100%;
-    margin-top: 15px;
+    
     display: flex;
     flex-wrap:nowrap;
     

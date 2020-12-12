@@ -1,17 +1,26 @@
 <header>
-   
-    <nav class="primerosLinks">
-               
+  
+        <nav class="primerosLinks">
+        <div class="userIngreso">
+        <% if (typeof hayUsuario != 'undefined') { %>
+            <li>
+                <a href="/users/logout">logout</a>
+            </li>
+        </div>
+        <h1>Bienveni@ <%= hayUsuario.name %></h1>
     
+   <% } else { %> 
+        <div class="userIngreso">   
             <li>
                 <a href="/users/register">Registrate</a>
             </li>
             <li>
                 <a href="/users/login">Iniciar Sesion</a>
             </li>
+        </div>         
         </nav>
-
-    <hr style="color:#c4c4c4; margin-top: 20px;">
+    <% } %>
+    <hr style="color:#c4c4c4; margin-top: 5px;">
 
     <div class="navegacion">
        <a href="/"> <img class="logo" src="../imagenes/logo-phuma.png" alt="logo de Phuma"></a>
