@@ -16,6 +16,11 @@
         "email": "admin@admin.com",
         "avatar": "undefined-1607693851002.jpg",
         "password": "$2a$12$XHMFiNviiDNI4yi1ZKZ5T.jhm0r.wZLdg8TF9MKKZRS/nwyiZmoAu"
+    },
+    {
+        "name": "sebastian",
+        "email": "sebastian@sebastian.com",
+        "avatar": "undefined-1607780029001.jpg",
+        "password": "$2a$12$HPezM6LmyokG.xk825WL/.Gn81rgT7Q/LAOkikHyNXiuXPXnUpdwK"
     }
-    
 ]
