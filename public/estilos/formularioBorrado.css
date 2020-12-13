@@ -1,0 +1,17 @@
+.formularioBorrado form {
+    margin-top:25px;
+}
+
+.formularioBorrado form * {
+    margin-top: 7px;
+}
+
+.formularioBorrado form button {
+    margin-top: 45px;
+}
+
+.formularioBorrado form button:hover {
+    cursor:pointer;
+    background-color: #DD2036;
+    border-color: #DD2036;
+}

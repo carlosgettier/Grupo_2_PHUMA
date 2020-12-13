@@ -6,6 +6,7 @@ const productsRouter = require('./routes/productsRoutes');
 const usersRouter = require('./routes/usersRouter');
 const session = require ('express-session')
 const sesionIniciadaMW = require('./middlewares/sessionIniciada');
+const methodOverride = require ('method-override');
 
 //De aplicaciòn
 
@@ -19,6 +20,8 @@ app.use(express.static(path.join(__dirname,"../public")))
 
 app.use(session({secret: 'chinguenguesha'}))
 app.use(sesionIniciadaMW);
+
+app.use(methodOverride('_method'));
 
 //De ruta
 app.use('/', mainRouter);

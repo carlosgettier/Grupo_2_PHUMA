@@ -31,10 +31,19 @@
     object-fit: contain;
 }
 
-.partials-tile-de-producto .botoncitos{
+.partials-tile-de-producto .flotar-derecha{
     position: absolute;
     right: 5px;
     top: 5px;
+}
+
+.partials-tile-de-producto .flotar-izquierda{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.partials-tile-de-producto .botoncitos{
     display: flex;
     flex-direction: column;
 }

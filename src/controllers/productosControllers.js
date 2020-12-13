@@ -7,16 +7,17 @@ databaseProducts = JSON.parse(databaseProducts);
 
 let dataBase = {
 
+    rutaAlArchivo: path.join(__dirname, '..', 'database', 'productos.json'),
+
     allProducts () {
 
-        let databaseProducts = fs.readFileSync(path.join(__dirname, '..', 'database', 'productos.json'));
+        let databaseProducts = fs.readFileSync(this.rutaAlArchivo);
 
         databaseProducts = JSON.parse(databaseProducts);
 
         return databaseProducts;
 
     },
-
 
     productById (id){
 
@@ -43,6 +44,11 @@ let dataBase = {
         }
 
         return productosSeleccionados
+    },
+
+    borrarProductById (id){
+        let arrayProductoBorrado= this.allProducts().filter(esteProducto => esteProducto.id != id)
+        fs.writeFileSync(this.rutaAlArchivo, JSON.stringify(arrayProductoBorrado, null, 4))
     }
 }
 
@@ -72,8 +78,7 @@ module.exports = {
             return res.render("products/detalleDeProducto", { producto: dataBase.productById(id), tilesDeProducto: dataBase.arrayRandomTiles('3') })
         } else {
             return res.send(dataBase.productById(id).error)
-        }
-        
+        } 
     },
 
 
@@ -96,7 +101,19 @@ module.exports = {
         fs.writeFileSync(path.join(__dirname, '../database/productos.json'), JSON.stringify(databaseProducts, null, 4));
         res.redirect('/')
         //let errors = validationResult(req);
-        
-        
     },
+
+    "confirmDelete": function (req, res){
+        let id = req.params.id
+        if (!dataBase.productById(id).error){
+            return res.render("products/formularioBorradoProducto", {producto: dataBase.productById(id)})
+        } else {
+            return res.send(dataBase.productById(id).error)
+        }
+    },
+
+    "deleteId": function (req, res){
+        dataBase.borrarProductById(req.params.id)
+        res.redirect('/products/')
+    }
 }

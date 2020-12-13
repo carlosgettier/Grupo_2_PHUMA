@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../partials/head.ejs")%>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main class= 'formularioBorrado'>
+        <h2 class="titulo">Datos del producto a borrar</h2>
+                <form action="/products/<%=producto.id%>?_method=DELETE" method="POST" class="formulario">
+                    <div>
+                        <label for="id">Identificador Unico: </label>
+                        <span id="id" ><%=producto.id%></span>
+                    </div>
+                    <div>
+                        <label for="nombre">Nombre: </label>
+                        <span id="nombre" ><%=producto.nombre%></span>
+                    </div>
+                    <div>
+                        <label for="description"> Descripción: </label>
+                        <span id="description" ><%=producto.description%></span>
+                    </div>
+                    <div>
+                        <label for="category">Categoría: </label>
+                        <span id="category" ><%=producto.categoria%></span>
+                    </div>
+                    <div>
+                        <label for="talle">Talles disponibles: </label>
+                        <span id="talle" ><%=producto.talle%></span>
+                    </div>
+                    <div>
+                        <label for="precio">Precio: </label>
+                        <span id="precio" ><%=producto.precio%></span>
+                    </div>
+                    <button class="enviar">CONFIRMAR BORRADO DE PRODUCTO</button>
+                </form>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>
