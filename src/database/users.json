@@ -1,11 +1,5 @@
 [
     {
-        "name": "asdasdasd",
-        "email": "facunpagani@hotmail.com",
-        "avatar": "undefined-1607543690134.jpg",
-        "password": "$2a$12$svbo9Ufn5rNDE15RsJlB8ekIAUV4ld.9xXzb9L1.Sr5Nca.avIHPW"
-    },
-    {
         "name": "pepe",
         "email": "pepe@hotmail.com",
         "avatar": "undefined-1607543885303.jpg",
@@ -22,5 +16,11 @@
         "email": "sebastian@sebastian.com",
         "avatar": "undefined-1607780029001.jpg",
         "password": "$2a$12$HPezM6LmyokG.xk825WL/.Gn81rgT7Q/LAOkikHyNXiuXPXnUpdwK"
+    },
+    {
+        "name": "facundo",
+        "email": "facunpagani@hotmail.com",
+        "avatar": "undefined-1607891289589.jpg",
+        "password": "$2a$12$NUWucbP2EfJ4mfGSQIr0duUIssrODzMuNtXtdvLYgGNPyg/TfMBMe"
     }
 ]

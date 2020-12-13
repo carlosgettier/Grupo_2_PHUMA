@@ -46,6 +46,12 @@ let dataBase = {
     }
 }
 
+let ultimoId = 0;
+for(let i = 0; i < databaseProducts.length; i++) {
+    if(ultimoId < databaseProducts[i].id) {
+        ultimoId = databaseProducts[i].id
+    }
+}
 
 
 
@@ -73,5 +79,24 @@ module.exports = {
 
     "add": function (req, res) {
         res.render("products/addProduct")
-    }
+    },
+
+    "save": function(req, res) {
+
+        let nuevoProducto = {
+            id: ultimoId + 1,
+            nombre: req.body.nombre,
+            description: req.body.description,
+            rutaALaImagen: req.file.filename,
+            categoria: req.body.category,
+            talle: req.body.talle.toUpperCase().split(","),
+            precio: req.body.precio,
+        }
+        databaseProducts.push(nuevoProducto)
+        fs.writeFileSync(path.join(__dirname, '../database/productos.json'), JSON.stringify(databaseProducts, null, 4));
+        res.redirect('/')
+        //let errors = validationResult(req);
+        
+        
+    },
 }
