@@ -14,6 +14,8 @@ proyecto integrador
 
 El proyecto se gestiona desde - https://trello.com/b/FUarmrFh/proyecto-phuma
 
+## heroku
+ Direccion del producto - https://grupo2phuma.herokuapp.com/
 
 ## Paginas de referencia
 
