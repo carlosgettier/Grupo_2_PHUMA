@@ -1,7 +1,31 @@
 [
     {
         "id": 1,
-        "nombre": "asdasdasd",
+        "nombre": "jeans",
+        "description": "azul ",
+        "rutaALaImagen": "undefined-1607889806373.jpg",
+        "categoria": "2",
+        "talle": [
+            "XL",
+            "S"
+        ],
+        "precio": "4000"
+    },
+    {
+        "id": 2,
+        "nombre": "short",
+        "description": "negro y blanco",
+        "categoria": "1",
+        "talle": [
+            "XL",
+            "S",
+            "M"
+        ],
+        "precio": "1000"
+    },
+    {
+        "id": 3,
+        "nombre": "camisa",
         "description": "asdasdasd",
         "rutaALaImagen": "undefined-1607889806373.jpg",
         "categoria": "1",
@@ -9,54 +33,5 @@
             "XL"
         ],
         "precio": "5100"
-    },
-    {
-        "id": 2,
-        "nombre": "camiseta 123",
-        "description": "123456",
-        "rutaALaImagen": "undefined-1607889840167.jpg",
-        "categoria": "1",
-        "talle": [
-            "XL"
-        ],
-        "precio": "5000"
-    },
-    {
-        "id": 3,
-        "nombre": "casaca lanus",
-        "description": "asdasdasdasdasdasdasd",
-        "rutaALaImagen": "undefined-1607890009898.jpg",
-        "categoria": "1",
-        "talle": [
-            "XL L"
-        ],
-        "precio": "5500"
-    },
-    {
-        "id": 4,
-        "nombre": "zapas123",
-        "description": "aksbiceiuvbno",
-        "rutaALaImagen": "undefined-1607890736059.jpg",
-        "categoria": "3",
-        "talle": [
-            "XL",
-            "L",
-            "32"
-        ],
-        "precio": "5500"
-    },
-    {
-        "id": 5,
-        "nombre": "casaca HD",
-        "description": "UNA LINDA CASACA",
-        "rutaALaImagen": "undefined-1607891121322.png",
-        "categoria": "1",
-        "talle": [
-            "XL",
-            "L",
-            "S",
-            "M"
-        ],
-        "precio": "4500"
     }
 ]

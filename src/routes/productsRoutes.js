@@ -26,5 +26,7 @@ router.get("/addProduct", sessionIniciada ,adminMW ,productosControllers.add);
 router.post('/addProduct', upload.single('rutaALaImagen'), sessionIniciada ,adminMW ,productosControllers.save);
 router.get("/delete/:id", adminMW ,productosControllers.confirmDelete);
 router.delete("/:id",sessionIniciada ,adminMW ,productosControllers.deleteId);
+router.get("/edit/:id",adminMW,productosControllers.edit)
+router.put("/edit/:id",upload.single('rutaALaImagen'),productosControllers.listo)
 
 module.exports = router;

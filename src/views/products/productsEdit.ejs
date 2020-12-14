@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../partials/head.ejs")%>
+<body>
+    <%- include("../partials/header.ejs") %>
+
+    <section>
+        <article><h1 class="titulo">Edita Un Producto</h1></article>
+
+        <article>
+            <div>
+
+                <form action="/products/edit/<%=productsToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
+                    
+                   
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" name="name" id="name" autocomplete="off" value="<%=productsToEdit.nombre %>">
+
+                    <label for="description"> Descripción </label>
+                    <input type="text" name="description" id="description" autocomplete="off"  value="<%=productsToEdit.description %>">
+
+
+                    <label for="image">Imagen del producto</label>
+                    <input id="image" type="file" name="image">
+                    
+                    <label for="category">Categoría</label> <br>
+                    <select name="category" id="category">
+                        <option value="1">Remeras</option>
+                        <option value="2">Pantalones</option>
+                        <option value="3">Camisas</option>
+                        <option value="3">Bolsos/mochilas</option>
+                        <option value="3">Indumentaria verano</option>
+                        <option value="3">Indumentaria deportiva</option>
+                        <option value="3">Calzado</option>
+                    </select> <br>
+
+                    <label for="talle">Talle</label><br>
+                    <input type="text" name="talle" id="talle" autocomplete="off"value="<%=productsToEdit.talle %>">
+
+                    <label for="precio">Precio</label><br>
+                    <input type="number" name="precio" id="precio" autocomplete="off" value="<%=productsToEdit.precio %>">
+
+                    <button class="enviar">editar</button>
+
+                         
+                </form>
+            </div>
+
+        </article>
+
+    </section>
+    
+
+
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

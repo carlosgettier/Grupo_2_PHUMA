@@ -1,3 +1,4 @@
+const { Console } = require('console');
 const fs = require('fs');
 const path = require('path')
 
@@ -115,5 +116,30 @@ module.exports = {
     "deleteId": function (req, res){
         dataBase.borrarProductById(req.params.id)
         res.redirect('/products/')
+    },
+    "edit": function(req,res){
+        let idProducts= req.params.id;
+         let productsToEdit= databaseProducts.filter(producto => (producto.id == idProducts))
+         res.render("products/productsEdit",{productsToEdit:productsToEdit[0]});
+    },
+    "listo": function(req,res){
+       
+        for(producto of databaseProducts){
+            if(producto.id== req.params.id){
+                producto.nombre=req.body.name
+                producto.description= req.body.description
+                producto.categoria= req.body.category
+                producto.talle=req.body.talle.toUpperCase().split(",")
+                producto.precio= req.body.precio
+                 if(req.file ){
+                  producto.rutaALaImagen = req.file.filename
+                  /*aca se debe guardar el archivo*/
+                 } 
+
+
+            }
+        } fs.writeFileSync(path.join(__dirname, '../database/productos.json'), JSON.stringify(databaseProducts, null, 4));
+        res.redirect('/')
+       
     }
 }
