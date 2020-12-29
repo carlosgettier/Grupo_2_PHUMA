@@ -53,5 +53,8 @@ module.exports = {
     logout: function (req, res) {
         req.session.destroy();
         res.redirect('/')
+    },
+    admi: function(req, res) {
+        res.render('users/admi')
     }
 }

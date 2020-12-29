@@ -23,6 +23,6 @@ router.post('/register', upload.single('avatar'), usersValidator.checkRegister, 
 router.get('/login', usersController.login);
 router.get('/logout', usersController.logout);
 router.post('/login', usersController.checklogin);
-
+router.get("/admi",usersController.admi)
 
 module.exports = router;

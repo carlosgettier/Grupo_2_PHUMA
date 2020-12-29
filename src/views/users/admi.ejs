@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../partials/head.ejs")%>
+ <body>
+        <%- include("../partials/header.ejs") %>
+         <section>
+             <h1>Pagina del administrador</h1>
+
+             <p>Esta es una pagina en donde vas a poder realizar diferente funciones como la de agregar, editar y eliminar productos</p>
+
+             <ul>
+                 <li>
+                     <a href="/products/addProduct">AGREGAR UN PRODUCTO</a>
+                 </li>
+                 <li>
+                    <a href="/edit/:id">EDITAR UN PRODUCTO</a>
+                </li>
+                <li>
+                    <a href="/delete/:id">ELIMINAR UN PRODUCTO</a>
+                </li>
+             </ul>
+         </section>
+ </body>  
+ <%- include("../partials/footer.ejs") %>
+ </html>     
