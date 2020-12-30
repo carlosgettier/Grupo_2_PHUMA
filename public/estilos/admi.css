@@ -1,0 +1,32 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+section .titulo{
+    font-size: 35px;
+}
+section .admi{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 26px;
+}
+section .lista{
+    text-decoration: none;
+    
+}
+section .lista li a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+    
+}
+section .listado{
+    
+    width: 50%;
+    height: 100px;
+}
