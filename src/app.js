@@ -7,6 +7,7 @@ const usersRouter = require('./routes/usersRouter');
 const session = require ('express-session')
 const sesionIniciadaMW = require('./middlewares/sessionIniciada');
 const methodOverride = require ('method-override');
+const cookieMW = require('./middlewares/CookieAuthMW');
 
 //De aplicaciòn
 
@@ -22,6 +23,7 @@ app.use(session({secret: 'chinguenguesha'}))
 app.use(sesionIniciadaMW);
 
 app.use(methodOverride('_method'));
+app.use(cookieMW);
 
 //De ruta
 app.use('/', mainRouter);

@@ -41,6 +41,9 @@ module.exports = {
                         name: usuarios[i].name,
                         email: usuarios[i].email
                     };
+                    if(req.body.recordame != undefined){
+                        res.cookie ('Recordame', datosUsuarios.email, { maxAge: 60000   })
+                    }
                     res.redirect('/')
 
                 }else {
