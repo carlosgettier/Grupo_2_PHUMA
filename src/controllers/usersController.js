@@ -44,8 +44,11 @@ module.exports = {
                     if(req.body.recordame != undefined){
                         res.cookie ('Recordame', datosUsuarios.email, { maxAge: 60000   })
                     }
-                    res.redirect('/')
-
+                    if(req.session.redirectTo){
+                        return res.redirect(req.session.redirectTo)
+                    } else {
+                        return res.redirect('/')
+                    }
                 }else {
                 res.send("El usuario no existe")
             }

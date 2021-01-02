@@ -32,7 +32,7 @@
                     <p><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
                     <p>11 Reseñas</p>
                 </div>
-                <form>
+                <form action="/products/carrito" method="get">
                     <p>TALLE | <a href="#"><i class="fas fa-tshirt"></i> VER TABLA DE TALLES</a></p>
                     <div class="selectorTalles">
                         <%
@@ -48,7 +48,7 @@
                       </div>
                       <div class="cantidad-comprar">
                         <div class="cantidad">
-                            <button class="cajaGris" name="resta uno al pedido" onclick="brrrRESTA"><i class="fas fa-minus"></i></button><input class="cajaGris" type="number" placeholder="1"><button class="cajaGris" name="suma uno al pedido" onclick="brrrSUMA"><i class="fas fa-plus"></i></button>
+                            <button class="cajaGris" name="resta uno al pedido" onclick="brrrRESTA" type="button"><i class="fas fa-minus"></i></button><input class="cajaGris" type="number" placeholder="1"><button class="cajaGris" name="suma uno al pedido" onclick="brrrSUMA" type="button"><i class="fas fa-plus"></i></button>
                         </div>
                         <button name="agregar al carrito" class="comprar" type="submit">COMPRAR</button>
                       </div>
