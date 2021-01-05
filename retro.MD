@@ -58,3 +58,23 @@
 # Stop Doing :
 
 * Dejar de poner todos los archivos del proyecto dentro de una carpeta separada para pasar a ponerlo en la raiz del proyecto, con esto conseguimos una mayor comodidad y el correcto uso de git ignore.
+
+# RETROSPECTIVA PARTE 4
+
+# Start Doing :
+
+* El uso de cookies. 
+
+* Empezar a usar Middlewares.
+
+# More Of :
+
+* En el sprint pasado fomentamos mucho mas el uso del tablero de trello y nos parece algo que tendriamos que usar mas aún. Nos permite organizarnos de forma mas eficiente.
+
+# Keep Doing :
+
+* Mantener la constante comunicacion.
+
+# Stop Doing :
+
+* Por el momento no encontramos algo que dejar de hacer especificamente.
