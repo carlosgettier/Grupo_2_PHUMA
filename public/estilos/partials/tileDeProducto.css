@@ -72,7 +72,11 @@
     height: 200px;
 }
 
-.partials-tile-de-producto  button{
+.partials-tile-de-producto  form{
+    align-self: center;
+}
+
+.partials-tile-de-producto form button{
     width: 135px;
     height: 35px;
     margin-top: 20px;
@@ -87,7 +91,7 @@
     transition: opacity 0.3s ease-in 0s;
 }
 
-.partials-tile-de-producto:hover button,
+.partials-tile-de-producto:hover form button,
 .partials-tile-de-producto:hover i{
     opacity: 1;
 }

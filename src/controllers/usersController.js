@@ -41,8 +41,14 @@ module.exports = {
                         name: usuarios[i].name,
                         email: usuarios[i].email
                     };
-                    res.redirect('/')
-
+                    if(req.body.recordame != undefined){
+                        res.cookie ('Recordame', datosUsuarios.email, { maxAge: 60000   })
+                    }
+                    if(req.session.redirectTo){
+                        return res.redirect(req.session.redirectTo)
+                    } else {
+                        return res.redirect('/')
+                    }
                 }else {
                 res.send("El usuario no existe")
             }
@@ -53,5 +59,8 @@ module.exports = {
     logout: function (req, res) {
         req.session.destroy();
         res.redirect('/')
+    },
+    admi: function(req, res) {
+        res.render('users/admi')
     }
 }

@@ -5,6 +5,7 @@ const router = express.Router();
 const productosControllers = require(path.join(__dirname,'..','controllers','productosControllers.js'))
 const adminMW = require('../middlewares/adminMW')
 const sessionIniciada = require('../middlewares/sessionIniciada')
+const verificaInicioSession = require(path.join(__dirname,'..','middlewares','verificaInicioSession.js'))
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -20,7 +21,7 @@ var upload = multer({ storage: storage })
 
 router.get('/',productosControllers.all)
 
-router.get("/carrito",productosControllers.carrito);
+router.get("/carrito",verificaInicioSession, productosControllers.carrito);
 router.get("/detalleDeProducto/:id", productosControllers.detalle);
 router.get("/addProduct", sessionIniciada ,adminMW ,productosControllers.add);
 router.post('/addProduct', upload.single('rutaALaImagen'), sessionIniciada ,adminMW ,productosControllers.save);

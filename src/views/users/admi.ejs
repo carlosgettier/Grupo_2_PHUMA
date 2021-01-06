@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/estilos/admi.css">
+ <body>
+        <%- include("../partials/header.ejs") %>
+         <section>
+             <h1 class="titulo">Pagina del administrador</h1>
+
+             <p class="admi">Esta es una pagina en donde vas a poder realizar diferente funciones como la de agregar, editar y eliminar productos</p>
+            <div class="listado">
+                <ul class="lista">
+                 <li>
+                     <a href="/products/addProduct">AGREGAR UN PRODUCTO</a>
+                 </li>
+                 <li>
+                    <a href="/products/edit/:id">EDITAR UN PRODUCTO</a>
+                </li>
+                <li>
+                    <a href="/products/delete/:id">ELIMINAR UN PRODUCTO</a>
+                </li>
+                </ul>
+            </div>
+         </section>
+ </body>  
+ <%- include("../partials/footer.ejs") %>
+ </html>     
