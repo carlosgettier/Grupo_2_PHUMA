@@ -5,6 +5,15 @@ let mainController = {
         return res.render('home', {
             mensaje: "Bienvenidos a nuestra página"
         });
+    },
+    hombres: function(req,res){
+        res.render("hombres")
+    },
+    mujeres:function(req,res){
+        res.render("mujeres")
+    },
+    niños:function(req,res){
+        res.render("ninios")
     }
 };
 
