@@ -1,7 +1,7 @@
 module.exports=function(sequelize,DataTypes){
-    let alias= "user"
+    let alias= "product"
     let cols={
-        id_usuario:{
+        id_producto:{
             type:DataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
@@ -11,34 +11,41 @@ module.exports=function(sequelize,DataTypes){
             type:DataTypes.STRING,
             notNull:true
         },
-        imagen:{
+        id_marca:{
+            type:DataTypes.INTEGER,
+            notNull:true,
+            foreignKey:true
+        },
+        cantidad:{
+            type:DataTypes.INTEGER,
+            notNull:true
+        },
+        
+        id_categoria:{
+            type:DataTypes.INTEGER,
+            foreignKey:true,
+            notNull:true
+        },
+        precio:{
+            type:DataTypes.INTEGER,
+            notNull:true
+        },
+        status:{
             type:DataTypes.INTEGER
         },
-        email:{
-            type:DataTypes.STRING,
-            notNull:true
-        },
-        password:{
+        id_sexo:{
             type:DataTypes.INTEGER,
-            notNull:true
-        },
-        repassword:{
-            type:DataTypes.INTEGER,
-            notNull:true
-        },
-        categoria_id:{
-            type:DataTypes.INTEGER,
-            notNull:true
-
+            foreignKey:true
         }
+
     }
     let config={
-        tableName:"users",
+        tableName:"products",
         timetamps:true,
         underscored: false
     }
-    const user= sequelize.define(alias,cols,config)
-    return user
+    const product= sequelize.define(alias,cols,config)
+    return product
       
 
 }
