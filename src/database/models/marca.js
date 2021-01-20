@@ -18,6 +18,12 @@ module.exports=function(sequelize,DataTypes){
         underscored: false
     }
     const marca= sequelize.define(alias,cols,config)
+    marca.associate= function(models){
+        marca.belongsTo(models.product,{
+             as:"marcPro",
+             foreignKey:"id_marca"
+         })
+        }
     return marca
       
 

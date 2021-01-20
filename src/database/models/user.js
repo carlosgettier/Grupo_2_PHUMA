@@ -28,7 +28,8 @@ module.exports=function(sequelize,DataTypes){
         },
         categoria_id:{
             type:DataTypes.INTEGER,
-            notNull:true
+            notNull:true,
+            foreignKey:true
 
         }
     }
@@ -38,6 +39,20 @@ module.exports=function(sequelize,DataTypes){
         underscored: false
     }
     const user= sequelize.define(alias,cols,config)
+        user.associate= function(models){
+
+            user.belongsTo(models.user_categoria,{
+                as:"usuario",
+                foreignKey:"categoria_id"
+            })
+            
+             user.belongsTo(models.carrito,{
+                as:"user_carrito",
+                foreignKey:"id_usuario"
+             })
+            
+        
+        }    
     return user
       
 

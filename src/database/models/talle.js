@@ -18,6 +18,16 @@ module.exports=function(sequelize,DataTypes){
         underscored: false
     }
     const talle= sequelize.define(alias,cols,config)
+ 
+    talle.associate= function(models){
+    talle.belongsToMany(models.product,{
+        as:"talleProduc",
+        through:"modelo_producto",
+        foreignKey:"id_talle",
+        otherKey:"id_producto",
+        timetamps:false
+    })
+    }
     return talle
       
 

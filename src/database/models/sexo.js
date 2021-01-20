@@ -18,6 +18,15 @@ module.exports=function(sequelize,DataTypes){
         underscored: false
     }
     const sexo= sequelize.define(alias,cols,config)
+
+    sexo.associate= function(models){
+       sexo.belongsTo(models.product,{
+            as:"sexoPro",
+            foreignKey:"id_sexo"
+        })
+
+    }
+
     return sexo
       
 

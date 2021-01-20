@@ -18,6 +18,13 @@ module.exports=function(sequelize,DataTypes){
         underscored: false
     }
     const categoria= sequelize.define(alias,cols,config)
+    categoria.associate= function(models){
+        categoria.belongsTo(models.product,{
+             as:"catePro",
+             foreignKey:"id_categoria"
+         })
+ 
+     }
     return categoria
       
 
