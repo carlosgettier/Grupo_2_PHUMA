@@ -66,13 +66,9 @@ module.exports = {
     'all': function (req, res) {
         res.render('products/productsAll', { tilesDeProducto: dataBase.allProducts() })
     },
-
-
     "carrito": function (req, res) {
         res.render("products/carrito")
     },
-
-
     "detalle": function (req, res) {
         let id = req.params.id
         if (!dataBase.productById(id).error){
@@ -81,8 +77,6 @@ module.exports = {
             return res.send(dataBase.productById(id).error)
         } 
     },
-
-
     "add": function (req, res) {
         res.render("products/addProduct")
     },
@@ -104,6 +98,25 @@ module.exports = {
         //let errors = validationResult(req);
     },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     "confirmDelete": function (req, res){
         let id = req.params.id
         if (!dataBase.productById(id).error){
@@ -135,11 +148,8 @@ module.exports = {
                   producto.rutaALaImagen = req.file.filename
                   /*aca se debe guardar el archivo*/
                  } 
-
-
             }
         } fs.writeFileSync(path.join(__dirname, '../database/productos.json'), JSON.stringify(databaseProducts, null, 4));
         res.redirect('/')
-       
     }
 }

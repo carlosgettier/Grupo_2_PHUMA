@@ -78,3 +78,24 @@
 # Stop Doing :
 
 * Por el momento no encontramos algo que dejar de hacer especificamente.
+
+# RETROSPECTIVA PARTE 5
+
+# Start Doing :
+
+* Realizar diagramas de entidades de la base de datos.
+* Utilizar Sequelize.
+* Utilizar una base de datos SQL.
+
+# More Of :
+
+* Optimizacion del tiempo en reuniones.
+
+# Keep Doing :
+
+* Mantener la constante comunicacion.
+* En el sprint pasado fomentamos mucho mas el uso del tablero de trello y nos parece algo que tendriamos que usar mas aún. Nos permite organizarnos de forma mas eficiente.
+
+# Stop Doing :
+
+* No utilizar JSON para persistencia de datos.
