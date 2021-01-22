@@ -23,7 +23,7 @@ module.exports=function(sequelize,DataTypes){
     }
     let config={
         tableName:"linea_de_carrito",
-        timestamps:true,
+        timestamps:false,
         underscored: false
     }
     const linea_carrito= sequelize.define(alias,cols,config)

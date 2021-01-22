@@ -14,7 +14,7 @@ module.exports=function(sequelize,DataTypes){
      }
     let config={
         tableName:"talle",
-        timestamps:true,
+        timestamps:false,
         underscored: false
     }
     const talle= sequelize.define(alias,cols,config)
