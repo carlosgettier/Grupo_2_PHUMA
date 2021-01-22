@@ -15,6 +15,11 @@
                    
                     <label for="nombre">Nombre</label><br>
                     <input type="text" name="name" id="name" autocomplete="off" value="<%=productsToEdit.nombre %>">
+                     
+                    <label for="cantidad">Cantidad</label><br>
+                    <input type="number" name="cantidad" id="name" autocomplete="off" value="<%=productsToEdit.nombre %>">
+
+
 
                     <label for="description"> Descripción </label>
                     <input type="text" name="description" id="description" autocomplete="off"  value="<%=productsToEdit.description %>">
@@ -34,8 +39,21 @@
                         <option value="3">Calzado</option>
                     </select> <br>
 
-                    <label for="talle">Talle</label><br>
-                    <input type="text" name="talle" id="talle" autocomplete="off"value="<%=productsToEdit.talle %>">
+                    <label for="sexo">SEXO</label><br>
+                    <select name="sexo" id="category">
+                        <option value="1">hombre</option>
+                        <option value="2">mujer</option>
+                        </select> <br>
+
+                    <label for="marca">MARCAS</label><br>
+                    <select name="marca" id="category">
+                        <option value="1">PUMA</option>
+                        <option value="2">ADIDAS</option>
+                        <option value="3">NIKE</option>
+                        <option value="3">TOPPER</option>
+                     
+                        
+                    </select> <br>
 
                     <label for="precio">Precio</label><br>
                     <input type="number" name="precio" id="precio" autocomplete="off" value="<%=productsToEdit.precio %>">

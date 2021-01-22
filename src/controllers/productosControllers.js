@@ -1,6 +1,7 @@
 const { Console } = require('console');
 const fs = require('fs');
 const path = require('path')
+const db= require("../database/models")
 
 let databaseProducts = fs.readFileSync(path.join(__dirname, '..', 'database', 'productos.json'));
 
@@ -136,20 +137,28 @@ module.exports = {
          res.render("products/productsEdit",{productsToEdit:productsToEdit[0]});
     },
     "listo": function(req,res){
+      db.product.update({
+          nombre:req.body.name,
+          cantidad:req.body.name,
+          descricion:req.body.description,
+          id_categoria:req.body.category,
+          id_sexo:req.body.sexo,
+          id_marca:req.body.marca,
+          precio:req.body.precio
+      },
+      {
+          where:{
+              id_producto:req.params.id
+               }
+      }
+      )
+      .then(function(hola){
+        res.redirect("/")
+      })
+      .catch (function(error){
+          res.send(error)
+      })
+
        
-        for(producto of databaseProducts){
-            if(producto.id== req.params.id){
-                producto.nombre=req.body.name
-                producto.description= req.body.description
-                producto.categoria= req.body.category
-                producto.talle=req.body.talle.toUpperCase().split(",")
-                producto.precio= req.body.precio
-                 if(req.file ){
-                  producto.rutaALaImagen = req.file.filename
-                  /*aca se debe guardar el archivo*/
-                 } 
-            }
-        } fs.writeFileSync(path.join(__dirname, '../database/productos.json'), JSON.stringify(databaseProducts, null, 4));
-        res.redirect('/')
     }
 }

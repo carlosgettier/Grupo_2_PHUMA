@@ -14,7 +14,7 @@ module.exports=function(sequelize,DataTypes){
      }
     let config={
         tableName:"estado_carrito",
-        timetamps:true,
+        timestamps:true,
         underscored: false
     }
     const estado_carrito= sequelize.define(alias,cols,config)
