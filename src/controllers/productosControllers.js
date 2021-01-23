@@ -65,7 +65,11 @@ for(let i = 0; i < databaseProducts.length; i++) {
 
 module.exports = {
     'all': function (req, res) {
-        res.render('products/productsAll', { tilesDeProducto: dataBase.allProducts() })
+       db.product.findAll()
+       .then(function(producto){
+         res.render('products/productsAll', { tilesDeProducto:producto})
+       })
+       
     },
     "carrito": function (req, res) {
         res.render("products/carrito")
@@ -132,15 +136,19 @@ module.exports = {
         res.redirect('/products/')
     },
     "edit": function(req,res){
-        let idProducts= req.params.id;
-         let productsToEdit= databaseProducts.filter(producto => (producto.id == idProducts))
-         res.render("products/productsEdit",{productsToEdit:productsToEdit[0]});
+        db.product.findAll()
+        .then((respuesta)=>{
+            res.render("/product/")
+        })
+        .catch (function(error){
+            res.send(error)
+        })
     },
     "listo": function(req,res){
       db.product.update({
           nombre:req.body.name,
           cantidad:req.body.name,
-          descricion:req.body.description,
+          descripcion:req.body.description,
           id_categoria:req.body.category,
           id_sexo:req.body.sexo,
           id_marca:req.body.marca,

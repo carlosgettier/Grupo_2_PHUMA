@@ -10,19 +10,19 @@
         <article>
             <div>
 
-                <form action="/products/edit/<%=productsToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
+                <form action="/products/edit/<%=respuesta.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
                     
                    
                     <label for="nombre">Nombre</label><br>
-                    <input type="text" name="name" id="name" autocomplete="off" value="<%=productsToEdit.nombre %>">
+                    <input type="text" name="name" id="name" autocomplete="off" value="<%=respuesta.nombre %>">
                      
                     <label for="cantidad">Cantidad</label><br>
-                    <input type="number" name="cantidad" id="name" autocomplete="off" value="<%=productsToEdit.nombre %>">
+                    <input type="number" name="cantidad" id="name" autocomplete="off" value="<%=<respuesta class="cantidad"></respuesta> %>">
 
 
 
                     <label for="description"> Descripción </label>
-                    <input type="text" name="description" id="description" autocomplete="off"  value="<%=productsToEdit.description %>">
+                    <input type="text" name="description" id="description" autocomplete="off"  value="<%=respuesta.descripcion %>">
 
 
                     <label for="image">Imagen del producto</label>
@@ -30,6 +30,7 @@
                     
                     <label for="category">Categoría</label> <br>
                     <select name="category" id="category">
+                        <option value="0"><% respuesta.categoria %> </option>
                         <option value="1">Remeras</option>
                         <option value="2">Pantalones</option>
                         <option value="3">Camisas</option>

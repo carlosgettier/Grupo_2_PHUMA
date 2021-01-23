@@ -36,6 +36,11 @@ module.exports=function(sequelize,DataTypes){
         id_sexo:{
             type:DataTypes.INTEGER,
             foreignKey:true
+        },
+        descripcion:{
+            type:DataTypes.STRING,
+            notNull:true
+
         }
 
     }
@@ -49,7 +54,7 @@ module.exports=function(sequelize,DataTypes){
         product.belongsToMany(models.carrito,{
             as:"produCarri",
             through:"linea_carrito",
-            foreignKey:"id_producto",
+           foreignKey:"id_producto",
             otherKey:"id_carrito",
             timetamps:false
         })
