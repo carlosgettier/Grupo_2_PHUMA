@@ -85,7 +85,17 @@ module.exports=function(sequelize,DataTypes){
          product.belongsTo(models.marca,{
                  as:"proMarc",
                  foreignKey:"id_marca"
-             })
+        })
+
+        product.belongsTo(models.imagenes,{
+            as:"imagenPrincipal",
+            foreignKey:"id_imagen_principal"
+        })
+
+        product.hasMany(models.imagenes,{
+            as:"imagenes",
+            foreignKey:"product_id"
+        })
 
     }
     return product
