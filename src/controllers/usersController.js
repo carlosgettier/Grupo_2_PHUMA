@@ -13,17 +13,20 @@ module.exports = {
         res.render('users/register')
     },
     save: function(req, res) {
+        
          db.user.create({
         nombre:req.body.name,
         imagen: req.file.filename,
         email:req.body.email,
         password: bcryptjs.hashSync(req.body.password, 12),
         repassword:bcryptjs.hashSync(req.body.repassword, 12)
+      })
+    .then(function(hola){
+          res.redirect("/")
        })
-       .then(function(hola){
-           res.redirect("/")
-       })
-        
+       .catch(function(error){
+           res.send(error)
+       }) 
     },
 
 
@@ -48,29 +51,38 @@ module.exports = {
     checklogin: function (req, res) {
         let emailuser = req.body.email;
         let passwordLogin = req.body.password;
-
-        for(let i = 0; i < usuarios.length; i++) {
-            if(emailuser == usuarios[i].email) {
-                if(bcryptjs.compareSync(passwordLogin, usuarios[i].password)){
-
-                    req.session.datosUsuarios = {
-                        name: usuarios[i].name,
-                        email: usuarios[i].email
-                    };
-                    if(req.body.recordame != undefined){
-                        res.cookie ('Recordame', datosUsuarios.email, { maxAge: 60000   })
-                    }
-                    if(req.session.redirectTo){
-                        return res.redirect(req.session.redirectTo)
-                    } else {
-                        return res.redirect('/')
-                    }
-                }else {
-                res.send("El usuario no existe")
+        
+        db.user.findAll({
+            where: {
+                email : emailuser,
+                password : passwordLogin
             }
+        })
+        .then(function (respuesta){
             
-            }
-        }
+              req.session.datosUsuarios = respuesta
+              console.log(datosUsuarios)
+
+            })
+            
+            
+            
+            .catch(function(error){
+                req.send("El usuario no existe")
+          })
+
+            //if(req.body.recordame != undefined){
+                   //res.cookie ('Recordame', respuesta.email, { maxAge: 60000   })
+       // }
+      //  if(req.session.redirectTo){
+                    //    return res.redirect(req.session.redirectTo)
+                  //  } else {
+                       // return res.redirect('/')
+                    
+                    //}
+               // }
+       // )
+            
     },
     logout: function (req, res) {
         req.session.destroy();
