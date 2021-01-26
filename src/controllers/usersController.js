@@ -49,39 +49,37 @@ module.exports = {
         res.render('users/login')
     },
     checklogin: function (req, res) {
-        let emailuser = req.body.email;
-        let passwordLogin = req.body.password;
+       
         
-        db.user.findAll({
+          db.user.findAll({
             where: {
-                email : emailuser,
-                password : passwordLogin
-            }
-        })
-        .then(function (respuesta){
-            
-              req.session.datosUsuarios = respuesta
-              console.log(datosUsuarios)
-
+                email : req.body.email,
+                password : req.body.password
+                
+                  }
             })
-            
-            
-            
-            .catch(function(error){
-                req.send("El usuario no existe")
-          })
+        .then(function (respuesta){
+            //res.send(respuesta)
 
-            //if(req.body.recordame != undefined){
-                   //res.cookie ('Recordame', respuesta.email, { maxAge: 60000   })
-       // }
-      //  if(req.session.redirectTo){
-                    //    return res.redirect(req.session.redirectTo)
-                  //  } else {
-                       // return res.redirect('/')
-                    
-                    //}
-               // }
-       // )
+            if(req.body.email == respuesta[0].email && req.body.password == respuesta[0].password)
+            req.session.datosUsuarios = {
+                name: respuesta[0].nombre,
+                email: respuesta[0].email
+            }
+            if(req.body.recordame != undefined){
+                res.cookie("Recordame", datosUsuarios.email, {maxAge: 60000})
+            }
+            if(req.session.redirectTo){
+                return res.redirect(req.session.redirectTo)
+            }else{
+                return res.redirect("/")
+            }
+
+        }).catch(function(error){
+            res.render("users/register")
+        })
+            
+      
             
     },
     logout: function (req, res) {
