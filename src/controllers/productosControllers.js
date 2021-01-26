@@ -48,7 +48,11 @@ module.exports = {
 
         try{
             let producto = await db.product.findByPk(req.params.id,{
-                include: [{association:'imagenes'},{association:'imagenPrincipal'},{association:'proCateg'}]
+                include: [
+                    {association:'imagenes'},
+                    {association:'imagenPrincipal'},
+                    {association:'proCateg'},
+                    {association:'produTalle'}]
             });
 
             let productosParaTiles = await db.product.findAll({

@@ -37,12 +37,12 @@
                     <p>TALLE | <a href="#"><i class="fas fa-tshirt"></i> VER TABLA DE TALLES</a></p>
                     <div class="selectorTalles">
                         <%
-                        if (producto.talle){
-                        producto.talle.forEach(esteTalle => {%>
+                        if (producto.produTalle){
+                        producto.produTalle.forEach(esteTalle => {%>
                             <span>
-                                <input type="radio" name="talle" value="<%=esteTalle %>" id="talleChoice<%=esteTalle %>">
-                                <label class="cajaGris" for="talleChoice<%=esteTalle %>">
-                                    <%=esteTalle%>
+                                <input type="radio" name="talle" value="<%=esteTalle.nombre %>" id="talleChoice<%=esteTalle.nombre %>">
+                                <label class="cajaGris" for="talleChoice<%=esteTalle.nombre %>">
+                                    <%=esteTalle.nombre%>
                                 </label>
                             </span>
                         <%})}%>
