@@ -5,21 +5,22 @@ const { validationResult } = require('express-validator');
 const { nextTick } = require('process');
 const users = require('../validators/users');
 const db= require("../database/models")
-let usuarios = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf8');
-usuarios = JSON.parse(usuarios);
+//let usuarios = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf8');
+//usuarios = JSON.parse(usuarios);
 
 module.exports = {
     register: function(req, res) {
         res.render('users/register')
     },
     save: function(req, res) {
+        
          db.user.create({
         nombre:req.body.name,
         imagen: req.file.filename,
         email:req.body.email,
         password: bcryptjs.hashSync(req.body.password, 12),
         repassword:bcryptjs.hashSync(req.body.repassword, 12)
-       }).then(function(usuario){
+       }).then(function(usuarioNuevo){
            res.redirect("/")
        })
         
