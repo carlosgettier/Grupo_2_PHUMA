@@ -12,18 +12,18 @@ module.exports=function(sequelize,DataTypes){
             notNull:true
         },
         imagen:{
-            type:DataTypes.INTEGER
+            type:DataTypes.STRING
         },
         email:{
             type:DataTypes.STRING,
             notNull:true
         },
         password:{
-            type:DataTypes.INTEGER,
+            type:DataTypes.STRING,
             notNull:true
         },
         repassword:{
-            type:DataTypes.INTEGER,
+            type:DataTypes.STRING,
             notNull:true
         },
         categoria_id:{

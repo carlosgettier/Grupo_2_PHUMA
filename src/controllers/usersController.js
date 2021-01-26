@@ -19,12 +19,11 @@ module.exports = {
         email:req.body.email,
         password: bcryptjs.hashSync(req.body.password, 12),
         repassword:bcryptjs.hashSync(req.body.repassword, 12)
-       })
-       .then(function(hola){
+       }).then(function(usuario){
            res.redirect("/")
        })
         
-    },
+    },   
 
 
 
