@@ -20,11 +20,14 @@ module.exports = {
         email:req.body.email,
         password: bcryptjs.hashSync(req.body.password, 12),
         repassword:bcryptjs.hashSync(req.body.repassword, 12)
-       }).then(function(usuarioNuevo){
-           res.redirect("/")
+      })
+    .then(function(hola){
+          res.redirect("/")
        })
-        
-    },   
+       /*.catch(function(error){
+           res.send(error)
+       })*/ 
+    },
 
 
 
@@ -46,31 +49,38 @@ module.exports = {
         res.render('users/login')
     },
     checklogin: function (req, res) {
-        let emailuser = req.body.email;
-        let passwordLogin = req.body.password;
+       
+        
+          db.user.findAll({
+            where: {
+                email : req.body.email,
+                password : req.body.password
+                
+                  }
+            })
+        .then(function (respuesta){
+            //res.send(respuesta)
 
-        for(let i = 0; i < usuarios.length; i++) {
-            if(emailuser == usuarios[i].email) {
-                if(bcryptjs.compareSync(passwordLogin, usuarios[i].password)){
-
-                    req.session.datosUsuarios = {
-                        name: usuarios[i].name,
-                        email: usuarios[i].email
-                    };
-                    if(req.body.recordame != undefined){
-                        res.cookie ('Recordame', datosUsuarios.email, { maxAge: 60000   })
-                    }
-                    if(req.session.redirectTo){
-                        return res.redirect(req.session.redirectTo)
-                    } else {
-                        return res.redirect('/')
-                    }
-                }else {
-                res.send("El usuario no existe")
+            if(req.body.email == respuesta[0].email && req.body.password == respuesta[0].password)
+            req.session.datosUsuarios = {
+                name: respuesta[0].nombre,
+                email: respuesta[0].email
             }
+            if(req.body.recordame != undefined){
+                res.cookie("Recordame", datosUsuarios.email, {maxAge: 60000})
+            }
+            if(req.session.redirectTo){
+                return res.redirect(req.session.redirectTo)
+            }else{
+                return res.redirect("/")
+            }
+
+        }).catch(function(error){
+            res.render("users/register")
+        })
             
-            }
-        }
+      
+            
     },
     logout: function (req, res) {
         req.session.destroy();
