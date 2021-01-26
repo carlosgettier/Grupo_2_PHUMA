@@ -23,7 +23,9 @@ module.exports = {
        .then(function(hola){
            res.redirect("/")
        })
-        
+        .catch(function(error){
+            res.send(erros)
+        })
     },
 
 
@@ -56,7 +58,7 @@ module.exports = {
                     req.session.datosUsuarios = {
                         name: usuarios[i].name,
                         email: usuarios[i].email
-                    };
+                    }
                     if(req.body.recordame != undefined){
                         res.cookie ('Recordame', datosUsuarios.email, { maxAge: 60000   })
                     }

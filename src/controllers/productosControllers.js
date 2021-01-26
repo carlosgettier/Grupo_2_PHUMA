@@ -65,7 +65,7 @@ for(let i = 0; i < databaseProducts.length; i++) {
 
 module.exports = {
     'all': function (req, res) {
-       db.product.findAll()
+       db.product.findAll( {where:{status: 1}})
        .then(function(producto){
          res.render('products/productsAll', { tilesDeProducto:producto})
        })
@@ -121,25 +121,36 @@ module.exports = {
 
 
 
-    
     "confirmDelete": function (req, res){
-        let id = req.params.id
-        if (!dataBase.productById(id).error){
-            return res.render("products/formularioBorradoProducto", {producto: dataBase.productById(id)})
-        } else {
-            return res.send(dataBase.productById(id).error)
-        }
+        db.product.findByPk(req.params.id)
+      .then(function(producto){
+            res.render("products/formularioBorradoProducto", {producto:producto})
+
+      })
     },
 
     "deleteId": function (req, res){
-        dataBase.borrarProductById(req.params.id)
-        res.redirect('/products/')
+        db.product.update({
+            status:0
+        },
+        {
+            where:{
+                id_producto:req.params.id
+                 }
+        }
+        )
+        .then(function(hola){
+          res.redirect("/products")
+        })
+
     },
     "edit": function(req,res){
-        db.product.findAll()
-        .then((respuesta)=>{
-            res.render("/product/")
-        })
+        db.product.findByPk(req.params.id)
+       .then(function(productos){
+           //res.send(productos)
+         res.render("products/productsEdit",{producto:productos})
+       })
+    
         .catch (function(error){
             res.send(error)
         })
@@ -161,7 +172,7 @@ module.exports = {
       }
       )
       .then(function(hola){
-        res.redirect("/")
+        res.redirect("/products")
       })
       .catch (function(error){
           res.send(error)

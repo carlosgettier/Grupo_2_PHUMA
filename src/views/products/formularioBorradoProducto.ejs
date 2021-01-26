@@ -5,10 +5,10 @@
     <%- include("../partials/header.ejs") %>
     <main class= 'formularioBorrado'>
         <h2 class="titulo">Datos del producto a borrar</h2>
-                <form action="/products/<%=producto.id%>?_method=DELETE" method="POST" class="formulario">
+                <form action="/products/delete/<%=producto.id_producto%>?_method=DELETE" method="POST" class="formulario">
                     <div>
                         <label for="id">Identificador Unico: </label>
-                        <span id="id" ><%=producto.id%></span>
+                        <span id="id" ><%=producto.id_producto%></span>
                     </div>
                     <div>
                         <label for="nombre">Nombre: </label>
@@ -16,15 +16,7 @@
                     </div>
                     <div>
                         <label for="description"> Descripción: </label>
-                        <span id="description" ><%=producto.description%></span>
-                    </div>
-                    <div>
-                        <label for="category">Categoría: </label>
-                        <span id="category" ><%=producto.categoria%></span>
-                    </div>
-                    <div>
-                        <label for="talle">Talles disponibles: </label>
-                        <span id="talle" ><%=producto.talle%></span>
+                        <span id="description" ><%=producto.descripcion%></span>
                     </div>
                     <div>
                         <label for="precio">Precio: </label>
