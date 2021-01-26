@@ -8,7 +8,7 @@
         <nav class="pathDeCategorias">
             <un>
                 <li><a href="/">Incio</a></li>  <i class="fas fa-long-arrow-alt-right"></i>
-                <li><a href="#"><%=producto.categoria%></a></li>  <i class="fas fa-long-arrow-alt-right"></i> 
+                <li><a href="#"><%=producto.proCateg.nombre%></a></li>  <i class="fas fa-long-arrow-alt-right"></i> 
                 <li><a href="#"><%=producto.nombre%></a></li>
             </un>
         </nav>
@@ -16,16 +16,17 @@
     <div>
         <section class="mostrador">
             <div class="selector-imagenes">
-                <figure><img src="/uploads/productImage/<%=producto.rutaALaImagen%>" alt="imagen secundaria 1"></figure>
-                <figure><img src="/uploads/productImage/<%=producto.rutaALaImagen%>" alt="imagen secundaria 2"></figure>
-                <figure><img src="/uploads/productImage/<%=producto.rutaALaImagen%>" alt="imagen secundaria 3"></figure>
+                <% for(let i = 0; i < producto.imagenes.length; i++){
+                    if(i < 3){%>
+                <figure><img src="/uploads/productImage/<%=producto.imagenes[i].rutaImagen%>" alt="imagen secundaria"></figure>
+                <%}}%>
             </div>
             <div class="imagen-principal">
-                <figure><img src="/uploads/productImage/<%=producto.rutaALaImagen%>" alt="detalle de imagen seleccionada"></figure>
+                <figure><img src="/uploads/productImage/<%=producto.imagenPrincipal?producto.imagenPrincipal.rutaImagen : ''%>" alt="detalle de imagen seleccionada"></figure>
             </div>
             <div class="caja">
                 <h1><%=producto.nombre%><br>
-                    <%=producto.categoria%>
+                    <%=producto.proCateg.nombre%>
                 </h1>
                 <p class="precio"><%=producto.precio%></p>
                 <div class="reseñasLite">
@@ -36,12 +37,12 @@
                     <p>TALLE | <a href="#"><i class="fas fa-tshirt"></i> VER TABLA DE TALLES</a></p>
                     <div class="selectorTalles">
                         <%
-                        if (producto.talle){
-                        producto.talle.forEach(esteTalle => {%>
+                        if (producto.produTalle){
+                        producto.produTalle.forEach(esteTalle => {%>
                             <span>
-                                <input type="radio" name="talle" value="<%=esteTalle %>" id="talleChoice<%=esteTalle %>">
-                                <label class="cajaGris" for="talleChoice<%=esteTalle %>">
-                                    <%=esteTalle%>
+                                <input type="radio" name="talle" value="<%=esteTalle.nombre %>" id="talleChoice<%=esteTalle.nombre %>">
+                                <label class="cajaGris" for="talleChoice<%=esteTalle.nombre %>">
+                                    <%=esteTalle.nombre%>
                                 </label>
                             </span>
                         <%})}%>
@@ -58,7 +59,7 @@
     </div>
     <div>
         <section class="resumen">
-            <p><%=producto.description%></p>
+            <p><%=producto.descripcion%></p>
             <div class="compartir-redes">
                 <p>Compartir producto</p>
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -99,6 +100,7 @@
         </section>
     </div>
     <%}%>
+    <!--
     <div>
         <section class="reseñas">
                 <h2>RESEÑAS</h2>
@@ -155,6 +157,7 @@
                 </FORM>
         </section>
     </div>
+    -->
     <div>
         <section class="talles">
                 <h2>TALLES</h2>

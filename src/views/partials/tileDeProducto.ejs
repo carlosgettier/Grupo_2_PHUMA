@@ -1,5 +1,5 @@
 <div class="partials-tile-de-producto">
-    <figure><img src="/uploads/productImage/<%=producto.rutaALaImagen %>" alt="imagen tile <%= producto.nombre %>"></figure>
+    <figure><img src="/uploads/productImage/<%= producto.imagenPrincipal?producto.imagenPrincipal.rutaImagen : '' %>" alt="imagen tile <%= producto.nombre %>"></figure>
     <p><%= producto.nombre %></p>
     <p><b><%= producto.precio %></b></p>
     <form action="/products/carrito" method="get">
@@ -7,12 +7,12 @@
     </form>
     <div class="botoncitos flotar-derecha">
         <a href='#'><i class="far fa-heart"></i></a>
-        <a href='/products/detalleDeProducto/<%= producto.id %>'><i class="far fa-eye"></i></a>
+        <a href='/products/detalleDeProducto/<%= producto.id_producto %>'><i class="far fa-eye"></i></a>
     </div>
     <% if (typeof hayUsuario != 'undefined' && hayUsuario.name == 'admin') { %>
     <div class="botoncitos flotar-izquierda">
-        <a href='/products/delete/<%= producto.id %>'><i class="far fa-trash-alt"></i></a>
-        <a href='/products/edit/<%= producto.id %>'><i class="fas fa-pencil-alt"></i></a>
+        <a href='/products/delete/<%= producto.id_producto %>'><i class="far fa-trash-alt"></i></a>
+        <a href='/products/edit/<%= producto.id_producto %>'><i class="fas fa-pencil-alt"></i></a>
     </div>
     <%} %>
 </div>
