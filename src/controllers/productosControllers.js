@@ -2,85 +2,79 @@ const { Console } = require('console');
 const fs = require('fs');
 const path = require('path')
 const db= require("../database/models")
+const { Op } = require("sequelize");
 
 let databaseProducts = fs.readFileSync(path.join(__dirname, '..', 'database', 'productos.json'));
 
 databaseProducts = JSON.parse(databaseProducts);
 
-let dataBase = {
+let mezclar = function (productos, cantidad){
 
-    rutaAlArchivo: path.join(__dirname, '..', 'database', 'productos.json'),
-
-    allProducts () {
-
-        let databaseProducts = fs.readFileSync(this.rutaAlArchivo);
-
-        databaseProducts = JSON.parse(databaseProducts);
-
-        return databaseProducts;
-
-    },
-
-    productById (id){
-
-        if(this.allProducts().filter(esteProducto => esteProducto.id == id).length !=1){
-            console.log('cagamo');
-            return {error:'Algo salio mal'}
-
-        } else {
-            return this.allProducts().filter(esteProducto => esteProducto.id == id)[0];
+    let productosSeleccionados = []
+    let todosLosProductos = []
+    productos.forEach(esteProducto=>todosLosProductos.push(esteProducto))
+    for(let i = 0 ; i < cantidad ; i++){
+        if(todosLosProductos.length >= 1){
+            //min incluido: 0, max excluido length
+            let aleatorio = Math.floor(Math.random() * (todosLosProductos.length));
+            productosSeleccionados.push(todosLosProductos[aleatorio])
+            todosLosProductos.splice(aleatorio, 1)
         }
-    },
-
-    arrayRandomTiles (cantidad) {
-
-        let productosSeleccionados = []
-        let todosLosProductos= this.allProducts()
-        for(let i = 0 ; i < cantidad ; i++){
-            if(todosLosProductos.length >= 1){
-                //min incluido: 0, max excluido length
-                let aleatorio = Math.floor(Math.random() * (todosLosProductos.length));
-                productosSeleccionados.push(todosLosProductos[aleatorio])
-                todosLosProductos.splice(aleatorio, 1)
-            }
-        }
-
-        return productosSeleccionados
-    },
-
-    borrarProductById (id){
-        let arrayProductoBorrado= this.allProducts().filter(esteProducto => esteProducto.id != id)
-        fs.writeFileSync(this.rutaAlArchivo, JSON.stringify(arrayProductoBorrado, null, 4))
     }
+
+    return productosSeleccionados
+
 }
-
-let ultimoId = 0;
-for(let i = 0; i < databaseProducts.length; i++) {
-    if(ultimoId < databaseProducts[i].id) {
-        ultimoId = databaseProducts[i].id
-    }
-}
-
-
 
 module.exports = {
-    'all': function (req, res) {
-       db.product.findAll( {where:{status: 1}})
-       .then(function(producto){
-         res.render('products/productsAll', { tilesDeProducto:producto})
-       })
-       
+    'all': async function (req, res) {
+    try{
+        let productos = await db.product.findAll({   where:{status: 1},
+            include: [
+                {association:'imagenes'},
+                {association:'imagenPrincipal'}
+            ]
+        });
+        res.render('products/productsAll', { tilesDeProducto:productos}); 
+    } catch (err){
+        console.log(err)
+        res.send('Algo salio mal XP');  
+    }     
     },
     "carrito": function (req, res) {
         res.render("products/carrito")
     },
-    "detalle": function (req, res) {
-        let id = req.params.id
-        if (!dataBase.productById(id).error){
-            return res.render("products/detalleDeProducto", { producto: dataBase.productById(id), tilesDeProducto: dataBase.arrayRandomTiles('3') })
-        } else {
-            return res.send(dataBase.productById(id).error)
-        } 
+    "detalle": async function (req, res) {
+
+        try{
+            let producto = await db.product.findByPk(req.params.id,{
+                include: [
+                    {association:'imagenes'},
+                    {association:'imagenPrincipal'},
+                    {association:'proCateg'},
+                    {association:'produTalle'}]
+            });
+
+            let productosParaTiles = await db.product.findAll({
+                where: {
+                    id_producto: {
+                        [Op.not]: req.params.id
+                    }
+                },
+                include: [
+                    {association:'imagenes'},
+                    {association:'imagenPrincipal'}
+                ]
+            });
+
+            let mezcla = mezclar (productosParaTiles, 3);
+            
+           console.log(producto)
+            res.render("products/detalleDeProducto", { producto: producto, tilesDeProducto: mezcla})
+        } catch (err){
+            console.log(err)
+            res.send('Algo salio mal XP');  
+        }
     },
     "add": function (req, res) {
         res.render("products/addProduct")
