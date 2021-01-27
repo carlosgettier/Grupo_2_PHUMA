@@ -39,6 +39,15 @@ CREATE TABLE `carrito` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `carrito`
+--
+
+LOCK TABLES `carrito` WRITE;
+/*!40000 ALTER TABLE `carrito` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carrito` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categoria`
 --
 
@@ -51,6 +60,16 @@ CREATE TABLE `categoria` (
   PRIMARY KEY (`id_categoria`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categoria`
+--
+
+LOCK TABLES `categoria` WRITE;
+/*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
+INSERT INTO `categoria` VALUES (1,'Remera'),(2,'Pantalon'),(3,'Zapatilla');
+/*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `color`
@@ -67,6 +86,16 @@ CREATE TABLE `color` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `color`
+--
+
+LOCK TABLES `color` WRITE;
+/*!40000 ALTER TABLE `color` DISABLE KEYS */;
+INSERT INTO `color` VALUES (1,'Negro'),(2,'Amarillo'),(3,'Naranja');
+/*!40000 ALTER TABLE `color` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `estado_carrito`
 --
 
@@ -79,6 +108,15 @@ CREATE TABLE `estado_carrito` (
   PRIMARY KEY (`id_estado_carrito`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estado_carrito`
+--
+
+LOCK TABLES `estado_carrito` WRITE;
+/*!40000 ALTER TABLE `estado_carrito` DISABLE KEYS */;
+/*!40000 ALTER TABLE `estado_carrito` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `imagenes`
@@ -95,6 +133,16 @@ CREATE TABLE `imagenes` (
   KEY `id_producto_fk_idx` (`product_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `imagenes`
+--
+
+LOCK TABLES `imagenes` WRITE;
+/*!40000 ALTER TABLE `imagenes` DISABLE KEYS */;
+INSERT INTO `imagenes` VALUES (1,'undefined-1607889806373.jpg',1),(2,'undefined-1607891121322.png',2),(3,'Tercer Producto  zapa s -1611781705655.jpg',3),(4,'undefined-1607890009898.jpg',1),(5,'undefined-1607889840167.jpg',4);
+/*!40000 ALTER TABLE `imagenes` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `linea_de_carrito`
@@ -115,6 +163,15 @@ CREATE TABLE `linea_de_carrito` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `linea_de_carrito`
+--
+
+LOCK TABLES `linea_de_carrito` WRITE;
+/*!40000 ALTER TABLE `linea_de_carrito` DISABLE KEYS */;
+/*!40000 ALTER TABLE `linea_de_carrito` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `marca`
 --
 
@@ -127,6 +184,16 @@ CREATE TABLE `marca` (
   PRIMARY KEY (`id_marca`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `marca`
+--
+
+LOCK TABLES `marca` WRITE;
+/*!40000 ALTER TABLE `marca` DISABLE KEYS */;
+INSERT INTO `marca` VALUES (1,'Marca 1'),(2,'Marca 2');
+/*!40000 ALTER TABLE `marca` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `modelo_de_producto`
@@ -151,6 +218,16 @@ CREATE TABLE `modelo_de_producto` (
   CONSTRAINT `id_modelo_talle_fk` FOREIGN KEY (`id_talle`) REFERENCES `talle` (`id_talle`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `modelo_de_producto`
+--
+
+LOCK TABLES `modelo_de_producto` WRITE;
+/*!40000 ALTER TABLE `modelo_de_producto` DISABLE KEYS */;
+INSERT INTO `modelo_de_producto` VALUES (1,1,1,1,5,_binary ''),(2,2,1,1,5,_binary ''),(3,3,2,2,5,_binary ''),(4,2,3,2,1,_binary ''),(5,1,4,2,2,_binary '');
+/*!40000 ALTER TABLE `modelo_de_producto` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `products`
@@ -183,6 +260,16 @@ CREATE TABLE `products` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `products`
+--
+
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,1,1,'Producto 1',5000,_binary '',2,1,'Prueba desc',1),(2,1,1,'Otro Producto',1000,_binary '',5,1,'\'Esta es una descripcion\'',2),(3,1,1,'Tercer Producto  zapa s ',3000,_binary '',0,1,'Una descripcion mas larga e interesante. Casi una historia. Igual lo que estaba fallando eran unas B que se completaban solas en la insert QUERY. Sabe dios por que hacia eso.    ',3),(4,2,2,'Cuarto Producto',5789,_binary '\0',5,2,'Para algo de variedad',5);
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `sexo`
 --
 
@@ -197,6 +284,16 @@ CREATE TABLE `sexo` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `sexo`
+--
+
+LOCK TABLES `sexo` WRITE;
+/*!40000 ALTER TABLE `sexo` DISABLE KEYS */;
+INSERT INTO `sexo` VALUES (1,'Masculino'),(2,'Femenino');
+/*!40000 ALTER TABLE `sexo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `talle`
 --
 
@@ -209,6 +306,16 @@ CREATE TABLE `talle` (
   PRIMARY KEY (`id_talle`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `talle`
+--
+
+LOCK TABLES `talle` WRITE;
+/*!40000 ALTER TABLE `talle` DISABLE KEYS */;
+INSERT INTO `talle` VALUES (1,'S'),(2,'M'),(3,'L'),(4,'XL');
+/*!40000 ALTER TABLE `talle` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
@@ -233,6 +340,16 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (10,'administrador','admin@admin.com','undefined-1611779858155.jpg','$2a$12$uWwUSLBbb.zW/uotaL99Kukmhry9lI5HXnmW.wnVxL9rMwEemFw/m','$2a$12$uA6z/cBf2ZOd0q6vN45ttOr.vu.B9PFQhrPscFIq9XfD/XTrzvpdW',_binary '',1);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users_categoria`
 --
 
@@ -245,6 +362,16 @@ CREATE TABLE `users_categoria` (
   PRIMARY KEY (`id_categoria`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users_categoria`
+--
+
+LOCK TABLES `users_categoria` WRITE;
+/*!40000 ALTER TABLE `users_categoria` DISABLE KEYS */;
+INSERT INTO `users_categoria` VALUES (1,'administrador'),(2,'logueado'),(3,'invitado');
+/*!40000 ALTER TABLE `users_categoria` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -255,4 +382,4 @@ CREATE TABLE `users_categoria` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-27 18:21:56
+-- Dump completed on 2021-01-27 18:59:25
