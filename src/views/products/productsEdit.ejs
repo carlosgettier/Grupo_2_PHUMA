@@ -5,24 +5,24 @@
     <%- include("../partials/header.ejs") %>
 
     <section>
-        <article><h1 class="titulo">Edita Un Producto</h1></article>
-
+        <article><h1 class="titulo">Edita Un Productos</h1></article>
+          
         <article>
             <div>
-
-                <form action="/products/edit/<%=respuesta.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
+                
+                     <form action="/products/edit/<%=producto.id_producto%>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
                     
                    
                     <label for="nombre">Nombre</label><br>
-                    <input type="text" name="name" id="name" autocomplete="off" value="<%=respuesta.nombre %>">
+                    <input type="text" name="name" id="name" autocomplete="off" value="<%=producto.nombre  %> " >
                      
                     <label for="cantidad">Cantidad</label><br>
-                    <input type="number" name="cantidad" id="name" autocomplete="off" value="<%=<respuesta class="cantidad"></respuesta> %>">
+                    <input type="text" name="cantidad" id="name" autocomplete="off" value="<%=producto.cantidad %>" >
 
 
 
                     <label for="description"> Descripción </label>
-                    <input type="text" name="description" id="description" autocomplete="off"  value="<%=respuesta.descripcion %>">
+                    <input type="text" name="description" id="description" autocomplete="off" value="<%=producto.descripcion %> " >
 
 
                     <label for="image">Imagen del producto</label>
@@ -30,7 +30,7 @@
                     
                     <label for="category">Categoría</label> <br>
                     <select name="category" id="category">
-                        <option value="0"><% respuesta.categoria %> </option>
+            
                         <option value="1">Remeras</option>
                         <option value="2">Pantalones</option>
                         <option value="3">Camisas</option>
@@ -57,12 +57,13 @@
                     </select> <br>
 
                     <label for="precio">Precio</label><br>
-                    <input type="number" name="precio" id="precio" autocomplete="off" value="<%=productsToEdit.precio %>">
+                    <input type="number" name="precio" id="precio" autocomplete="off" value="<%=producto.precio%>" >
 
                     <button class="enviar">editar</button>
 
                          
                 </form>
+                
             </div>
 
         </article>

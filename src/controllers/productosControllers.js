@@ -29,7 +29,9 @@ let mezclar = function (productos, cantidad){
 module.exports = {
     'all': async function (req, res) {
     try{
-        let productos = await db.product.findAll({
+        let productos = await db.product.findAll({ where:{
+            status:1
+        },
             include: [
                 {association:'imagenes'},
                 {association:'imagenPrincipal'}
@@ -134,41 +136,54 @@ module.exports = {
 
 
 
+     "confirmDelete": function (req, res){
+        db.product.findByPk(req.params.id)
+      .then(function(producto){
+            res.render("products/formularioBorradoProducto", {producto:producto})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    "confirmDelete": function (req, res){
-        let id = req.params.id
-        if (!dataBase.productById(id).error){
-            return res.render("products/formularioBorradoProducto", {producto: dataBase.productById(id)})
-        } else {
-            return res.send(dataBase.productById(id).error)
-        }
+      })
     },
 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     "deleteId": function (req, res){
-        dataBase.borrarProductById(req.params.id)
-        res.redirect('/products/')
+        db.product.update({
+            status:0
+        },
+        {
+            where:{
+                id_producto:req.params.id
+                 }
+        }
+        )
+        .then(function(hola){
+          res.redirect("/products")
+        })
+
     },
     "edit": function(req,res){
-        db.product.findAll()
-        .then((respuesta)=>{
-            res.render("/product/")
-        })
+        db.product.findByPk(req.params.id)
+       .then(function(productos){
+           //res.send(productos)
+         res.render("products/productsEdit",{producto:productos})
+       })
+    
         .catch (function(error){
             res.send(error)
         })
@@ -190,10 +205,21 @@ module.exports = {
       }
       )
       .then(function(hola){
-        res.redirect("/")
+        res.redirect("/products")
       })
       .catch (function(error){
           res.send(error)
+      })
+      db.imagenes.update({
+        rutaImagen: req.file.filename
+      },
+      { where:{
+          idimagenes:req.params.id
+
+         }
+      }
+      ) .then(function(hola){
+        res.redirect("/products")
       })
 
        
