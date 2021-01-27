@@ -29,7 +29,9 @@ let mezclar = function (productos, cantidad){
 module.exports = {
     'all': async function (req, res) {
     try{
-        let productos = await db.product.findAll({   where:{status: 1},
+        let productos = await db.product.findAll({ where:{
+            status:1
+        },
             include: [
                 {association:'imagenes'},
                 {association:'imagenPrincipal'}
@@ -99,23 +101,7 @@ module.exports = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    "confirmDelete": function (req, res){
+     "confirmDelete": function (req, res){
         db.product.findByPk(req.params.id)
       .then(function(producto){
             res.render("products/formularioBorradoProducto", {producto:producto})
@@ -123,6 +109,24 @@ module.exports = {
       })
     },
 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     "deleteId": function (req, res){
         db.product.update({
             status:0
