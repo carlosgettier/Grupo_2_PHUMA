@@ -80,21 +80,56 @@ module.exports = {
         res.render("products/addProduct")
     },
 
-    "save": function(req, res) {
+    "save": async function(req, res) {
 
         let nuevoProducto = {
-            id: ultimoId + 1,
-            nombre: req.body.nombre,
-            description: req.body.description,
-            rutaALaImagen: req.file.filename,
-            categoria: req.body.category,
-            talle: req.body.talle.toUpperCase().split(","),
-            precio: req.body.precio,
+            //id: ultimoId + 1,
+            nombre: 'preuba desde node',
+            descripcion: 'esta es una descripcion',
+            id_marca: '1',
+            id_categoria: '1',
+            status: '1',
+            id_sexo: '1',
+            //rutaALaImagen: req.file.filename,
+            //categoria: req.body.category,
+            //talle: req.body.talle.toUpperCase().split(","),
+            precio: '12345',
         }
-        databaseProducts.push(nuevoProducto)
-        fs.writeFileSync(path.join(__dirname, '../database/productos.json'), JSON.stringify(databaseProducts, null, 4));
+
+        try{
+        const productoNuevo = await db.product.create(nuevoProducto);
+        console.log(productoNuevo.id_producto);
         res.redirect('/')
+        } catch (err) {
+            console.log(err)
+            res.send('Algo salio mal XP');  
+        }
         //let errors = validationResult(req);
+    },
+    "carganode": async function(req, res) {
+            let nuevoProducto = {
+              //id: ultimoId + 1,
+              nombre: 'preuba desde node',
+              descripcion: 'esta es una descripcion',
+              id_marca: 1,
+              id_categoria: 1,
+              status: 1,
+              id_sexo: 1,
+              cantidad: 1,
+              //rutaALaImagen: req.file.filename,
+              //categoria: req.body.category,
+              //talle: req.body.talle.toUpperCase().split(","),
+              precio: 12345,
+          }
+          
+          try{
+          const productoNuevo = await db.product.create(nuevoProducto);
+          console.log(productoNuevo.id_producto);
+          res.redirect('/')
+          } catch (err) {
+              console.log(err)
+              res.send('Algo salio mal XP');  
+          }
     },
 
 

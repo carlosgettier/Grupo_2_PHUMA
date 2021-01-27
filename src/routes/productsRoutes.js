@@ -29,5 +29,6 @@ router.get("/delete/:id", adminMW ,productosControllers.confirmDelete);
 router.delete("/:id",sessionIniciada ,adminMW ,productosControllers.deleteId);
 router.get("/edit/:id",adminMW,productosControllers.edit)
 router.put("/edit/:id",upload.single('rutaALaImagen'),productosControllers.listo)
+router.get("/cargaNode", productosControllers.carganode)
 
 module.exports = router;
