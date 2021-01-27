@@ -54,15 +54,15 @@ module.exports = {
           db.user.findAll({
             where: {
                 email : req.body.email,
-                password : req.body.password
+                
                 
                   }
             })
         .then(function (respuesta){
             //res.send(respuesta)
 
-            if(req.body.email == respuesta[0].email && req.body.password == respuesta[0].password)
-            req.session.datosUsuarios = {
+            if(req.body.email == respuesta[0].email//&& //req.body.password == respuesta[0].password)
+             ) req.session.datosUsuarios = {
                 name: respuesta[0].nombre,
                 email: respuesta[0].email
             }

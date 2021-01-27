@@ -28,6 +28,6 @@ router.post('/addProduct', upload.single('rutaALaImagen'), sessionIniciada ,admi
 router.get("/delete/:id", adminMW ,productosControllers.confirmDelete);
 router.delete("/delete/:id",sessionIniciada ,adminMW ,productosControllers.deleteId);
 router.get("/edit/:id",adminMW,productosControllers.edit)
-router.put("/edit/:id",upload.single('rutaALaImagen'),productosControllers.listo)
+router.put("/edit/:id",upload.single('image'),productosControllers.listo)
 
 module.exports = router;

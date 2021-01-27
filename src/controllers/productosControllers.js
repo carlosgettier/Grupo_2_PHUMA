@@ -175,6 +175,17 @@ module.exports = {
       .catch (function(error){
           res.send(error)
       })
+      db.imagenes.update({
+        rutaImagen: req.file.filename
+      },
+      { where:{
+          idimagenes:req.params.id
+
+         }
+      }
+      ) .then(function(hola){
+        res.redirect("/products")
+      })
 
        
     }
