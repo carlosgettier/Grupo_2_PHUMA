@@ -1,0 +1,6 @@
+module.exports = {
+    'config': path.resolve('./Grupo_2_PHUMA/src/database/config', 'config.js'), 
+    'models-path': path.resolve('./Grupo_2_PHUMA/src/database', 'models'), 
+    'seeders-path': path.resolve('./Grupo_2_PHUMA/src/database', 'seeders'),
+    'migrations-path': path.resolve('./Grupo_2_PHUMA/src/database', 'migrations')
+    }

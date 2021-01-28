@@ -1,6 +1,9 @@
 # Grupo_2_PHUMA
 proyecto integrador
 
+# USUARIO ADMIN
+admin@admin.com
+pass: admin123
 
 ## Informacion sobre la pagina
 

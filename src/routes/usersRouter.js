@@ -4,6 +4,7 @@ const router = express.Router();
 const path = require('path');
 const usersController = require('../controllers/usersController');
 const usersValidator = require('../validators/users');
+const adminMW = require("../middlewares/adminMW")
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -23,6 +24,6 @@ router.post('/register', upload.single('imagen'), usersValidator.checkRegister, 
 router.get('/login', usersController.login);
 router.get('/logout', usersController.logout);
 router.post('/login', usersController.checklogin);
-router.get("/admi",usersController.admi)
+router.get("/admi",adminMW,usersController.admi)
 
 module.exports = router;
