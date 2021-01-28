@@ -19,27 +19,35 @@
                     <input type="text" name="description" id="description" autocomplete="off">
 
 
-                    <label for="rutaALaImagen">Imagen del producto</label>
+                    <label for="rutaALaImagen">Imagen principal del producto</label>
                     <input id="rutaALaImagen" type="file" name="rutaALaImagen">
+
+                    <label for="rutaImagenesSecundarias">Imagenes secundarias del producto</label>
+                    <input id="rutaImagenesSecundarias" type="file" name="rutaImagenesSecundarias" multiple='true'>
                     
                     <label for="category">Categoría</label> <br>
                     <select name="category" id="category">
                         <option value="1">Remeras</option>
                         <option value="2">Pantalones</option>
                         <option value="3">Camisas</option>
-                        <option value="3">Bolsos/mochilas</option>
-                        <option value="3">Indumentaria verano</option>
-                        <option value="3">Indumentaria deportiva</option>
-                        <option value="3">Calzado</option>
+                        <option value="4">Bolsos/mochilas</option>
+                        <option value="5">Indumentaria verano</option>
+                        <option value="6">Indumentaria deportiva</option>
+                        <option value="7">Calzado</option>
                     </select> <br>
-
+                    <!--Saco talle hasta resolver sobre la tabla intermedia de talle/color
                     <label for="talle">Talle</label><br>
                     <input type="text" name="talle" id="talle" autocomplete="off">
-                    
+                    -->
                     <label for="sexo">Sexo</label><br>
                     <select name="sexo" id="sexo">
                         <option value="1">Hombres</option>
                         <option value="2">Mujeres</option>
+                    </select><br>
+                    <label for="marca">Marca</label><br>
+                    <select name="marca" id="marca">
+                        <option value="1">Nike</option>
+                        <option value="2">Puma</option>
                     </select><br>
                     <label for="precio">Precio</label><br>
                     <input type="number" name="precio" id="precio" autocomplete="off">

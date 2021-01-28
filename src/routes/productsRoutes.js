@@ -23,12 +23,19 @@ router.get('/',productosControllers.all)
 
 router.get("/carrito",verificaInicioSession, productosControllers.carrito);
 router.get("/detalleDeProducto/:id", productosControllers.detalle);
+//---------------
+//Rutas para pruebas rapidas sin loggear:
+//router.get("/addProduct", productosControllers.add);
+//router.post('/addProduct', upload.fields([{name:'rutaALaImagen'},{name:'rutaImagenesSecundarias'}]),productosControllers.save);
+
+//rutas posta, produccion:
 router.get("/addProduct", sessionIniciada ,adminMW ,productosControllers.add);
-router.post('/addProduct', upload.single('rutaALaImagen'), sessionIniciada ,adminMW ,productosControllers.save);
+router.post('/addProduct', upload.fields([{name:'rutaALaImagen'},{name:'rutaImagenesSecundarias'}]), sessionIniciada ,adminMW ,productosControllers.save);
+
+//---------------
 router.get("/delete/:id", adminMW ,productosControllers.confirmDelete);
 router.delete("/delete/:id",sessionIniciada ,adminMW ,productosControllers.deleteId);
 router.get("/edit/:id",adminMW,productosControllers.edit)
-router.get("/cargaNode", productosControllers.carganode)
 router.put("/edit/:id",upload.single('image'),productosControllers.listo)
 
 module.exports = router;

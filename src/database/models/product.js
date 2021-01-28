@@ -40,7 +40,11 @@ module.exports=function(sequelize,DataTypes){
         descripcion:{
             type:DataTypes.STRING,
             notNull:true
+        },
 
+        id_imagen_principal:{
+            type:DataTypes.INTEGER,
+            foreignKey:true
         }
 
     }
