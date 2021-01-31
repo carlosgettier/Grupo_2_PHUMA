@@ -25,12 +25,12 @@ router.get("/carrito",verificaInicioSession, productosControllers.carrito);
 router.get("/detalleDeProducto/:id", productosControllers.detalle);
 //---------------
 //Rutas para pruebas rapidas sin loggear:
-//router.get("/addProduct", productosControllers.add);
-//router.post('/addProduct', upload.fields([{name:'rutaALaImagen'},{name:'rutaImagenesSecundarias'}]),productosControllers.save);
+router.get("/addProduct", productosControllers.add);
+router.post('/addProduct', upload.fields([{name:'rutaALaImagen'},{name:'rutaImagenesSecundarias'}]),productosControllers.save);
 
 //rutas posta, produccion:
-router.get("/addProduct", sessionIniciada ,adminMW ,productosControllers.add);
-router.post('/addProduct', upload.fields([{name:'rutaALaImagen'},{name:'rutaImagenesSecundarias'}]), sessionIniciada ,adminMW ,productosControllers.save);
+//router.get("/addProduct", sessionIniciada ,adminMW ,productosControllers.add);
+//router.post('/addProduct', upload.fields([{name:'rutaALaImagen'},{name:'rutaImagenesSecundarias'}]), sessionIniciada ,adminMW ,productosControllers.save);
 
 //---------------
 router.get("/delete/:id", adminMW ,productosControllers.confirmDelete);

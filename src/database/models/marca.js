@@ -19,7 +19,7 @@ module.exports=function(sequelize,DataTypes){
     }
     const marca= sequelize.define(alias,cols,config)
     marca.associate= function(models){
-        marca.belongsTo(models.product,{
+        marca.hasMany(models.product,{
              as:"marcPro",
              foreignKey:"id_marca"
          })

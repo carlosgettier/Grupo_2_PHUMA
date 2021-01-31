@@ -58,22 +58,15 @@ module.exports=function(sequelize,DataTypes){
         product.belongsToMany(models.carrito,{
             as:"produCarri",
             through:"linea_carrito",
-           foreignKey:"id_producto",
+            foreignKey:"id_producto",
             otherKey:"id_carrito",
             timetamps:false
         })
         product.belongsToMany(models.talle,{
-            as:"produTalle",
-            through:"modelo_producto",
+            as:"talles",
+            through:"talle_de_producto",
             foreignKey:"id_producto",
             otherKey:"id_talle",
-            timetamps:false
-        })
-        product.belongsToMany(models.color,{
-            as:"proCol",
-            through:"modelo_producto",
-            foreignKey:"id_producto",
-            otherKey:"id_color",
             timetamps:false
         })
         product.belongsTo(models.sexo,{
@@ -99,6 +92,11 @@ module.exports=function(sequelize,DataTypes){
         product.hasMany(models.imagenes,{
             as:"imagenes",
             foreignKey:"product_id"
+        })
+
+        product.hasMany(models.talle_de_producto,{
+            as:"tallesDeProducto",
+            foreignKey:"id_producto"
         })
 
     }

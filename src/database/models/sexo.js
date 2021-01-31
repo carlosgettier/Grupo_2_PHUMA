@@ -20,7 +20,7 @@ module.exports=function(sequelize,DataTypes){
     const sexo= sequelize.define(alias,cols,config)
 
     sexo.associate= function(models){
-       sexo.belongsTo(models.product,{
+       sexo.hasMany(models.product,{
             as:"sexoPro",
             foreignKey:"id_sexo"
         })

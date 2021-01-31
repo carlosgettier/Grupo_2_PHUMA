@@ -53,6 +53,23 @@ let prepararRegistroDeFotoPrincipal = function (req, idProducto) {
 }
 
 let prepararRegistroDeProducto = function (req) {
+    //funco la insercion de talles de un solo tiron!!!
+    //pendiente agregarlo para las fotos
+    let arrayDeTalles = [];
+
+    console.log(req.body.talles);
+
+    if (req.body.talles) {
+        if (!Array.isArray(req.body.talles)) {
+            arrayDeTalles.push({ id_talle: req.body.talles })
+        } else {
+            req.body.talles.forEach(talle => {
+                arrayDeTalles.push({ id_talle: talle })
+            })
+        }
+
+    }
+
     return {
         nombre: req.body.nombre,
         descripcion: req.body.description,
@@ -60,6 +77,7 @@ let prepararRegistroDeProducto = function (req) {
         id_sexo: req.body.sexo,
         id_marca: req.body.marca,
         precio: req.body.precio,
+        tallesDeProducto: arrayDeTalles,
         status: 1
     }
 }
@@ -86,14 +104,13 @@ module.exports = {
         res.render("products/carrito")
     },
     "detalle": async function (req, res) {
-
         try {
             let producto = await db.product.findByPk(req.params.id, {
                 include: [
                     { association: 'imagenes' },
                     { association: 'imagenPrincipal' },
                     { association: 'proCateg' },
-                    { association: 'produTalle' }]
+                    { association: 'talles' }]
             });
 
             let productosParaTiles = await db.product.findAll({
@@ -111,7 +128,7 @@ module.exports = {
 
             let mezcla = mezclar(productosParaTiles, 3);
 
-            console.log(producto)
+            //res.send(producto)
             res.render("products/detalleDeProducto", { producto: producto, tilesDeProducto: mezcla })
         } catch (err) {
             console.log(err)
@@ -119,27 +136,54 @@ module.exports = {
         }
     },
     "add": function (req, res) {
-        res.render("products/addProduct")
+        //not deleted
+        const talles_pro = db.talle.findAll();
+        const categorias_pro = db.categoria.findAll();
+        const sexos_pro = db.sexo.findAll();
+        const marcas_pro = db.marca.findAll();
+
+        Promise.all([talles_pro, categorias_pro, sexos_pro, marcas_pro]).then(resultados => {
+            res.render("products/addProduct",
+                {
+                    talles: resultados[0],
+                    categorias: resultados[1],
+                    sexos: resultados[2],
+                    marcas: resultados[3]
+                })
+        }).catch(reason => {
+            console.log(reason)
+            res.send('Algo salio mal XP: ' + reason)
+        });
+
+
+
+
     },
 
     "save": async function (req, res) {
-        
-        let nuevoProducto = prepararRegistroDeProducto (req)
-        
-        try{
-        const productoNuevo = await db.product.create(nuevoProducto);
-        let imagenesSecundarias = prepararRegistrosDeFotosSecundarias(req, productoNuevo.id_producto);
-        let imagenPrincipal = prepararRegistroDeFotoPrincipal(req, productoNuevo.id_producto);
-        await db.imagenes.bulkCreate(imagenesSecundarias);
-        const imagenePrin = await db.imagenes.create(imagenPrincipal);
-        await db.product.update(
-            {id_imagen_principal: imagenePrin.idimagenes},
-            {where:{id_producto: productoNuevo.id_producto}}
-        )
-        return res.redirect('/')
+        let nuevoProducto = prepararRegistroDeProducto(req)
+        console.log(nuevoProducto);
+
+        try {
+            const productoNuevo = await db.product.create(nuevoProducto,
+                { include: [{ model: db.talle_de_producto, as: 'tallesDeProducto' }] }
+            );
+            let imagenesSecundarias = prepararRegistrosDeFotosSecundarias(req, productoNuevo.id_producto);
+            let imagenPrincipal = prepararRegistroDeFotoPrincipal(req, productoNuevo.id_producto);
+            if (imagenesSecundarias) {
+                await db.imagenes.bulkCreate(imagenesSecundarias);
+            }
+            if (imagenPrincipal) {
+                const imagenePrin = await db.imagenes.create(imagenPrincipal);
+                await db.product.update(
+                    { id_imagen_principal: imagenePrin.idimagenes },
+                    { where: { id_producto: productoNuevo.id_producto } }
+                )
+            }
+            return res.redirect('/products/addProduct')
         } catch (err) {
-        console.log(err)
-        res.send('Algo salio mal XP');  
+            console.log(err)
+            res.send('Algo salio mal XP');
         }
     },
     "confirmDelete": function (req, res) {
