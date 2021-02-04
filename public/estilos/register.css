@@ -60,6 +60,10 @@ body{
     margin-left: 30%;
     margin-right: 30%;
 }
+.formulario small{
+    color:red;
+    font-weight: bold;
+}
 
 label{
     letter-spacing: 2px;
