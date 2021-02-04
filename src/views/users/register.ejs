@@ -23,9 +23,11 @@
                     <label for="email">Email</label><br>
                     <input type="email" name="email" id="email">
 
+                   <div class=" grup">
                     <label for="contraseña">Contraseña</label><br>
-                    <input type="password" name="password" id="password" autocomplete="off">
-
+                    <span class="eyeIcon show"></span>
+                    <input type="password" name="password" id="password" autocomplete="off" >
+                  </div>
                     <label for="confirmarContraseña">Confirmar Contraseña</label><br>
                     <input type="password" name="repassword" id="repassword" autocomplete="off">
 
@@ -40,5 +42,6 @@
     </section>
     
     <%- include("../partials/footer.ejs") %>
+ 
 </body>
 </html>
