@@ -93,8 +93,8 @@ form.addEventListener("submit", function (evento){
 
 
 
-//--------EMPIEZA CARLOS----------
-let password=document.querySelector("#password")
+//--------VALIDACION CONTRASEÑA----------
+
 let eye= document.querySelector(".eyeIcon")
 
 
@@ -102,16 +102,37 @@ eye.addEventListener("click",function(){
      eye.classList.toggle("hide")
      eye.classList.toggle("show")
      
-        if(password.getAttribute("type")== 'password'){
-         password.setAttribute('type','text')
+        if(inputPassword.getAttribute("type")== 'password'){
+         inputPassword.setAttribute('type','text')
         }
         else{
-            password.setAttribute('type','password')
+            inputPassword.setAttribute('type','password')
         }
  })
- password.addEventListener()
+ inputPassword.addEventListener("blur",function(){
+     if(inputPassword.value.length<8){
+        errorPassword.innerHTML="la contraseña debe tener mas de 8 caracteres"
+        error= error ++
+     }
+     else{
+        errorPassword.innerHTML= ""
+        error=0
+     }
+ })
 
-
+ //----- validacion de confirmar contraseña-------
+ 
+ 
+ inputRepassword.addEventListener("blur",function(){
+    if(inputRepassword.value.length<8){
+       errorRepassword.innerHTML="la contraseña debe tener mas de 8 caracteres"
+       error= error ++
+    }
+    else{
+       errorRepassword.innerHTML= ""
+       error=0
+    }
+})
 
 
 
