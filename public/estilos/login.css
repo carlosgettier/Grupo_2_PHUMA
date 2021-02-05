@@ -85,3 +85,34 @@ main h1{
      border-radius: 20px;
 
  }
+ .grup{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.eyeIcon.show:before{
+  content: "\f070";
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  color: #777;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 13%;
+  right: 0%;
+  cursor: pointer;
+ }
+ .eyeIcon.hide:before{
+  content: "\f06e";
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  color: #777;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 13%;
+  right: 0%;
+  cursor: pointer;
+ }

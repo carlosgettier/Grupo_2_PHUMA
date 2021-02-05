@@ -17,10 +17,17 @@
     <div class="cuadro">
         <form class="datoImp" method="POST">
             <label class="form-label " for="email">Email</label>
-            <input class="form-input" type="email" class="form-control form-control-border " autocorrect="off" autocapitalize="off" name="email">
+            <small id="errorEmail"></small>
+            <input class="form-input" type="email" id="email" class="form-control form-control-border " autocorrect="off" autocapitalize="off" name="email">
 
-            <label class="form-label " for="password">Contraseña</label>
-            <input class="form-input"  type="password" name="password">
+            <div class=" grup">
+                <label class="form-label " for="password">Contraseña</label>
+                <span class="eyeIcon show"></span>
+                <small id="errorPassword"></small>
+                <input class="form-input"  type="password" name="password" id="password">
+           </div>
+
+
             <div class="form-input">
             <input type="checkbox" name="Recordame">
             <label type="checkbox" name="checkbox">Recordame</label>
@@ -37,7 +44,9 @@
 
 <footer>
     <%- include('../partials/footer')  %> 
+
 </footer>
+<script src="/js/loginValid.js"></script>
 
 
 </body>
