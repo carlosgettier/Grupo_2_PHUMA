@@ -15,21 +15,31 @@
                 <form action="" method="POST" enctype="multipart/form-data" class="formulario">
                
                     <label for="nombre">Nombre y Apellido</label><br>
+                    <small id = "errorName"></small>
                     <input type="text" name="name" id="name" autocomplete="off">
+                            
                     
                     <label for="imagen">Imagen de perfil</label>
+                    <small id="errorImage"></small>
                     <input id="imagen" type="file" name="imagen">
-                    
+                            
+
                     <label for="email">Email</label><br>
+                    <small id="errorEmail"></small>
                     <input type="email" name="email" id="email">
+                            
 
                    <div class=" grup">
                     <label for="contraseña">Contraseña</label><br>
                     <span class="eyeIcon show"></span>
+                    <small id="errorPassword"></small>
                     <input type="password" name="password" id="password" autocomplete="off" >
                   </div>
-                    <label for="confirmarContraseña">Confirmar Contraseña</label><br>
+                    
+                <label for="confirmarContraseña">Confirmar Contraseña</label><br>
+                    <small id="errorRepassword"></small>
                     <input type="password" name="repassword" id="repassword" autocomplete="off">
+                            
 
                     <button class="enviar">Crear Cuenta</button>
 
@@ -42,6 +52,7 @@
     </section>
     
     <%- include("../partials/footer.ejs") %>
- 
+
+    <script src="/js/validaciones.js"></script>
 </body>
 </html>
