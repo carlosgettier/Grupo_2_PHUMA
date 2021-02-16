@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include ("../partials/head.ejs")%>
+<script src="/js/editProductValidator.js"></script>
 
     <body>
         <%- include("../partials/header.ejs") %>
@@ -13,31 +14,32 @@
                 <article>
                     <div>
                         <form action="/products/edit/<%=producto.id_producto%>?_method=PUT" method="POST"
-                            enctype="multipart/form-data" class="formulario">
+                            enctype="multipart/form-data" class="formulario" id="form">
                             <label for="nombre">Nombre</label><br>
                             <small id="errorNombre"></small>
                             <input type="text" name="nombre" id="nombre" autocomplete="off"
                                 value="<%=producto.nombre%>">
 
-                            <label for="description"> Descripción </label>
+                            <label for="description">Descripción</label><br>
                             <small id="errorDescripcion"></small>
                             <input type="text" name="description" id="description" autocomplete="off"
                                 value="<%=producto.descripcion%> ">
-                            <div>
-                                <p>Puede cargar nuevas imagenes. Las imagenes existentes se borran mas abajo!</p>
-                                <hr>
-                            </div>
-                            <label for="rutaALaImagen">Imagen principal del producto</label>
-                            <small id="errorImagenP"></small>
-                            <input id="rutaALaImagen" type="file" name="rutaALaImagen">
 
-                            <label for="rutaImagenesSecundarias">Imagenes secundarias del producto</label>
-                            <small id="errorImagenS"></small>
-                            <input id="rutaImagenesSecundarias" type="file" name="rutaImagenesSecundarias"
-                                multiple='true'>
+                                <div>
+                                    <p>Puede cargar nuevas imagenes o borrar las existentes mas abajo!</p>
+                                    <hr>
+                                    <br>
+                                </div>
+                                <label for="rutaALaImagen">Imagen principal del producto</label><br>
+                                <small id="errorImagenP"></small>
+                                <input id="rutaALaImagen" type="file" name="rutaALaImagen">
+    
+                                <label for="rutaImagenesSecundarias">Imagenes secundarias del producto</label><br>
+                                <small id="errorImagenS"></small>
+                                <input id="rutaImagenesSecundarias" type="file" name="rutaImagenesSecundarias"
+                                    multiple='true'>
 
-                            <label for="category">Categoría</label> <br>
-                            <small id="errorCategory"></small>
+                            <label for="category">Categoría</label><br>
                             <select name="category" id="category">
                                 <% categorias.forEach(categoria=>{%>
                                     <!-- El ejs adentro del tag de option esta mirando si es un producto con ID,
@@ -51,9 +53,8 @@
                                         <%=categoria.nombre%>
                                     </option>
                                 <%})%>
-                            </select> <br>
+                            </select><br>
                             <label for="sexo">Sexo</label><br>
-                            <small id="errorSexo"></small>
                             <select name="sexo" id="sexo">
                                 <% sexos.forEach(sexo=>{%>
                                     <option value="<%=sexo.id_sexo%>"
@@ -65,7 +66,6 @@
                                 <%})%>
                             </select><br>
                             <label for="marca">Marca</label><br>
-                            <small id="errorMarca"></small>
                             <select name="marca" id="marca">
                                 <% marcas.forEach(marca=>{%>
                                     <option value="<%=marca.id_marca%>"
@@ -77,7 +77,6 @@
                                 <%})%>
                             </select><br>
                             <label for="talles">Talles</label><br>
-                            <small id="errorTalles"></small>
                             <select name="talles" id="talles" multiple>
                                 <% talles.forEach(talle=>{%>
                                     <option value="<%=talle.id_talle%>"
@@ -93,6 +92,7 @@
                             <input type="number" name="precio" id="precio" autocomplete="off"
                                 value="<%=producto.precio%>"
                             >
+
                             <button class="enviar">Realizar cambios</button>
                         </form>
                     </div>
@@ -109,5 +109,4 @@
             </section>
             <%- include("../partials/footer.ejs") %>
     </body>
-
 </html>

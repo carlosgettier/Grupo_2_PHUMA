@@ -154,7 +154,7 @@ module.exports = {
             resultados[4].talles.forEach(objetoTalle => {
                 tallesProcesados.push(objetoTalle.id_talle);
             })
-            res.render("products/editProduct",
+            res.render("products/productsEdit",
                 {
                     talles: resultados[0],
                     categorias: resultados[1],
