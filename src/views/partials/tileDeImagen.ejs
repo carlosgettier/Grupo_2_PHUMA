@@ -1,0 +1,8 @@
+<div class="patials-tile-delete-image">
+    <figure><img src="/uploads/productImage/<%= imagen.rutaImagen %>" alt="imagen tile de producto <%= imagen.product_id %>"></figure>
+    <div class="flotar-izquierda">
+        <form action="/products/delete/relatedImage/<%=imagen.idimagenes%>?_method=DELETE" method="POST">
+            <button class = "botoncitoDisimulado"><i class="far fa-trash-alt"></i></button>
+        </form>
+    </div>
+</div>

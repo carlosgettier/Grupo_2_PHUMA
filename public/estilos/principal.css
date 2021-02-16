@@ -5,9 +5,10 @@
 @import "/estilos/login.css";
 @import "/estilos/productsAll.css";
 @import "/estilos/partials/tileDeProducto.css";
+@import "/estilos/partials/tileDeImagen.css";
 @import"/estilos/addProduct.css";
+@import"/estilos/editProduct.css";
 @import "/estilos/formularioBorrado.css";
-
 
 
 /*hesder*/

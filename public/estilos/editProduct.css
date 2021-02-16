@@ -1,0 +1,48 @@
+label{
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+input{
+    height: 35px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: solid  #c4c4c4 1px;
+}
+
+.enviar{
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 20px;
+    border: solid black ;
+    width: 100%;
+    background: black;
+    color: white;
+    margin-bottom: 55px;
+}
+
+section article div form input#image{
+    font-size: 20px;
+    border: none;
+}
+section article div form select{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.all-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.algo-de-margin{
+    margin-left: 10%;
+    margin-right: 10%;
+}
