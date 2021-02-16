@@ -18,7 +18,6 @@ module.exports = {
             });
             res.render('products/productsAll', { tilesDeProducto: productos });
         } catch (err) {
-            console.log(err)
             res.send('Algo salio mal XP');
         }
     },
@@ -55,7 +54,6 @@ module.exports = {
             //res.send(producto)
             res.render("products/detalleDeProducto", { producto: producto, tilesDeProducto: mezcla })
         } catch (err) {
-            console.log(err)
             res.send('Algo salio mal XP');
         }
     },
@@ -76,7 +74,6 @@ module.exports = {
                     marcas: resultados[3]
                 })
         }).catch(reason => {
-            console.log(reason)
             res.send('Algo salio mal XP: ' + reason)
         });
     },
@@ -102,7 +99,6 @@ module.exports = {
             }
             return res.redirect('/products/addProduct')
         } catch (err) {
-            console.log(err)
             res.send('Algo salio mal XP');
         }
     },
@@ -149,7 +145,6 @@ module.exports = {
         });
 
         Promise.all([talles_pro, categorias_pro, sexos_pro, marcas_pro, producto]).then(resultados => {
-            console.log(resultados[4]);
             let tallesProcesados = [];
             resultados[4].talles.forEach(objetoTalle => {
                 tallesProcesados.push(objetoTalle.id_talle);
@@ -164,45 +159,59 @@ module.exports = {
                     tallesProcesados: tallesProcesados
                 })
         }).catch(reason => {
-            console.log(reason)
-            res.send('Algo salio mal XP: ' + reason)
+            res.send('Algo salio mal en el get a edit: ' + reason)
         });
     },
 
-    "listo": function (req, res) {
-        db.product.update({
-            nombre: req.body.name,
-            cantidad: req.body.name,
-            descripcion: req.body.description,
-            id_categoria: req.body.category,
-            id_sexo: req.body.sexo,
-            id_marca: req.body.marca,
-            precio: req.body.precio
-        },
-            {
+    "listo": async function (req, res) {
+        
+        //crear objeto de producto a editar OK - aca se puede usar el existente, porque en el update
+        //ignora el array de talles
+        let productoEditado = prepararRegistroDeProducto(req);
+        let talles = prepararTallesDeProducto(req);
+
+        try {
+            //el update al objeto anda al pelo
+            await db.product.update(productoEditado,
+                {
+                    where:{
+                        id_producto: req.params.id
+                    } 
+                }
+            );
+
+            // borrado y creacion de todos los talles. No quedo tan bien
+            // lo interesante seria armar el front para que envie 2 arrays
+            // con talles a agregar y talles a borrar, en vez de borrar y crear todo siempre...
+
+            await db.talle_de_producto.destroy({
                 where: {
                     id_producto: req.params.id
                 }
-            }
-        )
-            .then(function (hola) {
-                res.redirect("/products")
-            })
-            .catch(function (error) {
-                res.send(error)
-            })
-        db.imagenes.update({
-            rutaImagen: req.file.filename
-        },
-            {
-                where: {
-                    idimagenes: req.params.id
+            });
 
-                }
+            await db.talle_de_producto.bulkCreate(talles);
+
+            //despues, si se cargaron nuevas imagenes, seguir con eso
+
+            let imagenesSecundarias = prepararRegistrosDeFotosSecundarias(req, req.params.id);
+            let imagenPrincipal = prepararRegistroDeFotoPrincipal(req, req.params.id);
+            if (imagenesSecundarias) {
+                await db.imagenes.bulkCreate(imagenesSecundarias);
             }
-        ).then(function (hola) {
-            res.redirect("/products")
-        })
+            if (imagenPrincipal) {
+                const imagenePrin = await db.imagenes.create(imagenPrincipal);
+                await db.product.update(
+                    { id_imagen_principal: imagenePrin.idimagenes },
+                    { where: { id_producto: req.params.id } }
+                )
+            }
+
+            return res.redirect('/products/edit/' + req.params.id)
+        } catch (err) {
+            console.log(err)
+            res.send('Algo salio mal durante el post' + err);
+        }
     },
 
     "deleteImageById": async function (req, res) {
@@ -261,8 +270,6 @@ let prepararRegistroDeProducto = function (req) {
     //pendiente agregarlo para las fotos
     let arrayDeTalles = [];
 
-    console.log(req.body.talles);
-
     if (req.body.talles) {
         if (!Array.isArray(req.body.talles)) {
             arrayDeTalles.push({ id_talle: req.body.talles })
@@ -284,4 +291,26 @@ let prepararRegistroDeProducto = function (req) {
         tallesDeProducto: arrayDeTalles,
         status: 1
     }
+}
+
+let prepararTallesDeProducto = function (req) {
+    let arrayDeTalles = [];
+
+    if (req.body.talles) {
+        if (!Array.isArray(req.body.talles)) {
+            arrayDeTalles.push({
+                id_talle: req.body.talles,
+                id_producto: req.params.id
+            })
+        } else {
+            req.body.talles.forEach(talle => {
+                arrayDeTalles.push({
+                    id_talle: talle,
+                    id_producto: req.params.id
+                })
+            })
+        }
+    }
+
+    return arrayDeTalles;
 }
