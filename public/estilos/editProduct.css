@@ -12,6 +12,10 @@ input{
     border: solid  #c4c4c4 1px;
 }
 
+small{
+    color:red;
+}
+
 .enviar{
     margin-top: 10px;
     letter-spacing: 0.5px;
