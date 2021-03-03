@@ -19,17 +19,21 @@
                             <input type="text" name="nombre" id="nombre" autocomplete="off">
 
                             <label for="description"> Descripción </label>
+                            <small id="errorDescripcion"></small>
                             <input type="text" name="description" id="description" autocomplete="off">
 
 
                             <label for="rutaALaImagen">Imagen principal del producto</label>
+                            <small id="errorImagenP"></small>
                             <input id="rutaALaImagen" type="file" name="rutaALaImagen">
 
                             <label for="rutaImagenesSecundarias">Imagenes secundarias del producto</label>
+                            <small id="errorImagenS"></small>
                             <input id="rutaImagenesSecundarias" type="file" name="rutaImagenesSecundarias"
                                 multiple='true'>
 
                             <label for="category">Categoría</label> <br>
+                            <small id="errorCategory"></small>
                             <select name="category" id="category">
                                 <% categorias.forEach(categoria=>{%>
                                     <option value="<%=categoria.id_categoria%>">
@@ -42,6 +46,7 @@
                     <input type="text" name="talle" id="talle" autocomplete="off">
                     -->
                             <label for="sexo">Sexo</label><br>
+                            <small id="errorSexo"></small>
                             <select name="sexo" id="sexo">
                                 <% sexos.forEach(sexo=>{%>
                                     <option value="<%=sexo.id_sexo%>">
@@ -50,6 +55,7 @@
                                     <%})%>
                             </select><br>
                             <label for="marca">Marca</label><br>
+                            <small id="errorMarca"></small>
                             <select name="marca" id="marca">
                                 <% marcas.forEach(marca=>{%>
                                     <option value="<%=marca.id_marca%>">
@@ -58,6 +64,7 @@
                                     <%})%>
                             </select><br>
                             <label for="talles">Talles</label><br>
+                            <small id="errorTalle"></small>
                             <select name="talles" id="talles" multiple>
                                 <% talles.forEach(talle=>{%>
                                     <option value="<%=talle.id_talle%>">
@@ -66,6 +73,7 @@
                                     <%})%>
                             </select><br>
                             <label for="precio">Precio</label><br>
+                            <small id="errorPrecio"></small>
                             <input type="number" name="precio" id="precio" autocomplete="off">
 
                             <button class="enviar">Registrar Producto</button>
