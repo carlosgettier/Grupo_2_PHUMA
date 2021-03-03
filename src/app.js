@@ -4,6 +4,7 @@ const path = require("path");
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRoutes');
 const usersRouter = require('./routes/usersRouter');
+const apiRouter = require('./routes/apiRouter');
 const session = require ('express-session')
 const sesionIniciadaMW = require('./middlewares/sessionIniciada');
 const methodOverride = require ('method-override');
@@ -31,6 +32,8 @@ app.use('/', mainRouter);
 app.use('/users', usersRouter);
 
 app.use('/products',productsRouter);
+
+app.use('/api',apiRouter);
 
 app.listen(process.env.PORT || 3000, function() {
     console.log("El servidor está corriendo en el puerto 3000");
