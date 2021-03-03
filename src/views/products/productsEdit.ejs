@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ("../partials/head.ejs")%>
-<body>
-    <%- include("../partials/header.ejs") %>
+<%- include ("../partials/head.ejs")%>
+<script src="/js/editProductValidator.js"></script>
 
-    <section>
-        <article><h1 class="titulo">Edita Un Productos</h1></article>
-          
-        <article>
-            <div>
-                
-                     <form action="/products/edit/<%=producto.id_producto%>?_method=PUT" method="POST" enctype="multipart/form-data" class="formulario">
-                    
-                   
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" name="name" id="name" autocomplete="off" value="<%=producto.nombre  %> " >
-                     
-                    <label for="cantidad">Cantidad</label><br>
-                    <input type="text" name="cantidad" id="name" autocomplete="off" value="<%=producto.cantidad %>" >
+    <body>
+        <%- include("../partials/header.ejs") %>
 
+            <section>
+                <article>
+                    <h1 class="titulo">Edita Un Producto</h1>
+                </article>
 
+                <article>
+                    <div>
+                        <form action="/products/edit/<%=producto.id_producto%>?_method=PUT" method="POST"
+                            enctype="multipart/form-data" class="formulario" id="form">
+                            <label for="nombre">Nombre</label><br>
+                            <small id="errorNombre"></small>
+                            <input type="text" name="nombre" id="nombre" autocomplete="off"
+                                value="<%=producto.nombre%>">
 
-                    <label for="description"> Descripción </label>
-                    <input type="text" name="description" id="description" autocomplete="off" value="<%=producto.descripcion %> " >
+                            <label for="description">Descripción</label><br>
+                            <small id="errorDescripcion"></small>
+                            <input type="text" name="description" id="description" autocomplete="off"
+                                value="<%=producto.descripcion%> ">
 
-
-                    <label for="image">Imagen del producto</label>
-                    <input id="image" type="file" name="image">
-                    
-                    <label for="category">Categoría</label> <br>
-                    <select name="category" id="category">
-            
-                        <option value="1">Remeras</option>
-                        <option value="2">Pantalones</option>
-                        <option value="3">Camisas</option>
-                        <option value="3">Bolsos/mochilas</option>
-                        <option value="3">Indumentaria verano</option>
-                        <option value="3">Indumentaria deportiva</option>
-                        <option value="3">Calzado</option>
-                    </select> <br>
-
-                    <label for="sexo">SEXO</label><br>
-                    <select name="sexo" id="category">
-                        <option value="1">hombre</option>
-                        <option value="2">mujer</option>
-                        </select> <br>
-
-                    <label for="marca">MARCAS</label><br>
-                    <select name="marca" id="category">
-                        <option value="1">PUMA</option>
-                        <option value="2">ADIDAS</option>
-                        <option value="3">NIKE</option>
-                        <option value="3">TOPPER</option>
-                     
-                        
-                    </select> <br>
-
-                    <label for="precio">Precio</label><br>
-                    <input type="number" name="precio" id="precio" autocomplete="off" value="<%=producto.precio%>" >
-
-                    <button class="enviar">editar</button>
-
-                         
-                </form>
-                
-            </div>
-
-        </article>
-
-    </section>
+                                <div>
+                                    <p>Desde aqui se pueden cargar nuevas imagenes o borrar las existentes mas abajo!</p>
+                                    <hr>
+                                    <br>
+                                </div>
+                                <label for="rutaALaImagen">Imagen principal del producto</label><br>
+                                <small id="errorImagenP"></small>
+                                <input id="rutaALaImagen" type="file" name="rutaALaImagen">
     
+                                <label for="rutaImagenesSecundarias">Imagenes secundarias del producto</label><br>
+                                <small id="errorImagenS"></small>
+                                <input id="rutaImagenesSecundarias" type="file" name="rutaImagenesSecundarias"
+                                    multiple='true'>
 
+                            <label for="category">Categoría</label><br>
+                            <select name="category" id="category">
+                                <% categorias.forEach(categoria=>{%>
+                                    <!-- El ejs adentro del tag de option esta mirando si es un producto con ID,
+                                si lo es, verifica que categoria tiene cargada el producto,
+                                y si esa categoria coincide con la iteracion,
+                                marca esa option como selected-->
+                                    <option value="<%=categoria.id_categoria%>"
+                                        <%=(producto.id_producto)?(categoria.id_categoria==producto.id_categoria? 'selected'
+                                        : '' ) :'' %>
+                                        >
+                                        <%=categoria.nombre%>
+                                    </option>
+                                <%})%>
+                            </select><br>
+                            <label for="sexo">Sexo</label><br>
+                            <select name="sexo" id="sexo">
+                                <% sexos.forEach(sexo=>{%>
+                                    <option value="<%=sexo.id_sexo%>"
+                                        <%=(producto.id_producto)?(sexo.id_sexo==producto.id_sexo? 'selected' : '' ) :''
+                                        %>
+                                        >
+                                        <%=sexo.nombre%>
+                                    </option>
+                                <%})%>
+                            </select><br>
+                            <label for="marca">Marca</label><br>
+                            <select name="marca" id="marca">
+                                <% marcas.forEach(marca=>{%>
+                                    <option value="<%=marca.id_marca%>"
+                                        <%=(producto.id_producto)?(marca.id_marca==producto.id_marca? 'selected' : '' )
+                                        :'' %>
+                                        >
+                                        <%=marca.nombre%>
+                                    </option>
+                                <%})%>
+                            </select><br>
+                            <label for="talles">Talles</label><br>
+                            <select name="talles" id="talles" multiple>
+                                <% talles.forEach(talle=>{%>
+                                    <option value="<%=talle.id_talle%>"
+                                        <%=(producto.id_producto)?(tallesProcesados.includes(talle.id_talle)? 'selected'
+                                        : '' ) :'' %>
+                                    >
+                                    <%=talle.nombre%>
+                                    </option>
+                                <%})%>
+                            </select><br>
+                            <label for="precio">Precio</label><br>
+                            <small id="errorPrecio"></small>
+                            <input type="number" name="precio" id="precio" autocomplete="off"
+                                value="<%=producto.precio%>"
+                            >
 
-
-    <%- include("../partials/footer.ejs") %>
-</body>
+                            <button class="enviar">Realizar cambios</button>
+                        </form>
+                    </div>
+                    <div class="algo-de-margin">
+                        <p>Imagenes a borrar</p>
+                        <hr>
+                        <section class='all-images'>
+                            <% producto.imagenes.forEach(estaImagen=>{ %>
+                                <%- include('../partials/tileDeImagen.ejs', {imagen:estaImagen}) %>
+                            <% }) %>
+                        </section>
+                    </div>
+                </article>
+            </section>
+            <%- include("../partials/footer.ejs") %>
+    </body>
 </html>

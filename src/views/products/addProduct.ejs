@@ -13,9 +13,10 @@
                 <article>
                     <div>
 
-                        <form action="" method="POST" enctype="multipart/form-data" id="form"  class="formulario">
+                        <form action="" method="POST" enctype="multipart/form-data" class="formulario" id="form">
 
                             <label for="nombre">Nombre</label><br>
+                            <small id="errorNombre"></small>
                             <input type="text" name="nombre" id="nombre" autocomplete="off">
 
                             <label for="description"> Descripción </label>
@@ -64,7 +65,7 @@
                                     <%})%>
                             </select><br>
                             <label for="talles">Talles</label><br>
-                            <small id="errorTalle"></small>
+                            <small id="errorTalles"></small>
                             <select name="talles" id="talles" multiple>
                                 <% talles.forEach(talle=>{%>
                                     <option value="<%=talle.id_talle%>">
@@ -86,7 +87,7 @@
 
             </section>
 
-          <script src="/js/addProductVali.js"></script>
+            <script src="/js/addProductValidator.js"></script>
 
 
             <%- include("../partials/footer.ejs") %>

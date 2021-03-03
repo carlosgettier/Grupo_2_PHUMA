@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-const { validationResult } = require('express-validator');
-const { nextTick } = require('process');
 const users = require('../validators/users');
 const db= require("../database/models")
 //let usuarios = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf8');
