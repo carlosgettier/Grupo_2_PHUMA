@@ -63,7 +63,7 @@ justify-content: flex-start
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    
+    height: 65px;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -95,7 +95,7 @@ justify-content: flex-start
 }
 
 .logo{
-    height: 70px;
+    height: 55px;
     width: 85px;
     margin-left: 50px ;
 }
@@ -185,10 +185,11 @@ nav.buscarheader form a i{
 .navegacion ul{
     display: flex;
     list-style: none;
+    margin-right: 500px;
 }
 .navegacion ul li{
 
-    margin-right:55px;
+    
 
 }
  
@@ -210,7 +211,7 @@ nav.buscarheader form a i{
 }
 
 .logo{
-    height: 70px;
+    height: 61px;
     width: 85px;
     margin-left: 50px ;
     
@@ -230,13 +231,14 @@ nav.buscarheader form a i{
 }
 .buscarheader input{
     width: 80%;
-    
+    padding: 9px;
     font-size: 18px;
     color: #000;
     outline: none;
     border: 1px solid silver;
     border-radius: 30px;
     transition:all 0.6 ease;
+    margin-right: 5px;
 }
 .boton{
     border-radius: 50px;
@@ -289,26 +291,27 @@ nav.buscarheader form a i{
   margin-top: 40px;
 }
 .formuNL2{
-    width: 49%;
+    width: 40%;
     display:flex;
     align-items: center;
+    margin-top: 25px;
     
 }
 .formuNL2 input{
     height: 45%;
     display: inline;
-    width: 38%;
-    margin-left:3% ;
+    padding: 5px;
+    margin-left:5% ;
     border-radius: 20px;
 }
 .enviarNL2{
-    width: 10%;
+    width: 25%;
     font-size: 35;
     height: 45%;
     border-radius: 20px;
     border: black 1px;
     background: black;
-    margin-left: 5%;
+    margin-left: 1%;
     color: white;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -327,6 +330,8 @@ nav.buscarheader form a i{
     letter-spacing: 0.5px;
     cursor: pointer;
 }
+
+
 .footer2{
     display: flex;
     flex-direction: column;
