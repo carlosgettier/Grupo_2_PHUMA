@@ -61,13 +61,24 @@ module.exports = {
    
 },
 productDetail: function (req,res){
-    db.product.findByPk(req.params.id).then(function (producto){
+    db.product.findByPk(req.params.id, {include: [
+        { association: 'imagenes' },
+        { association: 'imagenPrincipal' },
+        { association: 'proSexo' },
+        { association: 'proCateg' },
+        { association: 'talles' }]
+    }).then(function (producto){
+        let arrayTalles = []
+        producto.talles.forEach(talle=>arrayTalles.push(talle.nombre))
+
         res.json({"nombre" : producto.nombre,
         "descripcion" : producto.descripcion,
         "cantidad" : producto.cantidad,
-        "sexo" : producto.id_sexo,
-        "nombre" : producto.nombre,
-        "imagen" : "/api/products/img/" + producto.id_imagen_principal
+        "categoria" : producto.proCateg.nombre,
+        "sexo" : producto.proSexo.nombre,
+        "talles" :arrayTalles,
+        "precio": producto.precio,
+        "imagen" : "/uploads/productImage/" + producto.imagenPrincipal.rutaImagen
     })
     }).catch(function (error){
         res.send("El Producto solicitado no existe")
