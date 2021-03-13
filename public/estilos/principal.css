@@ -18,7 +18,6 @@
     flex-wrap: nowrap;
     list-style: none;
 justify-content: flex-end;
-margin-right: 10px;
     flex-direction: column;
     
 }
@@ -77,8 +76,6 @@ justify-content: flex-start
 
 }
  
-
-
 .navegacion ul li a{
     color: #8f8f8f;
     font-weight: bold;
@@ -267,7 +264,6 @@ nav.buscarheader form a i{
 .newsletter{
     display: flex;
     justify-content: space-around;
-   
     width: 100%;
 }
 
@@ -275,7 +271,6 @@ nav.buscarheader form a i{
 #pNl{
     display: inline;
     font-size: 20px;
-    padding-top: 0;
     font-weight: bold;
     padding-left: 150px;
     
@@ -290,7 +285,7 @@ nav.buscarheader form a i{
     width: 40%;
     display:flex;
     align-items: center;
-    margin-top: 25px;
+    
     
 }
 .formuNL2 input{
@@ -332,10 +327,7 @@ nav.buscarheader form a i{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
-    padding-top: 50px;
-   
-   
+ 
 }
 .listaF{
     display: flex;

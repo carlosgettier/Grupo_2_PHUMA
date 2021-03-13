@@ -3,10 +3,19 @@ const db = require('../database/models');
 
 let mainController = {
     index: function(req, res) {
-        return res.render('home', {
-            mensaje: "Bienvenidos a nuestra página"
-        });
+
+        db.product.findAll({
+            include: [
+                { association: 'imagenes' },
+                { association: 'imagenPrincipal' },
+                { association: 'proSexo' }
+            ]
+        }).then(function(todos){
+            
+            return res.render("home", {todos:todos})
+        })
     },
+
     hombres: function(req,res){
 
         db.product.findAll({
