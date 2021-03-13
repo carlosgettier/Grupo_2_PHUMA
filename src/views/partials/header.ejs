@@ -26,26 +26,69 @@
     <% } %>
     <hr style="color:#c4c4c4; margin-top: 5px;">
 
-    <div class="navegacion">
-       <a href="/"> <img class="logo" src="/imagenes/logo-phuma.png" alt="logo de Phuma"></a>
-        <ul class="navHeader">
-            <li>
-                    <a href="/hombres">Hombres</a>
-            </li>
-            <li>
-                <a href="/mujeres">Mujeres</a>
-            </li>
-        </ul>
-
-        <nav class="buscarheader">
-            <form class="formHeader" action="#">
-                <input type="text" placeholder="Buscar" required>
-                <button type="submit" class="boton"> <i class="fas fa-search icon"></i></button>
-                 <a href="/products/carrito" style="color: black;"> <i class="fas fa-shopping-cart"></i> </a>
-             </form>
-
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="container-fluid">
+            <a href="/"><img src="/imagenes/logo-phuma.png" style=" height: 80px; margin: 5px;"></a>
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto  mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Accesorios
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Mochilas</a></li>
+                  </ul>
+                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mujeres
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Remeras</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Camperas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Calzados</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Bikini</a></li>
+                 
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Hombres
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Remeras</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Camisas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Pantalones</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Trajes de Baño</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Calzados</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+            
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Escriba una busqueda" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+        
+      </nav>
     <hr>
      
 </header>

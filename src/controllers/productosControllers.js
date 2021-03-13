@@ -6,17 +6,23 @@ const { Op } = require("sequelize");
 
 module.exports = {
     'all': async function (req, res) {
+        let sexoQuery = req.query.sexo
+        let categoriaQuery = req.query.categoria
+        let titulo = "Todos los Productos"
+        let whereParams = {status : 1}
+        if(sexoQuery){
+            titulo = sexoQuery == 1? "Productos Para Hombres": "Productos Para Mujeres"
+            whereParams["id_sexo"] = sexoQuery
+        }
         try {
             let productos = await db.product.findAll({
-                where: {
-                    status: 1
-                },
+                where: whereParams,
                 include: [
                     { association: 'imagenes' },
                     { association: 'imagenPrincipal' }
                 ]
             });
-            res.render('products/productsAll', { tilesDeProducto: productos });
+            res.render('products/productsAll', { tilesDeProducto: productos, tituloPagina:titulo });
         } catch (err) {
             res.send('Algo salio mal XP');
         }
