@@ -9,6 +9,7 @@ const session = require ('express-session')
 const sesionIniciadaMW = require('./middlewares/sessionIniciada');
 const methodOverride = require ('method-override');
 const cookieMW = require('./middlewares/CookieAuthMW');
+var cors = require('cors')
 
 //De aplicaciòn
 
@@ -25,6 +26,7 @@ app.use(sesionIniciadaMW);
 
 app.use(methodOverride('_method'));
 app.use(cookieMW);
+app.use(cors())
 
 //De ruta
 app.use('/', mainRouter);
