@@ -99,3 +99,35 @@
 # Stop Doing :
 
 * No utilizar JSON para persistencia de datos.
+
+# RETROSPECTIVA FINAL
+
+# Start Doing : 
+
+* Empezar a utilizar react en las paginas que creamos convenientes
+
+* Comenzar a utilizar Apis para la recopilacion de informacion por ejemplo.
+
+* Utilizar frameworks como bootstrap si creemos que es conveniente, siempre y cuando estemos de a cuerdo con sus limitaciones.
+
+
+# More Of :
+
+* Optimizacion del tiempo en reuniones.
+
+* Implementar mas apis de terceros que nos pueden ahorrar tiempo.
+
+* Utilizacion de Query Strings
+
+# Keep Doing :
+
+* Varias reuniones por semana como venimos haciendo hasta ahora.
+
+* seguir teniendo en cuenta todos los casos de usuario posibles para realizar una pagina mas eficiente.
+
+# Stop Doing : 
+
+* No crear paginas para cada seccion ya que se pueden optimizar utilizando query String en una sola pagina de EJS.
+
+# Link A la linea de Tiempo :
+* https://jamboard.google.com/d/1qeTYNYJQQjI-pbfBD6afz1Gm3dj1Kx2Q5zj-EHy1-dQ/viewer?f=0
