@@ -26,8 +26,7 @@ app.use(sesionIniciadaMW);
 
 app.use(methodOverride('_method'));
 app.use(cookieMW);
-app.use(cors());
-
+app.use(cors())
 
 //De ruta
 app.use('/', mainRouter);
