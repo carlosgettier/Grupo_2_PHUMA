@@ -59,8 +59,11 @@
                 <hr>
                 <article id="hombres">
                     <div class="vistas">
+                        
                         <% for (let i=0 ; i < 4 ; i++) {%>
+                            <%if(hombres[i]){%>
 
+                                
                             
                                 <div class="elegidos">
                                     <a href="/products/detalleDeProducto/<%=hombres[i].id_producto %>">
@@ -75,7 +78,7 @@
                                             </h5>
                                     </a>
                                 </div>
-                        
+                                <%}%>
                         <%}%>
                     </div>
                 </article>

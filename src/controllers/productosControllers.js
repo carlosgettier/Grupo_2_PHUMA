@@ -103,7 +103,7 @@ module.exports = {
                     { where: { id_producto: productoNuevo.id_producto } }
                 )
             }
-            return res.redirect('/products/addProduct')
+            return res.redirect('/products')
         } catch (err) {
             res.send('Algo salio mal XP');
         }
