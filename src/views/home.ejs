@@ -61,21 +61,21 @@
                     <div class="vistas">
                         <% for (let i=0 ; i < 4 ; i++) {%>
 
-                            <% if(todos[i].id_sexo==1){ %>
+                            
                                 <div class="elegidos">
-                                    <a href="/products/detalleDeProducto/<%=todos[i].id_producto %>">
-                                        <img src="/uploads/productImage/<%= todos[i].imagenPrincipal.rutaImagen %>"
-                                            alt="imagen tile <%= todos.nombre %>">
+                                    <a href="/products/detalleDeProducto/<%=hombres[i].id_producto %>">
+                                        <img src="/uploads/productImage/<%= hombres[i].imagenPrincipal.rutaImagen %>"
+                                            alt="imagen tile <%= hombres.nombre %>">
                                         <h6>
-                                            <%= todos[i].proSexo.nombre %>
+                                            <%= hombres[i].proSexo.nombre %>
                                         </h6>
-                                        <%=todos[i].nombre %>
+                                        <%=hombres[i].nombre %>
                                             <i class="fas fa-eye"></i>
-                                            <h5>$ <%=todos[i].precio %>
+                                            <h5>$ <%=hombres[i].precio %>
                                             </h5>
                                     </a>
                                 </div>
-                            <% } %>
+                        
                         <%}%>
                     </div>
                 </article>
@@ -84,23 +84,23 @@
                 <hr>
                 <article id="mujeres">
                     <div class="vistas">
-                        <% for (let i=5 ; i < 9 ; i++) {%>
+                        <% for (let i=0 ; i < 4 ; i++) {%>
 
-                            <% if(todos[i].id_sexo==2){ %>
+                            
                                 <div class="elegidos">
-                                    <a href="/products/detalleDeProducto/<%=todos[i].id_producto %>">
-                                        <img src="/uploads/productImage/<%= todos[i].imagenPrincipal.rutaImagen %>"
-                                            alt="imagen tile <%= todos.nombre %>">
+                                    <a href="/products/detalleDeProducto/<%=mujeres[i].id_producto %>">
+                                        <img src="/uploads/productImage/<%= mujeres[i].imagenPrincipal.rutaImagen %>"
+                                            alt="imagen tile <%= mujeres.nombre %>">
                                         <h6>
-                                            <%= todos[i].proSexo.nombre %>
+                                            <%= mujeres[i].proSexo.nombre %>
                                         </h6>
-                                        <%=todos[i].nombre %>
+                                        <%=mujeres[i].nombre %>
                                             <i class="fas fa-eye"></i>
-                                            <h5>$ <%=todos[i].precio %>
+                                            <h5>$ <%=mujeres[i].precio %>
                                             </h5>
                                     </a>
                                 </div>
-                            <% } %>
+                          
                         <%}%>
                     </div>
                 </article>

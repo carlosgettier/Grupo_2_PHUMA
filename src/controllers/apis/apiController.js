@@ -49,8 +49,8 @@ module.exports = {
                         ["nombre","nombre"],
                         ["descripcion","descripcion"],
                         ["precio","precio"],
-                        [Sequelize.fn('CONCAT',"/api/products/", Sequelize.col('id_producto') ),'detail']
-
+                        [Sequelize.fn('CONCAT',"/api/products/", Sequelize.col('id_producto') ),'detail'],
+                        ["cantidad","cantidad"],
                     ]
         }).then(function (producto){
            let respuestaFormateada = { Productos:producto,

@@ -1,7 +1,7 @@
 module.exports={
   "development": {
     "username": "root",
-    "password": 'jpdjpd11',
+    "password": '',
     "database": "phuma",
     "host": "127.0.0.1",
     "dialect": "mysql"
