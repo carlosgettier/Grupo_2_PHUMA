@@ -1,94 +1,122 @@
 <header>
-  
-        <nav class="primerosLinks">
-        <div class="userIngreso">
-        <% if (typeof hayUsuario != 'undefined') { %>
-            <li>
-                <a href="/users/logout">logout</a>
-                <a href="/users/admi">Administracion de productos</a>
-            </li>
-        </div>
 
+  <nav class="primerosLinks">
+    <div class="userIngreso">
+      <% if (typeof hayUsuario !='undefined' ) { %>
+        <li>
+          <a href="/users/logout">logout</a>
+          <% if (hayUsuario.email=="admin@admin.com" ) { %>
+            <a href="/users/admi">Administracion de productos</a>
+            <% } %>
+        </li>
+    </div>
+ 
 
+    <div class="userWelcome">
+      <h1>Bienvenid@ <%= hayUsuario.name %>
+      </h1>
+      <img src='/uploads/avatars/<%=hayUsuario.imagen%>' id="logo2">
+    </div>
+    <% } else { %>
+      <div class="userIngreso">
+        <li>
+          <a href="/users/register">Registrate</a>
+        </li>
+        <li>
+          <a href="/users/login">Iniciar Sesion</a>
+        </li>
+      </div>
 
-        <h1>Bienveni@ <%= hayUsuario.name %></h1>
-    
-   <% } else { %> 
-        <div class="userIngreso">   
-            <li>
-                <a href="/users/register">Registrate</a>
-            </li>
-            <li>
-                <a href="/users/login">Iniciar Sesion</a>
-            </li>
-        </div>         
-        </nav>
-    <% } %>
-    <hr style="color:#c4c4c4; margin-top: 5px;">
+      <% } %>
+  </nav>
+  <hr style="color:#c4c4c4; margin-top: 5px;">
+  <br>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-        <div class="container-fluid">
-            <a href="/"><img src="/imagenes/logo-phuma.png" style=" height: 80px; margin: 5px;"></a>
-         
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto  mb-2 mb-lg-0 ">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Accesorios
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Mochilas</a></li>
-                  </ul>
-                </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Mujeres
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Remeras</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Camperas</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Calzados</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Bikini</a></li>
-                 
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Hombres
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Remeras</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Camisas</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Trajes de Baño</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Calzados</a></li>
-                  
-                </ul>
-              </li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="/"><img src="/imagenes/logo-phuma.png" style=" height: 80px; margin: 5px;"></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto  mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Accesorios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Mochilas</a></li>
             </ul>
-            
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Escriba una busqueda" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
-        </div>
-        
-      </nav>
-    <hr>
-     
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Mujeres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Remeras</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Camperas</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Calzados</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Bikini</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Hombres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Remeras</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Camisas</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Pantalones</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Trajes de Baño</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Calzados</a></li>
+
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Escriba una busqueda" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+
+        <a href='products/carrito/' class="btn btn-outline-success" style="margin-left: 15px;"><i
+            class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+
+  </nav>
+  <hr>
+
+
 </header>

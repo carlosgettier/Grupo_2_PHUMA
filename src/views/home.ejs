@@ -2,101 +2,110 @@
 <html lang="en">
 <%- include ("partials/head.ejs")%>
 
-<body>
-    <main class="home">
-    <%- include("partials/header.ejs") %>
-       <div class="container">
-        <ul class="slider">
-            <li id="slider1">
-                <img src="./imagenes/imagen 1.jpg" alt="">
-            </li>
-            <li id="slider2">
-               <img src="./imagenes/imagen2.jpg" alt=""> 
-            </li>
-            <li id="slider3">
-               <img src="./imagenes/imagen3.jpg" alt="">
-            </li>
-            <li id="slider4">
-               <img src="./imagenes/imagen4.jpg" alt="">    
-            </li>
-        </ul>
-        <ul class="menu">
-            <li>
-                <a href="#slider1"></a>
-            </li>
-            <li>
-                <a href="#slider2"></a>
-            </li>
-            <li>
-                <a href="#slider3"></a>
-            </li>
-            <li>
-                <a href="#slider4"></a>
-            </li>
-        </ul>
-     </div> 
-     <hr>
-         <article class="productos">
-            
-            <div id="imagen1"> 
-                <a href="/products/?sexo=2"><img src="./imagenes/mujer.jpg" alt="">
-             <p>MUJER</p></a>
-            </div>
-            <div id="imagen2">
+    <body>
+        <main class="home">
+            <%- include("partials/header.ejs") %>
+                <div class="container">
+                    <ul class="slider">
+                        <li id="slider1">
+                            <img src="./imagenes/imagen 1.jpg" alt="">
+                        </li>
+                        <li id="slider2">
+                            <img src="./imagenes/imagen2.jpg" alt="">
+                        </li>
+                        <li id="slider3">
+                            <img src="./imagenes/imagen3.jpg" alt="">
+                        </li>
+                        <li id="slider4">
+                            <img src="./imagenes/imagen4.jpg" alt="">
+                        </li>
+                    </ul>
+                    <ul class="menu">
+                        <li>
+                            <a href="#slider1"></a>
+                        </li>
+                        <li>
+                            <a href="#slider2"></a>
+                        </li>
+                        <li>
+                            <a href="#slider3"></a>
+                        </li>
+                        <li>
+                            <a href="#slider4"></a>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <article class="productos">
 
-            <a href="/products/?sexo=1">
-              <img src="./imagenes/hombre.jpg" alt="">
-              <p>HOMBRE</p></a>
-
-            </div> 
-            
-         </article>
-        <hr>
-   
-            <h3 class="h3">ELEGIDOS POR HOMBRES</h3>
-             <hr> 
-             <article id="hombres">
-                <div class="vistas"> 
-             <% for (let i = 0  ; i < 4 ; i++) {%>
-                
-                <% if(todos[i].id_sexo == 1){ %> 
-                   <div class="elegidos">  
-                    <a href="/products/detalleDeProducto/<%=todos[i].id_producto %>">   
-                    <img src="/uploads/productImage/<%= todos[i].imagenPrincipal.rutaImagen %>" alt="imagen tile <%= todos.nombre %>">  
-                     <h6> <%= todos[i].proSexo.nombre %></h6>
-                      <%=todos[i].nombre %>   
-                     <i class="fas fa-eye"></i>
-                      <h5>$ <%=todos[i].precio %></h5>
-                    </a>
-                    <%  } %>
+                    <div id="imagen1">
+                        <a href="/products/?sexo=2"><img src="./imagenes/mujer.jpg" alt="">
+                            <p>MUJER</p>
+                        </a>
                     </div>
-     
-                <%}%>
-            </div>
-        </article>
+                    <div id="imagen2">
 
-            <h3 class="h3">ELEGIDOS POR MUJERES</h3>
-             <hr> 
-             <article id="hombres">
-                <div class="vistas"> 
-             <% for (let i = 5  ; i < 9 ; i++) {%>
-               
-                <% if(todos[i].id_sexo == 2){ %> 
-                   <div class="elegidos">  
-                    <a href="/products/detalleDeProducto/<%=todos[i].id_producto %>">   
-                    <img src="/uploads/productImage/<%= todos[i].imagenPrincipal.rutaImagen %>" alt="imagen tile <%= todos.nombre %>">  
-                     <h6> <%= todos[i].proSexo.nombre %></h6>
-                      <%=todos[i].nombre %>   
-                     <i class="fas fa-eye"></i>
-                      <h5>$ <%=todos[i].precio %></h5>
-                    </a>
-                    <%  } %>
+                        <a href="/products/?sexo=1">
+                            <img src="./imagenes/hombre.jpg" alt="">
+                            <p>HOMBRE</p>
+                        </a>
+
                     </div>
 
-                 <%}%>
-            </div>
-        </article>
-    </main>
-    <%- include("partials/footer.ejs") %>
-</body>
+                </article>
+                <hr>
+
+                <h3 class="h3">ELEGIDOS POR HOMBRES</h3>
+                <hr>
+                <article id="hombres">
+                    <div class="vistas">
+                        <% for (let i=0 ; i < 4 ; i++) {%>
+
+                            <% if(todos[i].id_sexo==1){ %>
+                                <div class="elegidos">
+                                    <a href="/products/detalleDeProducto/<%=todos[i].id_producto %>">
+                                        <img src="/uploads/productImage/<%= todos[i].imagenPrincipal.rutaImagen %>"
+                                            alt="imagen tile <%= todos.nombre %>">
+                                        <h6>
+                                            <%= todos[i].proSexo.nombre %>
+                                        </h6>
+                                        <%=todos[i].nombre %>
+                                            <i class="fas fa-eye"></i>
+                                            <h5>$ <%=todos[i].precio %>
+                                            </h5>
+                                    </a>
+                                </div>
+                            <% } %>
+                        <%}%>
+                    </div>
+                </article>
+
+                <h3 class="h3">ELEGIDOS POR MUJERES</h3>
+                <hr>
+                <article id="mujeres">
+                    <div class="vistas">
+                        <% for (let i=5 ; i < 9 ; i++) {%>
+
+                            <% if(todos[i].id_sexo==2){ %>
+                                <div class="elegidos">
+                                    <a href="/products/detalleDeProducto/<%=todos[i].id_producto %>">
+                                        <img src="/uploads/productImage/<%= todos[i].imagenPrincipal.rutaImagen %>"
+                                            alt="imagen tile <%= todos.nombre %>">
+                                        <h6>
+                                            <%= todos[i].proSexo.nombre %>
+                                        </h6>
+                                        <%=todos[i].nombre %>
+                                            <i class="fas fa-eye"></i>
+                                            <h5>$ <%=todos[i].precio %>
+                                            </h5>
+                                    </a>
+                                </div>
+                            <% } %>
+                        <%}%>
+                    </div>
+                </article>
+        </main>
+        <%- include("partials/footer.ejs") %>
+    </body>
+
 </html>

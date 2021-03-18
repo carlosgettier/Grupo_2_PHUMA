@@ -17,14 +17,9 @@
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
-justify-content: flex-end;
+    justify-content: flex-end;
     flex-direction: column;
     
-}
-.primerosLinks h1 {
-    background-color: #c5c5c5;
-    width: 100%;
-    margin-top: 0%;
 }
 
 .userIngreso {
@@ -46,6 +41,28 @@ justify-content: flex-end;
 }
 .primerosLinks li a:hover{
     color: black;
+}
+
+.primerosLinks .userWelcome {
+    width: 100%;
+    height: 100%;
+    background-color: #c5c5c5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.primerosLinks .userWelcome h1 {
+    margin: 0px;
+}
+
+.primerosLinks .userWelcome img{
+    height: 100%;
+    width: 50px;
+    border-radius: 50px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* ACA EMPIEZA EL HEADER*/

@@ -23,7 +23,7 @@ window.addEventListener("load",function(){
   let errors=0;
    form.addEventListener("submit", function(event){
     
-    if(inputNombre.value.length == 0 || inputdescripcion.value.length == 0||inputImagenP.value.length == 0||  inputImagenS.value.length == 0 || inputPrecio.value.length == 0) {   
+    if(inputNombre.value.length == 0 || inputdescripcion.value.length == 0||inputImagenP.value.length == 0||  inputPrecio.value.length == 0) {   
        console.log("Hay un campo sin completar")
        event.preventDefault()
    }else{
