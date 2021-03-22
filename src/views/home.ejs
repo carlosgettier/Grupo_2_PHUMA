@@ -61,10 +61,7 @@
                     <div class="vistas">
                         
                         <% for (let i=0 ; i < 4 ; i++) {%>
-                            <%if(hombres[i]){%>
-
-                                
-                            
+                           
                                 <div class="elegidos">
                                     <a href="/products/detalleDeProducto/<%=hombres[i].id_producto %>">
                                         <img src="/uploads/productImage/<%= hombres[i].imagenPrincipal.rutaImagen %>"
@@ -78,7 +75,7 @@
                                             </h5>
                                     </a>
                                 </div>
-                                <%}%>
+                                
                         <%}%>
                     </div>
                 </article>

@@ -12,7 +12,8 @@ let mainController = {
             ],
             where:{
 
-                id_sexo : 1
+                id_sexo : 1,
+                status : 1
             },
             order:[["id_producto", "DESC"]]
         })
@@ -23,7 +24,8 @@ let mainController = {
                 { association: 'proSexo' }
             ],
             where:{
-                id_sexo : 2
+                id_sexo : 2,
+                status : 1
             },
             order:[["id_producto", "DESC"]]
         })
@@ -33,17 +35,6 @@ let mainController = {
                 return res.render("home", {hombres:resultados[0], mujeres:resultados[1]} )
             }
         )
-
-        db.product.findAll({
-            include: [
-                { association: 'imagenes' },
-                { association: 'imagenPrincipal' },
-                { association: 'proSexo' }
-            ]
-        }).then(function(todos){
-            
-            return res.render("home", {todos:todos})
-        })
     },
 
     hombres: function(req,res){
