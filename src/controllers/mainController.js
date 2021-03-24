@@ -30,20 +30,15 @@ let mainController = {
 
         Promise.all([hombres, mujeres]).then(
             function (resultados){
-                return res.render("home", {hombres:resultados[0], mujeres:resultados[1]} )
+                return res.render("home", {hombres:resultados[0], mujeres:resultados[1]} ),
+                console.log(hombres)
             }
+        
         )
 
-        db.product.findAll({
-            include: [
-                { association: 'imagenes' },
-                { association: 'imagenPrincipal' },
-                { association: 'proSexo' }
-            ]
-        }).then(function(todos){
             
-            return res.render("home", {todos:todos})
-        })
+            
+
     },
 
     hombres: function(req,res){
