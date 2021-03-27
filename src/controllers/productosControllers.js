@@ -130,7 +130,7 @@ module.exports = {
             .then(function (hola) {
                 res.redirect("/products")
             })
-
+         
     },
 
     "edit": function (req, res) {

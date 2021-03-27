@@ -12,7 +12,8 @@ let mainController = {
             ],
             where:{
 
-                id_sexo : 1
+                id_sexo : 1,
+                status : 1
             },
             order:[["id_producto", "DESC"]]
         })
@@ -23,7 +24,8 @@ let mainController = {
                 { association: 'proSexo' }
             ],
             where:{
-                id_sexo : 2
+                id_sexo : 2,
+                status : 1
             },
             order:[["id_producto", "DESC"]]
         })
@@ -35,10 +37,6 @@ let mainController = {
             }
         
         )
-
-            
-            
-
     },
 
     hombres: function(req,res){
